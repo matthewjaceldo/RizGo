@@ -1,9 +1,6 @@
 name: Build RizGo Android APK
 
 on:
-  workflow_dispatch:name: Build RizGo Android APK
-
-on:
   workflow_dispatch:
   push:
     branches:
@@ -36,117 +33,12 @@ jobs:
         run: mvn -Pandroid gluonfx:build gluonfx:package
 
       - name: Find generated APK
-        run: find target -type f -name "*.apk" -print
-
-      - name: Upload RizGo APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: RizGo-Android
-          path: target/**/*.apk
-          if-no-files-found: error  push:
-    branches:
-      - main
-
-jobs:
-  build-android:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout RizGo
-        uses: actions/checkout@v4
-
-      - name: Set up Java 21
-        uses: actions/setup-java@v4
-        with:
-          distribution: temurin
-          java-version: '21'
-          cache: maven
-
-      - name: Check Java and Maven
         run: |
-          java -version
-          mvn -version
-
-      - name: Compile RizGo
-        run: mvn clean compile
-
-      - name: Build Android APK
-        run: mvn -Pandroid gluonfx:build gluonfx:package
-
-      - name: Find generated APK
-        run: |
-          echo "Searching for APK..."
           find target -type f -name "*.apk" -print
 
       - name: Upload RizGo APK
         uses: actions/upload-artifact@v4
         with:
           name: RizGo-Android
-          path: |
-            target/**/*.apk
-          if-no-files-found: errorname: Build RizGo APK
-
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-android:
-    runs-on: ubuntu-latest
-
-    steps:
-
-      - name: Checkout RizGo
-        uses: actions/checkout@v4
-
-      - name: Setup GraalVM built by Gluon
-        uses: gluonhq/setup-graalvm@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Install required Linux libraries
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libasound2-dev \
-            libavcodec-dev \
-            libavformat-dev \
-            libavutil-dev \
-            libgl-dev \
-            libgtk-3-dev \
-            libpango1.0-dev \
-            libxtst-dev \
-            libfreetype6-dev \
-            zlib1g-dev
-
-      - name: Show build environment
-        run: |
-          echo "JAVA_HOME=$JAVA_HOME"
-          echo "GRAALVM_HOME=$GRAALVM_HOME"
-          java -version
-          native-image --version
-          mvn -version
-
-      - name: Compile RizGo
-        run: mvn clean compile
-
-      - name: Build Android APK
-        run: mvn -Pandroid gluonfx:build gluonfx:package
-
-      - name: Show generated Android files
-        run: |
-          find target/gluonfx/aarch64-android/gvm \
-            -type f \
-            \( -name "*.apk" -o -name "*.aab" \) \
-            -print
-
-      - name: Upload RizGo APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: RizGo-Android
-          path: |
-            target/gluonfx/aarch64-android/gvm/*.apk
-            target/gluonfx/aarch64-android/gvm/*.aab
-
+          path: target/**/*.apk
+          if-no-files-found: error
