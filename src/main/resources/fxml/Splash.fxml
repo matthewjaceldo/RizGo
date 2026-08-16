@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane xmlns="http://javafx.com/javafx/26"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.SplashController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="splashPageRoot">
+
+    <!-- SKINNY PHONE-SIZED SPLASH -->
+    <VBox alignment="CENTER"
+          spacing="18"
+          prefWidth="390"
+          minWidth="390"
+          maxWidth="390"
+          prefHeight="850"
+          minHeight="850"
+          maxHeight="850"
+          styleClass="splashCard">
+
+        <padding>
+            <Insets top="45"
+                    right="25"
+                    bottom="30"
+                    left="25"/>
+        </padding>
+
+        <Pane VBox.vgrow="ALWAYS"/>
+
+        <!-- RIZGO LOGO -->
+        <HBox alignment="CENTER"
+              spacing="4">
+
+            <Label text="RizG"
+                   styleClass="splashLogoText"/>
+
+            <StackPane fx:id="locationLogo"
+                       styleClass="splashLocationPin">
+
+                <Label text="●"
+                       styleClass="splashLocationDot"/>
+
+            </StackPane>
+
+        </HBox>
+
+        <Label text="Rizalians. Navigate. Discover."
+               styleClass="splashTagline"/>
+
+        <Pane prefHeight="60"/>
+
+        <!-- PROGRESS BAR -->
+        <ProgressBar fx:id="progressBar"
+                     progress="0"
+                     prefWidth="310"
+                     minWidth="310"
+                     maxWidth="310"
+                     styleClass="splashProgress"/>
+
+        <Label fx:id="loadingLabel"
+               text="Loading..."
+               styleClass="splashLoadingText"/>
+
+        <Pane VBox.vgrow="ALWAYS"/>
+
+        <Label text="Rizal High School Campus Guide"
+               styleClass="splashFooter"/>
+
+    </VBox>
+
+</StackPane>

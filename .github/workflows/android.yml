@@ -1,0 +1,66 @@
+name: Build RizGo APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout RizGo
+        uses: actions/checkout@v4
+
+      - name: Setup GraalVM built by Gluon
+        uses: gluonhq/setup-graalvm@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install required Linux libraries
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libasound2-dev \
+            libavcodec-dev \
+            libavformat-dev \
+            libavutil-dev \
+            libgl-dev \
+            libgtk-3-dev \
+            libpango1.0-dev \
+            libxtst-dev \
+            libfreetype6-dev \
+            zlib1g-dev
+
+      - name: Show build environment
+        run: |
+          echo "JAVA_HOME=$JAVA_HOME"
+          echo "GRAALVM_HOME=$GRAALVM_HOME"
+          java -version
+          native-image --version
+          mvn -version
+
+      - name: Compile RizGo
+        run: mvn clean compile
+
+      - name: Build Android APK
+        run: mvn -Pandroid gluonfx:build gluonfx:package
+
+      - name: Show generated Android files
+        run: |
+          find target/gluonfx/aarch64-android/gvm \
+            -type f \
+            \( -name "*.apk" -o -name "*.aab" \) \
+            -print
+
+      - name: Upload RizGo APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: RizGo-Android
+          path: |
+            target/gluonfx/aarch64-android/gvm/*.apk
+            target/gluonfx/aarch64-android/gvm/*.aab
+

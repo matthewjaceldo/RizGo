@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.MapController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <!-- ===================================================== -->
+    <!-- MAIN PAGE                                             -->
+    <!-- WINDOW SIZE IS NOT CHANGED                            -->
+    <!-- ===================================================== -->
+
+    <BorderPane maxWidth="430"
+                styleClass="rizgoMapRoot">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER                                            -->
+        <!-- ================================================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  maxWidth="Infinity"
+                  styleClass="rizgoMapHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+                </padding>
+
+
+                <GridPane maxWidth="Infinity">
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"
+                                           minWidth="0"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+
+                    <!-- BACK -->
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="mapBackButton"/>
+
+
+                    <!-- TITLE -->
+
+                    <Label text="Campus Map"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           maxWidth="Infinity"
+                           styleClass="rizgoMapTitle"/>
+
+
+                    <!-- ICON -->
+
+                    <Label text="⌖"
+                           GridPane.columnIndex="2"
+                           GridPane.halignment="CENTER"
+                           styleClass="rizgoMapHeaderPin"/>
+
+                </GridPane>
+
+
+                <!-- SEARCH -->
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="8"
+                      maxWidth="Infinity"
+                      styleClass="rizgoMapSearch">
+
+                    <Label text="⌕"
+                           styleClass="rizgoMapSearchIcon"/>
+
+                    <TextField fx:id="searchField"
+                               promptText="Search destination..."
+                               onAction="#searchBuilding"
+                               HBox.hgrow="ALWAYS"
+                               maxWidth="Infinity"
+                               styleClass="rizgoMapSearchField"/>
+
+                </HBox>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================================================= -->
+        <!-- CENTER                                            -->
+        <!-- ================================================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="rizgoMapScroll">
+
+                <content>
+
+                    <!--
+                        IMPORTANT:
+                        This VBox has NO fixed width.
+                        It follows the ScrollPane viewport.
+                    -->
+
+                    <VBox spacing="14"
+                          fillWidth="true"
+                          maxWidth="Infinity">
+
+                        <padding>
+                            <Insets top="14"
+                                    right="8"
+                                    bottom="20"
+                                    left="8"/>
+                        </padding>
+
+
+                        <!-- ================================================= -->
+                        <!-- NORMAL MAP PREVIEW                                -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="10"
+                              fillWidth="true"
+                              maxWidth="Infinity"
+                              styleClass="mapPreviewMainCard">
+
+
+                            <!-- MAP IMAGE -->
+
+                            <StackPane maxWidth="Infinity"
+                                       alignment="CENTER"
+                                       styleClass="mapPreviewImageHolder">
+
+                                <!--
+                                    320 WIDTH IS INTENTIONAL.
+                                    This keeps the map fully inside
+                                    the phone viewport.
+                                -->
+
+                                <ImageView fitWidth="320"
+                                           preserveRatio="true"
+                                           smooth="true">
+
+                                    <image>
+                                        <Image url="@../images/campus_map.png.png"/>
+                                    </image>
+
+                                </ImageView>
+
+                            </StackPane>
+
+
+                            <Label fx:id="pinpointMessage"
+                                   text="Select a building to view its location."
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="pinpointMessage"/>
+
+
+                            <Button text="Open Enlarged Map  ⤢"
+                                    onAction="#openZoomedMap"
+                                    maxWidth="Infinity"
+                                    prefHeight="46"
+                                    styleClass="mapZoomButton"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- SELECTED LOCATION                                 -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="12"
+                              fillWidth="true"
+                              maxWidth="Infinity"
+                              styleClass="selectedLocationCard">
+
+
+                            <Label text="♥  Selected Location"
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="selectedLocationHeading"/>
+
+
+                            <Label fx:id="nameLabel"
+                                   text="Select a building"
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="selectedLocationName"/>
+
+
+                            <!-- DETAILS -->
+
+                            <GridPane hgap="8"
+                                      vgap="10"
+                                      maxWidth="Infinity">
+
+                                <columnConstraints>
+
+                                    <ColumnConstraints minWidth="75"
+                                                       prefWidth="90"/>
+
+                                    <ColumnConstraints minWidth="0"
+                                                       hgrow="ALWAYS"/>
+
+                                </columnConstraints>
+
+
+                                <!-- CATEGORY -->
+
+                                <Label text="Category"
+                                       GridPane.columnIndex="0"
+                                       GridPane.rowIndex="0"
+                                       styleClass="selectedInfoLabel"/>
+
+                                <Label fx:id="categoryLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       maxWidth="Infinity"
+                                       GridPane.columnIndex="1"
+                                       GridPane.rowIndex="0"
+                                       styleClass="selectedInfoValue"/>
+
+
+                                <!-- FLOOR -->
+
+                                <Label text="Floor"
+                                       GridPane.columnIndex="0"
+                                       GridPane.rowIndex="1"
+                                       styleClass="selectedInfoLabel"/>
+
+                                <Label fx:id="floorLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       maxWidth="Infinity"
+                                       GridPane.columnIndex="1"
+                                       GridPane.rowIndex="1"
+                                       styleClass="selectedInfoValue"/>
+
+
+                                <!-- STATUS -->
+
+                                <Label text="Status"
+                                       GridPane.columnIndex="0"
+                                       GridPane.rowIndex="2"
+                                       styleClass="selectedInfoLabel"/>
+
+                                <Label fx:id="statusLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       maxWidth="Infinity"
+                                       GridPane.columnIndex="1"
+                                       GridPane.rowIndex="2"
+                                       styleClass="selectedInfoValue"/>
+
+                            </GridPane>
+
+
+                            <!-- PINPOINT -->
+
+                            <Button text="📍  Pinpoint on Map"
+                                    onAction="#pinpointSelectedBuilding"
+                                    maxWidth="Infinity"
+                                    prefHeight="46"
+                                    styleClass="mapPinpointButton"/>
+
+
+                            <!-- DETAILS -->
+
+                            <Button text="View Building Details  ›"
+                                    onAction="#viewBuildingDetails"
+                                    maxWidth="Infinity"
+                                    prefHeight="48"
+                                    styleClass="buildingDetailsButton"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- CAMPUS LOCATIONS                                  -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="9"
+                              fillWidth="true"
+                              maxWidth="Infinity">
+
+
+                            <Label text="CAMPUS LOCATIONS"
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="mapSectionTitle"/>
+
+
+                            <Button text="Admin Office"
+                                    onAction="#openAdmin"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Alumni Building"
+                                    onAction="#openAlumni"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Amang Building"
+                                    onAction="#openAmang"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Caruncho Gym"
+                                    onAction="#openCarunchoGym"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Eusebio Building (EBEC)"
+                                    onAction="#openEusebio"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="I.R. Building"
+                                    onAction="#openIR"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Jovito Salonga Building"
+                                    onAction="#openJovitoSalonga"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="M.A.E. Building"
+                                    onAction="#openMAE"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Neptali Building"
+                                    onAction="#openNeptali"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="R.H. Building"
+                                    onAction="#openRH"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="R.J. Building"
+                                    onAction="#openRJ"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="RHS Chapel"
+                                    onAction="#openRHSChapel"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="RHS Oval"
+                                    onAction="#openRHSOval"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Romulo Building"
+                                    onAction="#openRomulo"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Science &amp; SCE Building"
+                                    onAction="#openScience"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                            <Button text="Tanghalang Rizal"
+                                    onAction="#openTanghalangRizal"
+                                    maxWidth="Infinity"
+                                    styleClass="mapLocationButton"/>
+
+                        </VBox>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM NAV                                        -->
+        <!-- ================================================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+
+                <!-- HOME -->
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER" spacing="3">
+
+                            <Label text="⌂"/>
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- MAP -->
+
+                <Button HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButtonActive">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER" spacing="3">
+
+                            <Label text="⌖"/>
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- CHAT -->
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER" spacing="3">
+
+                            <Label text="◉"/>
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- PROFILE -->
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER" spacing="3">
+
+                            <Label text="♙"/>
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- ENLARGED MAP                                          -->
+    <!-- STILL INSIDE SAME WINDOW                              -->
+    <!-- ===================================================== -->
+
+    <StackPane fx:id="zoomMapOverlay"
+               visible="false"
+               managed="false"
+               maxWidth="430"
+               maxHeight="Infinity"
+               styleClass="zoomMapOverlay">
+
+
+        <!--
+            360px instead of 400px.
+            This guarantees the popup fits inside
+            your existing phone window.
+        -->
+
+        <VBox fx:id="zoomMapCard"
+              spacing="10"
+              prefWidth="360"
+              maxWidth="360"
+              maxHeight="720"
+              styleClass="zoomMapCard">
+
+
+            <!-- HEADER -->
+
+            <HBox alignment="CENTER_LEFT"
+                  maxWidth="Infinity">
+
+
+                <VBox spacing="2"
+                      HBox.hgrow="ALWAYS"
+                      maxWidth="Infinity">
+
+                    <Label text="Campus Map"
+                           styleClass="zoomMapTitle"/>
+
+                    <Label fx:id="zoomBuildingName"
+                           text="Selected Location"
+                           wrapText="true"
+                           maxWidth="Infinity"
+                           styleClass="zoomMapSubtitle"/>
+
+                </VBox>
+
+
+                <Button text="×"
+                        onAction="#closeZoomedMap"
+                        styleClass="zoomMapCloseButton"/>
+
+            </HBox>
+
+
+            <!-- ================================================= -->
+            <!-- LARGE SCROLLABLE MAP                              -->
+            <!-- ================================================= -->
+
+            <ScrollPane fx:id="zoomMapScroll"
+                        fitToWidth="false"
+                        fitToHeight="false"
+                        pannable="true"
+                        hbarPolicy="AS_NEEDED"
+                        vbarPolicy="AS_NEEDED"
+                        VBox.vgrow="ALWAYS"
+                        styleClass="zoomMapScroll">
+
+                <content>
+
+
+                    <!-- LARGE MAP CANVAS -->
+
+                    <StackPane prefWidth="760"
+                               prefHeight="652"
+                               minWidth="760"
+                               minHeight="652"
+                               maxWidth="760"
+                               maxHeight="652"
+                               styleClass="zoomMapCanvas">
+
+
+                        <!-- MAP -->
+
+                        <ImageView fitWidth="760"
+                                   preserveRatio="true"
+                                   smooth="true">
+
+                            <image>
+                                <Image url="@../images/campus_map.png.png"/>
+                            </image>
+
+                        </ImageView>
+
+
+                        <!-- PIN LAYER -->
+
+                        <Pane prefWidth="760"
+                              prefHeight="652"
+                              minWidth="760"
+                              minHeight="652"
+                              maxWidth="760"
+                              maxHeight="652"
+                              mouseTransparent="true">
+
+                            <Label fx:id="zoomPin"
+                                   text="●"
+                                   visible="false"
+                                   managed="false"
+                                   styleClass="zoomLocationPin"/>
+
+                        </Pane>
+
+                    </StackPane>
+
+                </content>
+
+            </ScrollPane>
+
+
+            <Label text="Drag or use the scrollbars to inspect the campus map."
+                   wrapText="true"
+                   maxWidth="Infinity"
+                   styleClass="zoomMapHint"/>
+
+
+            <Button text="Close Map"
+                    onAction="#closeZoomedMap"
+                    maxWidth="Infinity"
+                    prefHeight="46"
+                    styleClass="zoomMapDoneButton"/>
+
+        </VBox>
+
+    </StackPane>
+
+</StackPane>

@@ -1,0 +1,5 @@
+target/
+.idea/
+*.iml
+rizgo.db
+.DS_Store

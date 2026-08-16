@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.rizgo.controllers.ProfileController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <BorderPane maxWidth="430"
+                styleClass="profileRootNew">
+
+        <!-- =====================================================
+             HEADER
+             ===================================================== -->
+
+        <top>
+
+            <GridPane alignment="CENTER"
+                      styleClass="profileHeaderNew">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="14"
+                            left="16"/>
+                </padding>
+
+                <columnConstraints>
+
+                    <ColumnConstraints minWidth="50"
+                                       prefWidth="50"
+                                       maxWidth="50"/>
+
+                    <ColumnConstraints hgrow="ALWAYS"/>
+
+                    <ColumnConstraints minWidth="50"
+                                       prefWidth="50"
+                                       maxWidth="50"/>
+
+                </columnConstraints>
+
+
+                <!-- LEFT BACK BUTTON -->
+
+                <Button text="←"
+                        onAction="#goBack"
+                        GridPane.columnIndex="0"
+                        styleClass="profileBackButtonNew"/>
+
+
+                <!-- CENTER TITLE -->
+
+                <Label text="My Profile"
+                       GridPane.columnIndex="1"
+                       GridPane.halignment="CENTER"
+                       styleClass="profilePageTitleNew"/>
+
+
+                <!-- RIGHT SIDE PLACEHOLDER -->
+
+                <Region GridPane.columnIndex="2"/>
+
+            </GridPane>
+
+        </top>
+
+
+        <!-- =====================================================
+             CENTER
+             ===================================================== -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="profileScrollNew">
+
+                <content>
+
+                    <VBox spacing="16"
+                          alignment="TOP_CENTER"
+                          fillWidth="true"
+                          styleClass="profileContentNew">
+
+                        <padding>
+                            <Insets top="18"
+                                    right="16"
+                                    bottom="24"
+                                    left="16"/>
+                        </padding>
+
+
+                        <!-- =================================================
+                             PROFILE
+                             ================================================= -->
+
+                        <VBox spacing="8"
+                              alignment="CENTER">
+
+                            <StackPane styleClass="profileAvatarNew">
+
+                                <Label text="👤"
+                                       styleClass="profileAvatarIconNew"/>
+
+                            </StackPane>
+
+                            <Label text="Rizalian Student"
+                                   styleClass="profileNameTitleNew"/>
+
+                            <Label text="RizGo User"
+                                   styleClass="profileRoleNew"/>
+
+                        </VBox>
+
+
+                        <!-- =================================================
+                             PERSONAL INFORMATION
+                             ================================================= -->
+
+                        <VBox spacing="12"
+                              styleClass="profileCardNew">
+
+                            <Label text="Personal Information"
+                                   styleClass="profileSectionTitleNew"/>
+
+                            <Separator/>
+
+
+                            <!-- FULL NAME -->
+
+                            <VBox spacing="4">
+
+                                <Label text="Full Name"
+                                       styleClass="profileFieldLabelNew"/>
+
+                                <TextField fx:id="nameField"
+                                           promptText="Enter your full name"
+                                           editable="false"
+                                           styleClass="profileFieldNew"/>
+
+                            </VBox>
+
+
+                            <!-- EMAIL -->
+
+                            <VBox spacing="4">
+
+                                <Label text="Email"
+                                       styleClass="profileFieldLabelNew"/>
+
+                                <TextField fx:id="emailField"
+                                           promptText="Enter your email"
+                                           editable="false"
+                                           styleClass="profileFieldNew"/>
+
+                            </VBox>
+
+
+                            <!-- USERNAME -->
+
+                            <VBox spacing="4">
+
+                                <Label text="Username"
+                                       styleClass="profileFieldLabelNew"/>
+
+                                <TextField fx:id="usernameField"
+                                           promptText="Enter your username"
+                                           editable="false"
+                                           styleClass="profileFieldNew"/>
+
+                            </VBox>
+
+                        </VBox>
+
+
+                        <!-- =================================================
+                             ACCOUNT
+                             ================================================= -->
+
+                        <VBox spacing="10"
+                              styleClass="profileCardNew">
+
+                            <Label text="Account"
+                                   styleClass="profileSectionTitleNew"/>
+
+                            <Separator/>
+
+                            <Button text="Edit Profile"
+                                    onAction="#editProfile"
+                                    maxWidth="Infinity"
+                                    styleClass="profilePrimaryButtonNew"/>
+
+                            <Button text="Logout"
+                                    onAction="#logout"
+                                    maxWidth="Infinity"
+                                    styleClass="profileLogoutButtonNew"/>
+
+                        </VBox>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- =====================================================
+             BOTTOM NAVIGATION
+             ===================================================== -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="6"
+                  styleClass="newBottomBar">
+
+                <Button text="⌂&#10;Home"
+                        onAction="#goHome"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="⌖&#10;Map"
+                        onAction="#openMap"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="◉&#10;Chat"
+                        onAction="#openChat"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="♙&#10;Profile"
+                        styleClass="bottomNavButtonActive"/>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+</StackPane>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.BuildingController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <!-- WINDOW WIDTH IS STILL 430 -->
+
+    <BorderPane maxWidth="430"
+                styleClass="buildingRoot">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <top>
+
+            <HBox alignment="CENTER"
+                  prefHeight="115"
+                  styleClass="header">
+
+                <padding>
+
+                    <Insets top="18"
+                            right="24"
+                            bottom="18"
+                            left="24"/>
+
+                </padding>
+
+
+                <!-- BACK -->
+
+                <StackPane prefWidth="70"
+                           minWidth="70"
+                           maxWidth="70"
+                           alignment="CENTER_LEFT">
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            styleClass="iconButton"/>
+
+                </StackPane>
+
+
+                <!-- TITLE -->
+
+                <StackPane HBox.hgrow="ALWAYS"
+                           alignment="CENTER">
+
+                    <Label text="Building Information"
+                           styleClass="pageTitle"/>
+
+                </StackPane>
+
+
+                <!-- PROFILE -->
+
+                <StackPane prefWidth="70"
+                           minWidth="70"
+                           maxWidth="70"
+                           alignment="CENTER_RIGHT">
+
+                    <Button text="♙"
+                            onAction="#openProfile"
+                            styleClass="profileHeaderButton"/>
+
+                </StackPane>
+
+            </HBox>
+
+        </top>
+
+
+        <!-- ================= CENTER ================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="buildingScroll">
+
+                <content>
+
+                    <VBox spacing="14"
+                          fillWidth="true"
+                          styleClass="buildingContent">
+
+                        <padding>
+
+                            <Insets top="16"
+                                    right="16"
+                                    bottom="24"
+                                    left="16"/>
+
+                        </padding>
+
+
+                        <!-- ================================================= -->
+                        <!-- BUILDING HERO                                     -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="9"
+                              styleClass="buildingHeroCardNew">
+
+                            <Label fx:id="buildingNameLabel"
+                                   text="Building"
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="buildingNameLargeNew"/>
+
+
+                            <Label fx:id="descriptionLabel"
+                                   text="Building information."
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="buildingDescriptionNew"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- IMAGE / MAP REFERENCE                             -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="10"
+                              styleClass="buildingImageCard">
+
+                            <Label text="Campus Location Preview"
+                                   styleClass="buildingSectionTitle"/>
+
+
+                            <StackPane styleClass="buildingImageHolder">
+
+                                <ImageView fitWidth="360"
+                                           preserveRatio="true"
+                                           smooth="true">
+
+                                    <image>
+
+                                        <Image url="@../images/campus_map.png.png"/>
+
+                                    </image>
+
+                                </ImageView>
+
+                            </StackPane>
+
+
+                            <Label text="This campus map shows the location of buildings and facilities around Rizal High School."
+                                   wrapText="true"
+                                   styleClass="buildingImageHint"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- BUILDING INFORMATION                              -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="12"
+                              styleClass="buildingInfoCard">
+
+                            <Label text="Building Information"
+                                   styleClass="buildingSectionTitle"/>
+
+                            <Separator/>
+
+
+                            <!-- CATEGORY -->
+
+                            <VBox spacing="3">
+
+                                <Label text="Category"
+                                       styleClass="buildingInfoLabel"/>
+
+                                <Label fx:id="categoryLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       styleClass="buildingInfoValue"/>
+
+                            </VBox>
+
+
+                            <!-- FLOOR -->
+
+                            <VBox spacing="3">
+
+                                <Label text="Floor"
+                                       styleClass="buildingInfoLabel"/>
+
+                                <Label fx:id="floorLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       styleClass="buildingInfoValue"/>
+
+                            </VBox>
+
+
+                            <!-- STATUS -->
+
+                            <VBox spacing="3">
+
+                                <Label text="Status"
+                                       styleClass="buildingInfoLabel"/>
+
+                                <Label fx:id="statusLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       styleClass="buildingStatusValue"/>
+
+                            </VBox>
+
+
+                            <!-- LOCATION -->
+
+                            <VBox spacing="3">
+
+                                <Label text="Location"
+                                       styleClass="buildingInfoLabel"/>
+
+                                <Label fx:id="locationLabel"
+                                       text="-"
+                                       wrapText="true"
+                                       styleClass="buildingInfoValue"/>
+
+                            </VBox>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- ADDITIONAL INFORMATION                            -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="10"
+                              styleClass="buildingInfoCard">
+
+                            <Label text="Additional Information"
+                                   styleClass="buildingSectionTitle"/>
+
+                            <Separator/>
+
+
+                            <Label fx:id="additionalInfoLabel"
+                                   text="No additional information available."
+                                   wrapText="true"
+                                   maxWidth="Infinity"
+                                   styleClass="buildingAdditionalText"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- PLACEMENT / DIRECTIONS                            -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="10"
+                              styleClass="buildingMapCard">
+
+
+                            <HBox spacing="8"
+                                  alignment="CENTER_LEFT">
+
+                                <Label text="📍"
+                                       styleClass="buildingMapIcon"/>
+
+                                <Label text="Placement Information"
+                                       styleClass="buildingSectionTitle"/>
+
+                            </HBox>
+
+
+                            <Label text="Open the Campus Map to see this building pinpointed on the enlarged map."
+                                   wrapText="true"
+                                   styleClass="buildingAdditionalText"/>
+
+
+                            <Button text="Get Directions  ›"
+                                    onAction="#openMap"
+                                    maxWidth="Infinity"
+                                    styleClass="buildingDirectionsButton"/>
+
+                        </VBox>
+
+
+                        <!-- BACK -->
+
+                        <Button text="← Back to Campus Map"
+                                onAction="#goBack"
+                                maxWidth="Infinity"
+                                styleClass="buildingSecondaryButton"/>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================= BOTTOM ================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌂"/>
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButtonActive">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌖"/>
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="◉"/>
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="♙"/>
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+</StackPane>

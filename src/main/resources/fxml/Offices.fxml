@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.OfficesController"
+           stylesheets="@../css/rizgo.css">
+
+    <!-- ===================================================== -->
+    <!-- MAIN OFFICES PAGE                                     -->
+    <!-- ===================================================== -->
+
+    <BorderPane maxWidth="Infinity"
+                maxHeight="Infinity"
+                styleClass="officesRoot">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER                                            -->
+        <!-- ================================================= -->
+
+        <top>
+
+            <VBox spacing="18"
+                  styleClass="officesHeader">
+
+                <padding>
+
+                    <Insets top="24"
+                            right="22"
+                            bottom="20"
+                            left="22"/>
+
+                </padding>
+
+
+                <!-- TOP BAR -->
+
+                <GridPane alignment="CENTER"
+                          maxWidth="Infinity">
+
+                    <columnConstraints>
+
+                        <ColumnConstraints percentWidth="20"
+                                           halignment="LEFT"/>
+
+                        <ColumnConstraints percentWidth="60"
+                                           halignment="CENTER"/>
+
+                        <ColumnConstraints percentWidth="20"
+                                           halignment="RIGHT"/>
+
+                    </columnConstraints>
+
+
+                    <!-- BACK -->
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="mapBackButton"/>
+
+
+                    <!-- TITLE -->
+
+                    <Label text="Offices"
+                           GridPane.columnIndex="1"
+                           styleClass="officesPageTitle"/>
+
+
+                    <!-- EMPTY RIGHT SIDE FOR CENTERING -->
+
+                    <Pane GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+
+                <!-- SEARCH -->
+
+                <TextField fx:id="officeSearchField"
+                           promptText="Search office..."
+                           onAction="#searchOffice"
+                           maxWidth="Infinity"
+                           prefHeight="58"
+                           styleClass="officeSearchField"/>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================================================= -->
+        <!-- OFFICE LIST                                       -->
+        <!-- ================================================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="officeScroll">
+
+                <content>
+
+                    <VBox spacing="14"
+                          fillWidth="true">
+
+                        <padding>
+
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="30"
+                                    left="20"/>
+
+                        </padding>
+
+
+                        <!-- ================================= -->
+                        <!-- REGISTRAR                         -->
+                        <!-- ================================= -->
+
+                        <StackPane fx:id="registrarCard"
+                                   maxWidth="Infinity">
+
+                            <Button onAction="#openRegistrar"
+                                    maxWidth="Infinity"
+                                    prefHeight="100"
+                                    styleClass="officeCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="18">
+
+                                        <Label text="▦"
+                                               styleClass="officeIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Registrar's Office"
+                                                   styleClass="officeName"/>
+
+                                            <Label text="Ground Floor"
+                                                   styleClass="officeFloor"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="officeArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </StackPane>
+
+
+                        <!-- ================================= -->
+                        <!-- GUIDANCE                          -->
+                        <!-- ================================= -->
+
+                        <StackPane fx:id="guidanceCard"
+                                   maxWidth="Infinity">
+
+                            <Button onAction="#openGuidance"
+                                    maxWidth="Infinity"
+                                    prefHeight="100"
+                                    styleClass="officeCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="18">
+
+                                        <Label text="♙"
+                                               styleClass="officeIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Guidance Office"
+                                                   styleClass="officeName"/>
+
+                                            <Label text="Ground Floor"
+                                                   styleClass="officeFloor"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="officeArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </StackPane>
+
+
+                        <!-- ================================= -->
+                        <!-- PRINCIPAL                         -->
+                        <!-- ================================= -->
+
+                        <StackPane fx:id="principalCard"
+                                   maxWidth="Infinity">
+
+                            <Button onAction="#openPrincipal"
+                                    maxWidth="Infinity"
+                                    prefHeight="100"
+                                    styleClass="officeCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="18">
+
+                                        <Label text="▦"
+                                               styleClass="officeIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Principal's Office"
+                                                   styleClass="officeName"/>
+
+                                            <Label text="Ground Floor"
+                                                   styleClass="officeFloor"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="officeArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </StackPane>
+
+
+                        <!-- ================================= -->
+                        <!-- ACCOUNTING                        -->
+                        <!-- ================================= -->
+
+                        <StackPane fx:id="accountingCard"
+                                   maxWidth="Infinity">
+
+                            <Button onAction="#openAccounting"
+                                    maxWidth="Infinity"
+                                    prefHeight="100"
+                                    styleClass="officeCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="18">
+
+                                        <Label text="▤"
+                                               styleClass="officeIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Accounting Office"
+                                                   styleClass="officeName"/>
+
+                                            <Label text="Ground Floor"
+                                                   styleClass="officeFloor"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="officeArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </StackPane>
+
+
+                        <!-- ================================= -->
+                        <!-- CASHIER                           -->
+                        <!-- ================================= -->
+
+                        <StackPane fx:id="cashierCard"
+                                   maxWidth="Infinity">
+
+                            <Button onAction="#openCashier"
+                                    maxWidth="Infinity"
+                                    prefHeight="100"
+                                    styleClass="officeCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="18">
+
+                                        <Label text="₱"
+                                               styleClass="officeIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Cashier"
+                                                   styleClass="officeName"/>
+
+                                            <Label text="Ground Floor"
+                                                   styleClass="officeFloor"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="officeArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </StackPane>
+
+
+                        <!-- ================================= -->
+                        <!-- CLINIC                            -->
+                        <!-- ================================= -->
+
+                        <StackPane fx:id="clinicCard"
+                                   maxWidth="Infinity">
+
+                            <Button onAction="#openClinic"
+                                    maxWidth="Infinity"
+                                    prefHeight="100"
+                                    styleClass="officeCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="18">
+
+                                        <Label text="✚"
+                                               styleClass="officeIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Clinic"
+                                                   styleClass="officeName"/>
+
+                                            <Label text="Ground Floor"
+                                                   styleClass="officeFloor"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="officeArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </StackPane>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM NAVIGATION                                 -->
+        <!-- ================================================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+                <!-- HOME -->
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌂"/>
+
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- MAP -->
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌖"/>
+
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- CHAT -->
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="◉"/>
+
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- PROFILE -->
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="♙"/>
+
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- CUSTOM RIZGO POPUP                                    -->
+    <!-- ===================================================== -->
+
+    <StackPane fx:id="officePopupOverlay"
+               visible="false"
+               managed="false"
+               maxWidth="Infinity"
+               maxHeight="Infinity"
+               styleClass="officePopupOverlay">
+
+        <VBox fx:id="officePopupCard"
+              alignment="CENTER_LEFT"
+              spacing="16"
+              prefWidth="330"
+              maxWidth="330"
+              minHeight="-Infinity"
+              prefHeight="-1"
+              maxHeight="-Infinity"
+              styleClass="officePopupCard">
+
+            <!-- TOP -->
+
+            <HBox alignment="CENTER_LEFT">
+
+                <Label text="RizGo"
+                       styleClass="officePopupBrand"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <Button text="×"
+                        onAction="#closeOfficePopup"
+                        styleClass="officePopupClose"/>
+
+            </HBox>
+
+
+            <!-- TITLE -->
+
+            <Label fx:id="officePopupTitle"
+                   text="Office"
+                   wrapText="true"
+                   styleClass="officePopupTitle"/>
+
+
+            <!-- RED DIVIDER -->
+
+            <Separator styleClass="officePopupSeparator"/>
+
+
+            <!-- MESSAGE -->
+
+            <Label fx:id="officePopupMessage"
+                   text="Office information."
+                   wrapText="true"
+                   maxWidth="Infinity"
+                   styleClass="officePopupMessage"/>
+
+
+            <!-- OK -->
+
+            <Button text="OK"
+                    onAction="#closeOfficePopup"
+                    prefHeight="48"
+                    maxWidth="Infinity"
+                    styleClass="officePopupButton"/>
+
+        </VBox>
+
+    </StackPane>
+
+</StackPane>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.rizgo.controllers.AnnouncementsController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <BorderPane maxWidth="430"
+                styleClass="announcementsRoot">
+
+        <!-- ================= HEADER ================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  styleClass="announcementsHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+                </padding>
+
+                <GridPane>
+
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+                    </columnConstraints>
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="announcementsBackButton"/>
+
+                    <Label text="Announcements"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="announcementsPageTitle"/>
+
+                    <Region GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================= CENTER ================= -->
+
+        <center>
+
+            <VBox spacing="10"
+                  styleClass="announcementsContent">
+
+                <padding>
+                    <Insets top="12"
+                            right="14"
+                            bottom="14"
+                            left="14"/>
+                </padding>
+
+
+                <!-- ================= FILTERS ================= -->
+
+                <HBox spacing="7"
+                      alignment="CENTER_LEFT">
+
+                    <ToggleButton fx:id="allFilter"
+                                  text="All"
+                                  selected="true"
+                                  onAction="#filterAll"
+                                  styleClass="announcementFilterActive"/>
+
+                    <ToggleButton fx:id="eventsFilter"
+                                  text="Events"
+                                  onAction="#filterEvents"
+                                  styleClass="announcementFilter"/>
+
+                    <ToggleButton fx:id="noticesFilter"
+                                  text="Notices"
+                                  onAction="#filterNotices"
+                                  styleClass="announcementFilter"/>
+
+                    <ToggleButton fx:id="updatesFilter"
+                                  text="Updates"
+                                  onAction="#filterUpdates"
+                                  styleClass="announcementFilter"/>
+
+                </HBox>
+
+
+                <!-- ================= ANNOUNCEMENT LIST ================= -->
+
+                <ScrollPane fitToWidth="true"
+                            hbarPolicy="NEVER"
+                            vbarPolicy="AS_NEEDED"
+                            VBox.vgrow="ALWAYS"
+                            styleClass="announcementsScroll">
+
+                    <content>
+
+                        <VBox fx:id="announcementList"
+                              spacing="10"
+                              fillWidth="true">
+
+
+                            <!-- ENROLLMENT -->
+
+                            <VBox userData="notice"
+                                  spacing="8"
+                                  styleClass="announcementPageCard">
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="10">
+
+                                    <Label text="📢"
+                                           styleClass="announcementPageIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Enrollment starts August 12"
+                                               wrapText="true"
+                                               styleClass="announcementPageTitle"/>
+
+                                        <Label text="NOTICE"
+                                               styleClass="announcementNoticeBadge"/>
+
+                                    </VBox>
+
+                                </HBox>
+
+                                <Label text="Students are advised to prepare the required school documents before the enrollment period begins."
+                                       wrapText="true"
+                                       styleClass="announcementPageDescription"/>
+
+                                <Label text="August 12"
+                                       styleClass="announcementPageDate"/>
+
+                            </VBox>
+
+
+                            <!-- LIBRARY -->
+
+                            <VBox userData="update"
+                                  spacing="8"
+                                  styleClass="announcementPageCard">
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="10">
+
+                                    <Label text="📚"
+                                           styleClass="announcementPageIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Library closes at 8 PM"
+                                               wrapText="true"
+                                               styleClass="announcementPageTitle"/>
+
+                                        <Label text="UPDATE"
+                                               styleClass="announcementUpdateBadge"/>
+
+                                    </VBox>
+
+                                </HBox>
+
+                                <Label text="Students are reminded to plan their library visits before the closing time."
+                                       wrapText="true"
+                                       styleClass="announcementPageDescription"/>
+
+                                <Label text="Today"
+                                       styleClass="announcementPageDate"/>
+
+                            </VBox>
+
+
+                            <!-- GYM -->
+
+                            <VBox userData="notice"
+                                  spacing="8"
+                                  styleClass="announcementPageCard">
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="10">
+
+                                    <Label text="🏀"
+                                           styleClass="announcementPageIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Gymnasium temporarily closed"
+                                               wrapText="true"
+                                               styleClass="announcementPageTitle"/>
+
+                                        <Label text="NOTICE"
+                                               styleClass="announcementNoticeBadge"/>
+
+                                    </VBox>
+
+                                </HBox>
+
+                                <Label text="Caruncho Gym is temporarily unavailable. Please wait for the next school update regarding its reopening."
+                                       wrapText="true"
+                                       styleClass="announcementPageDescription"/>
+
+                                <Label text="Until further notice"
+                                       styleClass="announcementPageDate"/>
+
+                            </VBox>
+
+
+                            <!-- SCHOOL EVENT -->
+
+                            <VBox userData="event"
+                                  spacing="8"
+                                  styleClass="announcementPageCard">
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="10">
+
+                                    <Label text="🎉"
+                                           styleClass="announcementPageIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Upcoming School Activity"
+                                               wrapText="true"
+                                               styleClass="announcementPageTitle"/>
+
+                                        <Label text="EVENT"
+                                               styleClass="announcementEventBadge"/>
+
+                                    </VBox>
+
+                                </HBox>
+
+                                <Label text="Watch for the official schedule and venue details for the upcoming school activity."
+                                       wrapText="true"
+                                       styleClass="announcementPageDescription"/>
+
+                                <Label text="Coming Soon"
+                                       styleClass="announcementPageDate"/>
+
+                            </VBox>
+
+                        </VBox>
+
+                    </content>
+
+                </ScrollPane>
+
+            </VBox>
+
+        </center>
+
+
+        <!-- ================= BOTTOM NAV ================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="6"
+                  styleClass="newBottomBar">
+
+                <Button text="⌂&#10;Home"
+                        onAction="#goHome"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="⌖&#10;Map"
+                        onAction="#openMap"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="◉&#10;Chat"
+                        onAction="#openChat"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="♙&#10;Profile"
+                        onAction="#openProfile"
+                        styleClass="bottomNavButton"/>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+</StackPane>

@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.FacilitiesController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <!-- ===================================================== -->
+    <!-- MAIN FACILITIES PAGE                                  -->
+    <!-- ===================================================== -->
+
+    <BorderPane maxWidth="430"
+                styleClass="facilitiesRoot">
+
+        <!-- ================= HEADER ================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  styleClass="facilitiesHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+                </padding>
+
+                <GridPane>
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+                    <!-- BACK -->
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="facilitiesBackButton"/>
+
+                    <!-- TITLE -->
+
+                    <Label text="Facilities"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="facilitiesPageTitle"/>
+
+                    <!-- RIGHT PLACEHOLDER -->
+
+                    <Region GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+
+                <!-- SEARCH -->
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="8"
+                      styleClass="facilitiesSearchContainer">
+
+                    <Label text="⌕"
+                           styleClass="facilitiesSearchIcon"/>
+
+                    <TextField fx:id="searchField"
+                               promptText="Search facility..."
+                               onKeyReleased="#searchFacilities"
+                               HBox.hgrow="ALWAYS"
+                               styleClass="facilitiesSearchField"/>
+
+                </HBox>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================= CENTER ================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="facilitiesScroll">
+
+                <content>
+
+                    <VBox fx:id="facilityList"
+                          spacing="10"
+                          fillWidth="true">
+
+                        <padding>
+                            <Insets top="14"
+                                    right="14"
+                                    bottom="20"
+                                    left="14"/>
+                        </padding>
+
+
+                        <!-- LIBRARY -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openLibrary"
+                                styleClass="facilityCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="📚"
+                                           styleClass="facilityIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Library"
+                                               styleClass="facilityName"/>
+
+                                        <Label text="Learning Facility"
+                                               styleClass="facilitySubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="facilityArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- GYMNASIUM -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openGymnasium"
+                                styleClass="facilityCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="🏀"
+                                           styleClass="facilityIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Gymnasium"
+                                               styleClass="facilityName"/>
+
+                                        <Label text="Sports Facility"
+                                               styleClass="facilitySubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="facilityArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- COVERED COURT -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openCoveredCourt"
+                                styleClass="facilityCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="🏟"
+                                           styleClass="facilityIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Covered Court"
+                                               styleClass="facilityName"/>
+
+                                        <Label text="Sports / Activity Facility"
+                                               styleClass="facilitySubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="facilityArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- CANTEEN -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openCanteen"
+                                styleClass="facilityCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="🍽"
+                                           styleClass="facilityIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Canteen"
+                                               styleClass="facilityName"/>
+
+                                        <Label text="Food Facility"
+                                               styleClass="facilitySubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="facilityArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- SCIENCE LAB -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openScienceLab"
+                                styleClass="facilityCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="🔬"
+                                           styleClass="facilityIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Science Laboratory"
+                                               styleClass="facilityName"/>
+
+                                        <Label text="Academic Laboratory"
+                                               styleClass="facilitySubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="facilityArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- COMPUTER LAB -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openComputerLab"
+                                styleClass="facilityCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="💻"
+                                           styleClass="facilityIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Computer Laboratory"
+                                               styleClass="facilityName"/>
+
+                                        <Label text="Technology Facility"
+                                               styleClass="facilitySubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="facilityArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================= BOTTOM NAV ================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+                <!-- HOME -->
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌂"/>
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- MAP -->
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌖"/>
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- CHAT -->
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="◉"/>
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- PROFILE -->
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="♙"/>
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- CUSTOM FACILITY POPUP                                 -->
+    <!-- ===================================================== -->
+
+    <StackPane fx:id="facilityPopupOverlay"
+               visible="false"
+               managed="false"
+               maxWidth="430"
+               maxHeight="Infinity"
+               styleClass="facilityPopupOverlay">
+
+        <VBox fx:id="facilityPopupCard"
+              alignment="CENTER_LEFT"
+              spacing="14"
+              prefWidth="330"
+              maxWidth="330"
+              minHeight="-Infinity"
+              prefHeight="-1"
+              maxHeight="-Infinity"
+              styleClass="facilityPopupCard">
+
+            <!-- TOP -->
+
+            <HBox alignment="CENTER_LEFT">
+
+                <Label text="RizGo"
+                       styleClass="facilityPopupBrand"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <Button text="×"
+                        onAction="#closeFacilityPopup"
+                        styleClass="facilityPopupClose"/>
+
+            </HBox>
+
+
+            <!-- TITLE -->
+
+            <Label fx:id="facilityPopupTitle"
+                   text="Facility"
+                   wrapText="true"
+                   styleClass="facilityPopupTitle"/>
+
+
+            <!-- DIVIDER -->
+
+            <Separator styleClass="facilityPopupSeparator"/>
+
+
+            <!-- DESCRIPTION -->
+
+            <Label fx:id="facilityPopupMessage"
+                   text="Facility information."
+                   wrapText="true"
+                   maxWidth="Infinity"
+                   styleClass="facilityPopupMessage"/>
+
+
+            <!-- OK -->
+
+            <Button text="OK"
+                    onAction="#closeFacilityPopup"
+                    maxWidth="Infinity"
+                    prefHeight="48"
+                    styleClass="facilityPopupButton"/>
+
+        </VBox>
+
+    </StackPane>
+
+</StackPane>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.rizgo.controllers.RoleSelectionController"
+            stylesheets="@../css/rizgo.css"
+            styleClass="roleSelectionRoot">
+
+    <center>
+
+        <VBox alignment="CENTER"
+              spacing="20"
+              maxWidth="Infinity"
+              maxHeight="Infinity">
+
+            <padding>
+                <Insets top="55"
+                        right="55"
+                        bottom="45"
+                        left="55"/>
+            </padding>
+
+
+            <!-- ================= RIZGO BRAND ================= -->
+
+            <Label text="RizGo"
+                   styleClass="roleLogo"/>
+
+            <Label text="Rizalians. Navigate. Discover."
+                   styleClass="roleTagline"/>
+
+
+            <Pane prefHeight="25"/>
+
+
+            <!-- ================= TITLE ================= -->
+
+            <Label text="Welcome to RizGo"
+                   styleClass="roleTitle"/>
+
+            <Label text="Select how you'll use RizGo"
+                   styleClass="roleSubtitle"/>
+
+
+            <Pane prefHeight="10"/>
+
+
+            <!-- ================= GUEST ================= -->
+
+            <Button onAction="#selectGuest"
+                    maxWidth="Infinity"
+                    prefHeight="95"
+                    styleClass="roleCard">
+
+                <graphic>
+
+                    <HBox alignment="CENTER_LEFT"
+                          spacing="20">
+
+                        <Label text="👤"
+                               styleClass="roleIcon"/>
+
+                        <VBox spacing="4">
+
+                            <Label text="GUEST"
+                                   styleClass="roleCardTitle"/>
+
+                            <Label text="Continue without an account"
+                                   styleClass="roleCardDescription"/>
+
+                        </VBox>
+
+                    </HBox>
+
+                </graphic>
+
+            </Button>
+
+
+            <!-- ================= STUDENT ================= -->
+
+            <Button onAction="#selectStudent"
+                    maxWidth="Infinity"
+                    prefHeight="95"
+                    styleClass="roleCard">
+
+                <graphic>
+
+                    <HBox alignment="CENTER_LEFT"
+                          spacing="20">
+
+                        <Label text="🎓"
+                               styleClass="roleIcon"/>
+
+                        <VBox spacing="4">
+
+                            <Label text="STUDENT"
+                                   styleClass="roleCardTitle"/>
+
+                            <Label text="Access your student account"
+                                   styleClass="roleCardDescription"/>
+
+                        </VBox>
+
+                    </HBox>
+
+                </graphic>
+
+            </Button>
+
+
+            <!-- ================= TEACHER ================= -->
+
+            <Button onAction="#selectTeacher"
+                    maxWidth="Infinity"
+                    prefHeight="95"
+                    styleClass="roleCard">
+
+                <graphic>
+
+                    <HBox alignment="CENTER_LEFT"
+                          spacing="20">
+
+                        <Label text="📚"
+                               styleClass="roleIcon"/>
+
+                        <VBox spacing="4">
+
+                            <Label text="TEACHER"
+                                   styleClass="roleCardTitle"/>
+
+                            <Label text="Access your teacher account"
+                                   styleClass="roleCardDescription"/>
+
+                        </VBox>
+
+                    </HBox>
+
+                </graphic>
+
+            </Button>
+
+
+            <!-- ================= SCHOOL STAFF ================= -->
+
+            <Button onAction="#selectStaff"
+                    maxWidth="Infinity"
+                    prefHeight="95"
+                    styleClass="roleCard">
+
+                <graphic>
+
+                    <HBox alignment="CENTER_LEFT"
+                          spacing="20">
+
+                        <Label text="🏫"
+                               styleClass="roleIcon"/>
+
+                        <VBox spacing="4">
+
+                            <Label text="SCHOOL STAFF"
+                                   styleClass="roleCardTitle"/>
+
+                            <Label text="Access your staff account"
+                                   styleClass="roleCardDescription"/>
+
+                        </VBox>
+
+                    </HBox>
+
+                </graphic>
+
+            </Button>
+
+
+            <Pane VBox.vgrow="ALWAYS"/>
+
+
+            <!-- ================= FOOTER ================= -->
+
+            <Label text="Rizal High School Campus Guide"
+                   styleClass="roleFooter"/>
+
+        </VBox>
+
+    </center>
+
+</BorderPane>

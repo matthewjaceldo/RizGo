@@ -1,0 +1,7065 @@
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #F5F8F6;
+}
+
+/* =========================================================
+   SPLASH SCREEN
+========================================================= */
+
+/* ======================================================
+   SPLASH SCREEN
+====================================================== */
+
+.splashRoot{
+
+    -fx-background-color:#F5F8F6;
+    -fx-alignment:center;
+
+}
+
+.splashLogo{
+
+    -fx-font-size:48px;
+    -fx-font-weight:bold;
+    -fx-text-fill:#0E8A57;
+
+}
+
+.subtitle{
+
+    -fx-font-size:18px;
+    -fx-text-fill:#555555;
+
+}
+
+.loading{
+
+    -fx-font-size:15px;
+    -fx-text-fill:#666666;
+
+}
+
+.progress-bar{
+
+    -fx-pref-height:12px;
+
+}
+
+.progress-bar .track{
+
+    -fx-background-color:#D8E7DD;
+    -fx-background-radius:20;
+
+}
+
+.progress-bar .bar{
+
+    -fx-background-color:#0E8A57;
+    -fx-background-radius:20;
+
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.header {
+    -fx-background-color: #ff0000;
+}
+
+.logo {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.pageTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.searchBox {
+    -fx-background-radius: 25;
+    -fx-font-size: 15px;
+    -fx-pref-height: 42;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.iconButton {
+    -fx-background-color: white;
+    -fx-background-radius: 50;
+    -fx-pref-width: 40;
+    -fx-pref-height: 40;
+}
+
+.greenButton {
+    -fx-background-color: #0E8A57;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-background-radius: 15;
+    -fx-pref-height: 40;
+}
+
+.greenButton:hover {
+    -fx-background-color: #087346;
+}
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.card {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-padding: 18;
+    -fx-spacing: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.15), 10, 0, 0, 5);
+}
+
+.cardTitle {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0E8A57;
+}
+
+.imagePlaceholder {
+    -fx-background-color: #D9D9D9;
+    -fx-background-radius: 15;
+}
+
+.mapCard {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-padding: 20;
+    -fx-pref-height: 280;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,.15), 10, 0, 0, 5);
+}
+
+.placeholderText {
+    -fx-font-size: 18px;
+    -fx-text-fill: #888888;
+}
+
+/* =========================================================
+   BOTTOM NAVIGATION
+========================================================= */
+
+.bottomBar {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-border-color: #DDDDDD;
+}
+
+.navButton {
+    -fx-background-color: transparent;
+    -fx-font-size: 20px;
+}
+/* =========================================
+   BUILDING INFORMATION
+   ========================================= */
+
+.building-content {
+    -fx-background-color: #F5F8F6;
+}
+
+.building-image {
+    -fx-background-color: #D9E5DE;
+    -fx-background-radius: 20px;
+    -fx-min-height: 200px;
+    -fx-pref-height: 200px;
+    -fx-max-height: 200px;
+}
+
+.infoLabel {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+    -fx-alignment: CENTER-LEFT;
+    -fx-text-alignment: LEFT;
+}
+
+
+.infoValue {
+    -fx-font-size: 16px;
+    -fx-text-fill: #222222;
+    -fx-wrap-text: true;
+    -fx-text-overflow: CLIP;
+    -fx-alignment: TOP-LEFT;
+    -fx-text-alignment: LEFT;
+}
+
+.favoriteButton {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-font-size: 22px;
+    -fx-pref-width: 45px;
+    -fx-pref-height: 40px;
+}
+
+.favoriteButton:hover {
+    -fx-background-color: #E8F5EE;
+}
+
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: #F5F8F6;
+}
+
+.content-scroll > .viewport {
+    -fx-background-color: #F5F8F6;
+}
+
+/* =========================
+   PROFILE
+   ========================= */
+
+.profileScroll {
+    -fx-background-color: #F5F8F6;
+    -fx-border-color: transparent;
+}
+
+.profileScroll > .viewport {
+    -fx-background-color: #F5F8F6;
+}
+
+.profileImage {
+    -fx-background-color: #D9E5DE;
+    -fx-background-radius: 60px;
+    -fx-min-width: 100px;
+    -fx-min-height: 100px;
+    -fx-max-width: 100px;
+    -fx-max-height: 100px;
+}
+
+.profileIcon {
+    -fx-font-size: 42px;
+}
+
+.fieldLabel {
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.profileScroll .text-field {
+    -fx-background-color: #F5F8F6;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+}
+
+.logoutButton {
+    -fx-background-color: #D9534F;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.logoutButton:hover {
+    -fx-background-color: #C9302C;
+}
+
+/* Building name */
+
+.buildingNameLarge {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0E8A57;
+    -fx-alignment: CENTER-LEFT;
+    -fx-text-alignment: LEFT;
+}
+
+
+/* Description */
+
+.buildingDescription {
+    -fx-font-size: 15px;
+    -fx-text-fill: #444444;
+    -fx-line-spacing: 3px;
+    -fx-alignment: TOP-LEFT;
+    -fx-text-alignment: LEFT;
+}
+
+
+/* Small information titles */
+
+.smallInfoTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #777777;
+}
+
+
+/* Small information values */
+
+.smallInfoValue {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+    -fx-alignment: TOP-LEFT;
+    -fx-text-alignment: LEFT;
+}
+
+
+/* Additional information */
+
+.additionalInfoText {
+    -fx-font-size: 14px;
+    -fx-text-fill: #444444;
+    -fx-line-spacing: 3px;
+    -fx-alignment: TOP-LEFT;
+    -fx-text-alignment: LEFT;
+}
+
+/* =========================
+MAP BUTTON
+========================= */
+
+.mapButton {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 200px;
+    -fx-pref-height: 200px;
+    -fx-font-size: 200px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.mapButton:hover {
+    -fx-background-color: #E8F5EE;
+    -fx-border-color: #0E8A57;
+}
+
+
+/* =========================
+CHAT BOTTOM
+========================= */
+
+.chatInputArea {
+    -fx-background-color: #F5F8F6;
+}
+
+
+/* =========================
+SUGGESTIONS
+========================= */
+
+.suggestionBox {
+    -fx-background-color: white;
+    -fx-background-radius: 15px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 15px;
+    -fx-padding: 10px;
+}
+
+.suggestionTitle {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.suggestionButton {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #D5D5D5;
+    -fx-border-radius: 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #333333;
+    -fx-pref-height: 35px;
+    -fx-padding: 5px 10px;
+}
+
+.suggestionButton:hover {
+    -fx-background-color: #E8F5EE;
+    -fx-border-color: #0E8A57;
+}
+
+
+/* =========================
+MESSAGE INPUT
+========================= */
+
+.messageInputContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 22px;
+    -fx-border-color: #DDDDDD;
+    -fx-border-radius: 22px;
+    -fx-padding: 3px 5px 3px 15px;
+}
+
+.messageField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+.messageField:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.sendButton {
+    -fx-background-color: #0E8A57;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-text-fill: white;
+    -fx-font-size: 17px;
+}
+
+.sendButton:hover {
+    -fx-background-color: #087346;
+}
+
+/* =========================
+   CHAT BUBBLES
+   ========================= */
+
+.chatBotBubble {
+    -fx-background-color: #EAF5EF;
+    -fx-background-radius: 14px;
+    -fx-padding: 10px 14px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #222222;
+}
+
+.chatUserBubble {
+    -fx-background-color: #10965E;
+    -fx-background-radius: 14px;
+    -fx-padding: 10px 14px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+
+/* =========================
+   QUICK QUESTIONS
+   ========================= */
+
+.quickQuestionBox {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-padding: 14px;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+.quickQuestionTitle {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+}
+
+.quickQuestionButton {
+    -fx-background-color: #F2F7F4;
+    -fx-background-radius: 10px;
+    -fx-border-color: #D8E8DF;
+    -fx-border-radius: 10px;
+
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 10px 12px;
+
+    -fx-cursor: hand;
+}
+
+.quickQuestionButton:hover {
+    -fx-background-color: #E4F3EA;
+}
+
+/* =========================================
+   MAP PREVIEW
+   ========================================= */
+
+.mapPreviewCard {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 16px;
+
+    -fx-padding: 8px;
+
+    -fx-alignment: center;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+.mapPreviewCard:hover {
+    -fx-background-color: #e1e1e1;
+}
+
+.mapHint {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777777;
+}
+
+/* =========================================
+   MAP PREVIEW
+   ========================================= */
+
+.mapPreviewCard {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 16px;
+    -fx-padding: 8px;
+    -fx-alignment: center;
+    -fx-cursor: hand;
+}
+
+.mapPreviewCard:hover {
+    -fx-background-color: #e2e2e2;
+}
+
+.mapHint {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777777;
+}
+
+
+/* =========================================
+   FULL MAP OVERLAY
+   ========================================= */
+
+.mapOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.75);
+    -fx-padding: 20px;
+}
+
+
+/* White map viewer */
+
+.fullMapContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 18px;
+    -fx-padding: 15px;
+}
+
+
+/* Map title */
+
+.fullMapTitle {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #10965E;
+}
+
+
+/* X button */
+
+.mapCloseButton {
+    -fx-background-color: #10965E;
+    -fx-text-fill: white;
+
+    -fx-background-radius: 50%;
+
+    -fx-min-width: 45px;
+    -fx-min-height: 45px;
+
+    -fx-pref-width: 45px;
+    -fx-pref-height: 45px;
+
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.mapCloseButton:hover {
+    -fx-background-color: #0B7D4D;
+}
+
+/* =========================================================
+   CAMPUS MAP IMAGE PREVIEW
+   ========================================================= */
+
+.mapPreviewCard {
+    -fx-background-color: #eeeeee;
+    -fx-background-radius: 16px;
+
+    -fx-padding: 8px;
+
+    -fx-alignment: center;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.08),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+
+.mapPreviewCard:hover {
+    -fx-background-color: #e1e1e1;
+}
+
+
+.mapHint {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777777;
+}
+
+
+/* =========================================================
+   FULL MAP OVERLAY
+   ========================================================= */
+
+.mapOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.72);
+    -fx-padding: 20px;
+}
+
+
+/* =========================================================
+   WHITE MAP VIEWER
+   ========================================================= */
+
+.fullMapContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+
+    -fx-padding: 15px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.20),
+            15,
+            0,
+            0,
+            4
+    );
+}
+
+
+/* =========================================================
+   LARGE MAP AREA
+   ========================================================= */
+
+.largeMapArea {
+    -fx-background-color: #f4f4f4;
+    -fx-background-radius: 14px;
+
+    -fx-padding: 10px;
+
+    -fx-alignment: center;
+}
+
+
+/* =========================================================
+   FULL MAP TITLE
+   ========================================================= */
+
+.fullMapTitle {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #10965E;
+}
+
+
+/* =========================================================
+   CLOSE X BUTTON
+   ========================================================= */
+
+.mapCloseButton {
+    -fx-background-color: #10965E;
+
+    -fx-text-fill: white;
+
+    -fx-background-radius: 50%;
+
+    -fx-min-width: 45px;
+    -fx-min-height: 45px;
+
+    -fx-pref-width: 45px;
+    -fx-pref-height: 45px;
+
+    -fx-max-width: 45px;
+    -fx-max-height: 45px;
+
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+
+.mapCloseButton:hover {
+    -fx-background-color: #0B7D4D;
+}
+
+/* =========================================================
+   NEW RIZGO DASHBOARD
+   ========================================================= */
+
+.dashboardRoot {
+    -fx-background-color: #FFF8F8;
+}
+
+
+/* ================= HEADER ================= */
+
+.dashboardHeader {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #FFE4E1 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.dashboardLogo {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.menuButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8B0000;
+    -fx-font-size: 22px;
+    -fx-cursor: hand;
+}
+
+.profileCircleButton {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 50%;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-font-size: 17px;
+    -fx-cursor: hand;
+}
+
+.profileCircleButton:hover {
+    -fx-background-color: #F08080;
+}
+
+.dashboardGreeting {
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.dashboardSubtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #777777;
+}
+
+
+/* ================= SEARCH ================= */
+
+.dashboardSearchContainer {
+    -fx-background-color: #FFF8F8;
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 4px 5px 4px 14px;
+}
+
+.searchIcon {
+    -fx-font-size: 17px;
+    -fx-text-fill: #8B0000;
+}
+
+.dashboardSearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 13px;
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+.dashboardSearchField:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.searchCircleButton {
+    -fx-background-color: #DC143C;
+    -fx-background-radius: 50%;
+
+    -fx-pref-width: 38px;
+    -fx-pref-height: 38px;
+
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+
+    -fx-max-width: 38px;
+    -fx-max-height: 38px;
+
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+
+    -fx-cursor: hand;
+}
+
+.searchCircleButton:hover {
+    -fx-background-color: #8B0000;
+}
+
+
+/* ================= SCROLL ================= */
+
+.dashboardScroll {
+    -fx-background-color: #FFF8F8;
+    -fx-border-color: transparent;
+}
+
+.dashboardScroll > .viewport {
+    -fx-background-color: #FFF8F8;
+}
+
+.dashboardScroll .corner {
+    -fx-background-color: #FFF8F8;
+}
+
+
+/* ================= SECTION TITLES ================= */
+
+.sectionLabel {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+
+.viewAllText {
+    -fx-font-size: 11px;
+    -fx-text-fill: #DC143C;
+}
+
+
+/* ================= QUICK ACCESS ================= */
+
+.quickAccessCard {
+    -fx-background-color: white;
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-pref-height: 95px;
+    -fx-padding: 10px;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.06),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+.quickAccessCard:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-border-color: #F08080;
+}
+
+.quickAccessIcon {
+    -fx-font-size: 24px;
+}
+
+.quickAccessText {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+    -fx-text-alignment: center;
+}
+
+
+/* ================= EXPLORE CARD ================= */
+
+.exploreCard {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #DC143C,
+            #8B0000
+    );
+
+    -fx-background-radius: 18px;
+    -fx-padding: 16px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            10,
+            0,
+            0,
+            3
+    );
+}
+
+.exploreTitle {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.exploreSubtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #FFE4E1;
+    -fx-max-width: 240px;
+}
+
+.explorePin {
+    -fx-font-size: 35px;
+}
+
+.dashboardMapPreview {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 14px;
+    -fx-padding: 4px;
+}
+
+
+/* ================= NORMAL CARD ================= */
+
+.dashboardCard {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 16px;
+
+    -fx-padding: 15px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.06),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+.cardIcon {
+    -fx-font-size: 28px;
+}
+
+.dashboardCardTitle {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.dashboardCardSubtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777777;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.primaryRedButton {
+    -fx-background-color: white;
+    -fx-background-radius: 18px;
+
+    -fx-text-fill: #8B0000;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+
+    -fx-pref-height: 38px;
+
+    -fx-cursor: hand;
+}
+
+.primaryRedButton:hover {
+    -fx-background-color: #FFE4E1;
+}
+
+.outlineRedButton {
+    -fx-background-color: #DC143C;
+    -fx-background-radius: 18px;
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+
+    -fx-pref-height: 38px;
+
+    -fx-cursor: hand;
+}
+
+.outlineRedButton:hover {
+    -fx-background-color: #8B0000;
+}
+
+
+/* ================= ANNOUNCEMENTS ================= */
+
+.announcementItem {
+    -fx-padding: 12px 4px;
+}
+
+.announcementIcon {
+    -fx-font-size: 22px;
+}
+
+.announcementTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.announcementDescription {
+    -fx-font-size: 10px;
+    -fx-text-fill: #777777;
+}
+
+.announcementArrow {
+    -fx-font-size: 22px;
+    -fx-text-fill: #CD5C5C;
+}
+
+
+/* ================= BOTTOM NAV ================= */
+
+.newBottomBar {
+    -fx-background-color: white;
+
+    -fx-padding: 7px 10px 9px 10px;
+
+    -fx-border-color: #FFE4E1 transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+}
+
+.bottomNavButton,
+.bottomNavButtonActive {
+    -fx-background-color: transparent;
+
+    -fx-pref-width: 75px;
+    -fx-pref-height: 48px;
+
+    -fx-font-size: 11px;
+    -fx-text-alignment: center;
+
+    -fx-cursor: hand;
+}
+
+.bottomNavButton {
+    -fx-text-fill: #888888;
+}
+
+.bottomNavButton:hover {
+    -fx-text-fill: #DC143C;
+}
+
+.bottomNavButtonActive {
+    -fx-text-fill: #DC143C;
+    -fx-font-weight: bold;
+}
+
+/* =========================================================
+   NEW RIZGO CAMPUS MAP
+   ========================================================= */
+
+.mapRoot {
+    -fx-background-color: #FFE4E1;
+}
+
+.mobilePage {
+    -fx-background-color: #FFF9F9;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0,
+            0,
+            4
+    );
+}
+
+
+/* ================= HEADER ================= */
+
+.mapHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.mapBackButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #111111;
+
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 0;
+    -fx-min-width: 50px;
+    -fx-pref-width: 50px;
+    -fx-max-width: 50px;
+
+    -fx-min-height: 50px;
+    -fx-pref-height: 50px;
+    -fx-max-height: 50px;
+
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+.mapBackButton:hover {
+    -fx-text-fill: #DC143C;
+}
+
+.mapPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.mapHeaderIcon {
+    -fx-font-size: 19px;
+    -fx-text-fill: #8B0000;
+}
+
+
+/* ================= SEARCH ================= */
+
+.mapSearchContainer {
+    -fx-background-color: #FFF8F8;
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 3px 12px;
+}
+
+.mapSearchIcon {
+    -fx-font-size: 17px;
+    -fx-text-fill: #777777;
+}
+
+.mapSearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 13px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+.mapSearchField:focused {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+
+/* ================= PAGE SCROLL ================= */
+
+.mapPageScroll {
+    -fx-background-color: #FFF9F9;
+    -fx-border-color: transparent;
+}
+
+.mapPageScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+.mapPageScroll .corner {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= MAIN MAP ================= */
+
+.mainMapContainer {
+    -fx-background-color: #E9E9E9;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-width: 0 0 1 0;
+
+    -fx-cursor: hand;
+}
+
+.mapPinContainer {
+    -fx-background-color: #DC143C;
+    -fx-background-radius: 10px;
+
+    -fx-padding: 6px 10px;
+
+    -fx-translate-y: -15px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.22),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+.mainMapPin {
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+.mapPinLabel {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+/* ================= MAP CONTROLS ================= */
+
+.mapControlButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 50%;
+
+    -fx-pref-width: 35px;
+    -fx-pref-height: 35px;
+
+    -fx-min-width: 35px;
+    -fx-min-height: 35px;
+
+    -fx-max-width: 35px;
+    -fx-max-height: 35px;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #333333;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.15),
+            6,
+            0,
+            0,
+            2
+    );
+}
+
+
+/* ================= SELECTED LOCATION ================= */
+
+.selectedBuildingCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 18px;
+
+    -fx-padding: 16px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 18px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            10,
+            0,
+            0,
+            3
+    );
+
+    -fx-margin: 0 16px 0 16px;
+}
+
+.selectedHeart {
+    -fx-text-fill: #DC143C;
+    -fx-font-size: 15px;
+}
+
+.selectedCardTitle {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.selectedDot {
+    -fx-text-fill: #DC143C;
+    -fx-font-size: 13px;
+}
+
+.selectedBuildingName {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.selectedInfoLabel {
+    -fx-font-size: 11px;
+    -fx-text-fill: #888888;
+}
+
+.selectedInfoValue {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+
+.selectedStatusValue {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #DC143C;
+}
+
+
+/* ================= PRIMARY MAP BUTTON ================= */
+
+.mapPrimaryButton {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 8px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 42px;
+
+    -fx-cursor: hand;
+}
+
+.mapPrimaryButton:hover {
+    -fx-background-color: #8B0000;
+}
+
+
+/* ================= LOCATIONS ================= */
+
+.mapSectionTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.mapSectionHint {
+    -fx-font-size: 10px;
+    -fx-text-fill: #999999;
+}
+
+.locationListButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 12px;
+
+    -fx-padding: 10px 12px;
+
+    -fx-pref-height: 62px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.locationListButton:hover {
+    -fx-background-color: #FFF0F0;
+    -fx-border-color: #F08080;
+}
+
+.locationListIcon {
+    -fx-font-size: 22px;
+}
+
+.locationListTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.locationListSubtitle {
+    -fx-font-size: 10px;
+    -fx-text-fill: #888888;
+}
+
+.locationArrow {
+    -fx-font-size: 22px;
+    -fx-text-fill: #CD5C5C;
+}
+
+
+/* =========================================================
+   FULL MAP OVERLAY
+   ========================================================= */
+
+.newMapOverlay {
+    -fx-background-color: rgba(0,0,0,0.72);
+    -fx-padding: 18px;
+}
+
+.newFullMapContainer {
+    -fx-background-color: white;
+
+    -fx-background-radius: 18px;
+
+    -fx-padding: 14px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.28),
+            18,
+            0,
+            0,
+            5
+    );
+}
+
+.newMapCloseButton {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 50%;
+
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 42px;
+    -fx-pref-height: 42px;
+
+    -fx-min-width: 42px;
+    -fx-min-height: 42px;
+
+    -fx-max-width: 42px;
+    -fx-max-height: 42px;
+
+    -fx-cursor: hand;
+}
+
+.newMapCloseButton:hover {
+    -fx-background-color: #8B0000;
+}
+
+.newFullMapTitle {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.fullMapScroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.fullMapScroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.newLargeMapArea {
+    -fx-background-color: #FFF5F5;
+    -fx-background-radius: 12px;
+    -fx-padding: 8px;
+}
+
+.appBackground {
+    -fx-background-color: #FFE4E1;
+    -fx-alignment: CENTER;
+}
+
+.dashboardRoot {
+    -fx-background-color: #FFF9F9;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0,
+            0,
+            4
+    );
+}
+
+.dashboardGreeting {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.dashboardLogo {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.primaryRedButton {
+    -fx-background-color: white;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #8B0000;
+
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 34px;
+
+    -fx-cursor: hand;
+}
+
+.outlineRedButton {
+    -fx-background-color: #DC143C;
+    -fx-background-radius: 18px;
+
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 34px;
+
+    -fx-cursor: hand;
+}
+
+/* ========================================================= */
+/* RIZGO CHATBOT                                             */
+/* ========================================================= */
+
+.chatbotPageRoot {
+    -fx-background-color: #FFF8F8;
+}
+
+
+/* ========================================================= */
+/* HEADER                                                    */
+/* ========================================================= */
+
+.chatbotHeader {
+    -fx-background-color: white;
+
+    -fx-border-color: transparent transparent #FFD6D6 transparent;
+    -fx-border-width: 0 0 1 0;
+
+    -fx-min-height: 110px;
+    -fx-pref-height: 110px;
+}
+
+
+/* TITLE */
+
+.chatbotPageTitle {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+
+/* BACK ARROW */
+
+.chatbotBackButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+
+    -fx-border-color: transparent;
+
+    -fx-font-size: 32px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #B00000;
+
+    -fx-cursor: hand;
+
+    -fx-min-width: 55px;
+    -fx-pref-width: 55px;
+    -fx-min-height: 55px;
+    -fx-pref-height: 55px;
+}
+
+.chatbotBackButton:hover {
+    -fx-background-color: #FFF0F0;
+}
+
+
+/* RESET */
+
+.chatbotResetButton {
+    -fx-background-color: transparent;
+    -fx-background-radius: 50;
+
+    -fx-border-color: transparent;
+
+    -fx-font-size: 30px;
+    -fx-text-fill: #B00000;
+
+    -fx-cursor: hand;
+
+    -fx-min-width: 55px;
+    -fx-pref-width: 55px;
+    -fx-min-height: 55px;
+    -fx-pref-height: 55px;
+}
+
+.chatbotResetButton:hover {
+    -fx-background-color: #FFF0F0;
+}
+
+
+/* ========================================================= */
+/* CHAT AREA                                                 */
+/* ========================================================= */
+
+.chatScroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.chatScroll > .viewport {
+    -fx-background-color: transparent;
+}
+
+.chatMessages {
+    -fx-background-color: transparent;
+    -fx-padding: 10px;
+}
+
+
+/* ========================================================= */
+/* BOT ICON                                                  */
+/* ========================================================= */
+
+.chatBotIcon {
+    -fx-font-size: 30px;
+
+    -fx-text-fill: #B00000;
+
+    -fx-min-width: 42px;
+    -fx-pref-width: 42px;
+
+    -fx-alignment: top-center;
+}
+
+
+/* ========================================================= */
+/* BOT BUBBLE                                                */
+/* ========================================================= */
+
+.botBubble {
+    -fx-background-color: white;
+
+    -fx-background-radius: 25px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 25px;
+
+    -fx-padding: 16px 20px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.05),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+
+.botTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+
+.botText {
+    -fx-font-size: 16px;
+    -fx-text-fill: #333333;
+}
+
+
+/* ========================================================= */
+/* USER MESSAGE                                              */
+/* ========================================================= */
+
+.userBubble {
+    -fx-background-color: #FFE8E8;
+
+    -fx-background-radius: 25px;
+
+    -fx-padding: 14px 20px;
+
+    -fx-max-width: 480px;
+}
+
+
+.userMessageText {
+    -fx-font-size: 16px;
+    -fx-text-fill: #B00000;
+}
+
+
+/* ========================================================= */
+/* SUGGESTIONS                                               */
+/* ========================================================= */
+
+.suggestionBox {
+    -fx-background-color: white;
+
+    -fx-background-radius: 25px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 25px;
+
+    -fx-padding: 18px;
+}
+
+
+.suggestionTitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #444444;
+}
+
+
+.suggestionButton {
+    -fx-background-color: #FFF8F8;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 13px 18px;
+
+    -fx-font-size: 15px;
+    -fx-text-fill: #B00000;
+
+    -fx-cursor: hand;
+}
+
+
+.suggestionButton:hover {
+    -fx-background-color: #FFEAEA;
+    -fx-border-color: #E60033;
+}
+
+
+/* ========================================================= */
+/* MESSAGE BAR                                               */
+/* ========================================================= */
+
+.chatMessageBar {
+    -fx-background-color: white;
+
+    -fx-background-radius: 30px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 30px;
+
+    -fx-padding: 7px 8px 7px 18px;
+}
+
+
+.chatMessageInput {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-font-size: 16px;
+
+    -fx-prompt-text-fill: #AAAAAA;
+
+    -fx-padding: 12px;
+}
+
+
+/* SEND BUTTON */
+
+.chatSendButton {
+    -fx-background-color: #E60033;
+
+    -fx-background-radius: 50;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+
+    -fx-min-width: 55px;
+    -fx-pref-width: 55px;
+    -fx-max-width: 55px;
+
+    -fx-min-height: 55px;
+    -fx-pref-height: 55px;
+    -fx-max-height: 55px;
+
+    -fx-cursor: hand;
+}
+
+
+.chatSendButton:hover {
+    -fx-background-color: #C4002B;
+}
+
+
+/* ========================================================= */
+/* DISCLAIMER                                                */
+/* ========================================================= */
+
+.chatDisclaimer {
+    -fx-font-size: 13px;
+    -fx-text-fill: #999999;
+    -fx-padding: 0 3px 5px 3px;
+}
+
+
+/* ========================================================= */
+/* BOTTOM NAVIGATION                                         */
+/* ========================================================= */
+
+.bottomNavigation {
+    -fx-background-color: white;
+
+    -fx-border-color: #FFD6D6 transparent transparent transparent;
+    -fx-border-width: 1 0 0 0;
+
+    -fx-padding: 10px 15px 10px 15px;
+
+    -fx-min-height: 85px;
+    -fx-pref-height: 85px;
+}
+
+
+.bottomNavButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #888888;
+
+    -fx-font-size: 13px;
+
+    -fx-cursor: hand;
+}
+
+
+.bottomNavButton:hover {
+    -fx-background-color: #FFF5F5;
+}
+
+
+.bottomNavActive {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #E60033;
+
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+
+.bottomNavIconActive {
+    -fx-text-fill: #E60033;
+}
+
+
+.bottomNavTextActive {
+    -fx-text-fill: #E60033;
+    -fx-font-weight: bold;
+}
+
+
+/* =========================================================
+   IMPORTANT CHATBOT SIZE FIX
+   ========================================================= */
+
+/*
+   Do NOT give the chatbot a fixed giant height.
+   The Stage/window should decide the available height.
+*/
+
+.chatbotRoot,
+.chatbotContent,
+.chatbotScroll,
+.chatbotMessageBox {
+    -fx-min-height: 0;
+}
+
+/* =========================================================
+   CHATBOT HEADER FIX
+   ========================================================= */
+
+.chatbotHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+
+    -fx-pref-height: 65px;
+}
+
+
+/* BACK BUTTON */
+
+.chatbotBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 0;
+
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+
+    -fx-cursor: hand;
+}
+
+.chatbotBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 20px;
+
+    -fx-text-fill: #DC143C;
+}
+
+
+/* TITLE */
+
+.chatbotPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* REFRESH */
+
+.chatbotRefreshIcon {
+    -fx-font-size: 21px;
+    -fx-text-fill: #8B0000;
+}
+
+/* =========================================================
+   BUILDING INFORMATION - NEW RIZGO RED UI
+   ========================================================= */
+
+.buildingRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= HEADER ================= */
+
+.buildingHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.buildingBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+
+    -fx-cursor: hand;
+}
+
+.buildingBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #DC143C;
+}
+
+.buildingPageTitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.buildingProfileButton {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 50%;
+
+    -fx-pref-width: 38px;
+    -fx-pref-height: 38px;
+
+    -fx-min-width: 38px;
+    -fx-min-height: 38px;
+
+    -fx-max-width: 38px;
+    -fx-max-height: 38px;
+
+    -fx-font-size: 14px;
+
+    -fx-cursor: hand;
+}
+
+.buildingProfileButton:hover {
+    -fx-background-color: #F08080;
+}
+
+
+/* ================= SCROLL ================= */
+
+.buildingScroll {
+    -fx-background-color: #FFF9F9;
+    -fx-border-color: transparent;
+}
+
+.buildingScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+.buildingScroll .corner {
+    -fx-background-color: #FFF9F9;
+}
+
+.buildingContent {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= HERO ================= */
+
+.buildingHeroCardNew {
+    -fx-background-color: white;
+
+    -fx-background-radius: 16px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 16px;
+
+    -fx-padding: 15px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.06),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+.buildingNameLargeNew {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.buildingDescriptionNew {
+    -fx-font-size: 11px;
+    -fx-text-fill: #555555;
+    -fx-line-spacing: 2px;
+}
+
+
+/* ================= INFORMATION CARDS ================= */
+
+.buildingInfoCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 15px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 15px;
+
+    -fx-padding: 14px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.05),
+            7,
+            0,
+            0,
+            2
+    );
+}
+
+.buildingSectionTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.buildingInfoLabel {
+    -fx-font-size: 9px;
+    -fx-text-fill: #888888;
+}
+
+.buildingInfoValue {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.buildingStatusValue {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #DC143C;
+}
+
+.buildingAdditionalText {
+    -fx-font-size: 10px;
+    -fx-text-fill: #555555;
+    -fx-line-spacing: 2px;
+}
+
+
+/* ================= MAP CARD ================= */
+
+.buildingMapCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 15px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 15px;
+
+    -fx-padding: 14px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.05),
+            7,
+            0,
+            0,
+            2
+    );
+}
+
+.buildingMapIcon {
+    -fx-font-size: 18px;
+}
+
+
+/* ================= DIRECTIONS ================= */
+
+.buildingDirectionsButton {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 9px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 38px;
+
+    -fx-cursor: hand;
+}
+
+.buildingDirectionsButton:hover {
+    -fx-background-color: #8B0000;
+}
+
+
+/* ================= BACK ================= */
+
+.buildingSecondaryButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 9px;
+
+    -fx-border-color: #CD5C5C;
+    -fx-border-radius: 9px;
+
+    -fx-text-fill: #8B0000;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 38px;
+
+    -fx-cursor: hand;
+}
+
+.buildingSecondaryButton:hover {
+    -fx-background-color: #FFE4E1;
+}
+
+/* =========================================================
+   PROFILE - NEW RIZGO RED UI
+   ========================================================= */
+
+.profileRootNew {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= HEADER ================= */
+
+.profileHeaderNew {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.profileBackButtonNew {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+
+    -fx-cursor: hand;
+}
+
+.profileBackButtonNew:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 20px;
+    -fx-text-fill: #DC143C;
+}
+
+.profilePageTitleNew {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* ================= SCROLL ================= */
+
+.profileScrollNew {
+    -fx-background-color: #FFF9F9;
+    -fx-border-color: transparent;
+}
+
+.profileScrollNew > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+.profileScrollNew .corner {
+    -fx-background-color: #FFF9F9;
+}
+
+.profileContentNew {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= AVATAR ================= */
+
+.profileAvatarNew {
+    -fx-background-color: #FFE4E1;
+
+    -fx-background-radius: 50%;
+
+    -fx-pref-width: 90px;
+    -fx-pref-height: 90px;
+
+    -fx-min-width: 90px;
+    -fx-min-height: 90px;
+
+    -fx-max-width: 90px;
+    -fx-max-height: 90px;
+
+    -fx-border-color: #F08080;
+    -fx-border-radius: 50%;
+}
+
+.profileAvatarIconNew {
+    -fx-font-size: 36px;
+}
+
+.profileNameTitleNew {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.profileRoleNew {
+    -fx-font-size: 10px;
+    -fx-text-fill: #888888;
+}
+
+
+/* ================= PROFILE CARD ================= */
+
+.profileCardNew {
+    -fx-background-color: white;
+
+    -fx-background-radius: 15px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 15px;
+
+    -fx-padding: 14px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.05),
+            7,
+            0,
+            0,
+            2
+    );
+}
+
+.profileSectionTitleNew {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+
+/* ================= FIELDS ================= */
+
+.profileFieldLabelNew {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+}
+
+.profileFieldNew {
+    -fx-background-color: #FFF5F5;
+
+    -fx-background-radius: 9px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 9px;
+
+    -fx-padding: 9px 10px;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #AAAAAA;
+}
+
+.profileFieldNew:focused {
+    -fx-border-color: #F08080;
+}
+
+
+/* ================= EDIT PROFILE ================= */
+
+.profilePrimaryButtonNew {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 9px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 38px;
+
+    -fx-cursor: hand;
+}
+
+.profilePrimaryButtonNew:hover {
+    -fx-background-color: #8B0000;
+}
+
+
+/* ================= LOGOUT ================= */
+
+.profileLogoutButtonNew {
+    -fx-background-color: white;
+
+    -fx-background-radius: 9px;
+
+    -fx-border-color: #CD5C5C;
+    -fx-border-radius: 9px;
+
+    -fx-text-fill: #8B0000;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 38px;
+
+    -fx-cursor: hand;
+}
+
+.profileLogoutButtonNew:hover {
+    -fx-background-color: #FFE4E1;
+}
+
+/* =========================================================
+   PROFILE HEADER FIX
+   ========================================================= */
+
+.profileHeaderNew {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+
+    -fx-pref-height: 68px;
+}
+
+
+/* BACK BUTTON */
+
+.profileBackButtonNew {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 0;
+
+    -fx-pref-width: 40px;
+    -fx-pref-height: 40px;
+
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+
+    -fx-alignment: CENTER;
+
+    -fx-cursor: hand;
+}
+
+.profileBackButtonNew:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 20px;
+
+    -fx-text-fill: #DC143C;
+}
+
+
+/* PROFILE TITLE */
+
+.profilePageTitleNew {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+/* =========================================================
+   BUILDING PAGE HEADER
+   ========================================================= */
+
+.header {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #ffd8d8 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.pageTitle {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #171717;
+}
+
+.iconButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #171717;
+    -fx-cursor: hand;
+    -fx-padding: 5px 10px;
+}
+
+.iconButton:hover {
+    -fx-text-fill: #e8103d;
+}
+
+.profileHeaderButton {
+    -fx-background-color: #ffe1de;
+    -fx-background-radius: 100px;
+
+    -fx-min-width: 60px;
+    -fx-min-height: 60px;
+    -fx-pref-width: 60px;
+    -fx-pref-height: 60px;
+    -fx-max-width: 60px;
+    -fx-max-height: 60px;
+
+    -fx-font-size: 22px;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* =========================================================
+   LOGIN - NEW RIZGO RED UI
+   ========================================================= */
+
+.loginRootNew {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= BRAND ================= */
+
+.loginLogoNew {
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.loginSubtitleNew {
+    -fx-font-size: 11px;
+    -fx-text-fill: #777777;
+}
+
+
+/* ================= LOGIN CARD ================= */
+
+.loginCardNew {
+    -fx-background-color: white;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 18px;
+
+    -fx-padding: 22px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            12,
+            0,
+            0,
+            3
+    );
+}
+
+.loginTitleNew {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.loginDescriptionNew {
+    -fx-font-size: 10px;
+    -fx-text-fill: #888888;
+}
+
+
+/* ================= FIELDS ================= */
+
+.loginFieldLabelNew {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.loginFieldNew {
+    -fx-background-color: #FFF5F5;
+
+    -fx-background-radius: 10px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 10px;
+
+    -fx-padding: 10px 11px;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #AAAAAA;
+}
+
+.loginFieldNew:focused {
+    -fx-border-color: #F08080;
+}
+
+
+/* ================= LOGIN BUTTON ================= */
+
+.loginPrimaryButtonNew {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 10px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 40px;
+
+    -fx-cursor: hand;
+}
+
+.loginPrimaryButtonNew:hover {
+    -fx-background-color: #8B0000;
+}
+
+
+/* ================= LINKS ================= */
+
+.loginLinkNew {
+    -fx-text-fill: #DC143C;
+
+    -fx-font-size: 10px;
+
+    -fx-border-color: transparent;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.loginLinkNew:hover {
+    -fx-text-fill: #8B0000;
+    -fx-underline: true;
+}
+
+.loginBottomTextNew {
+    -fx-font-size: 10px;
+    -fx-text-fill: #777777;
+}
+
+/* =========================================================
+   RIZGO SIDE MENU
+   ========================================================= */
+
+
+/* ================= DARK OVERLAY ================= */
+
+.sideMenuOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.32);
+}
+
+
+/* ================= MAIN PANEL ================= */
+
+.sideMenuPanel {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #8B0000,
+            #A60016
+    );
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.30),
+            18,
+            0,
+            4,
+            0
+    );
+}
+
+
+/* ================= HEADER ================= */
+
+.sideMenuHeader {
+    -fx-background-color: transparent;
+}
+
+.sideMenuTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.sideMenuCloseButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 25px;
+    -fx-font-weight: normal;
+
+    -fx-pref-width: 35px;
+    -fx-pref-height: 35px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.sideMenuCloseButton:hover {
+    -fx-background-color: rgba(255,255,255,0.15);
+    -fx-background-radius: 50%;
+}
+
+
+/* ================= ITEMS CONTAINER ================= */
+
+.sideMenuItems {
+    -fx-background-color: transparent;
+}
+
+
+/* ================= NORMAL ITEM ================= */
+
+.sideMenuItem {
+    -fx-background-color: transparent;
+
+    -fx-background-radius: 7px;
+
+    -fx-border-color: transparent;
+
+    -fx-pref-height: 42px;
+
+    -fx-padding: 7px 11px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.sideMenuItem:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+
+/* ================= ACTIVE HOME ================= */
+
+.sideMenuItemActive {
+    -fx-background-color: rgba(255,255,255,0.16);
+
+    -fx-background-radius: 7px;
+
+    -fx-border-color: transparent;
+
+    -fx-pref-height: 42px;
+
+    -fx-padding: 7px 11px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+
+/* ================= ICONS ================= */
+
+.sideMenuIcon {
+    -fx-font-size: 16px;
+    -fx-text-fill: white;
+
+    -fx-min-width: 24px;
+    -fx-pref-width: 24px;
+}
+
+
+/* ================= TEXT ================= */
+
+.sideMenuText {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+/* ================= FOOTER ================= */
+
+.sideMenuFooter {
+    -fx-border-color:
+            rgba(255,255,255,0.15)
+            transparent
+            transparent
+            transparent;
+
+    -fx-border-width: 1 0 0 0;
+}
+
+.sideMenuFooterLogo {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.sideMenuFooterText {
+    -fx-font-size: 9px;
+    -fx-text-fill: rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   SPLASH / LOADING SCREEN - NEW RIZGO UI
+   ========================================================= */
+
+.splashBackground {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #8B0000,
+            #DC143C
+    );
+
+    -fx-alignment: CENTER;
+}
+
+
+/* ================= MAIN PANEL ================= */
+
+.splashPanel {
+    -fx-background-color: transparent;
+}
+
+
+/* ================= LOGO ================= */
+
+.splashLogoNew {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.splashTaglineNew {
+    -fx-font-size: 12px;
+    -fx-text-fill: #FFE4E1;
+}
+
+
+/* ================= LOADING TEXT ================= */
+
+.splashLoadingTextNew {
+    -fx-font-size: 10px;
+    -fx-text-fill: #FFE4E1;
+}
+
+
+/* ================= FOOTER ================= */
+
+.splashFooterNew {
+    -fx-font-size: 9px;
+    -fx-text-fill: rgba(255,255,255,0.75);
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.splashProgressNew {
+    -fx-accent: white;
+}
+
+.splashProgressNew > .track {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-background-radius: 10px;
+
+    -fx-pref-height: 8px;
+}
+
+.splashProgressNew > .bar {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+
+    -fx-background-insets: 0;
+}
+
+/* ========================================================= */
+/* OFFICES PAGE                                              */
+/* ========================================================= */
+
+.officeSearch {
+    -fx-background-color: #fffafa;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: #ffd6d6;
+    -fx-border-width: 1.5;
+    -fx-padding: 12 18 12 18;
+
+    -fx-font-size: 15px;
+    -fx-text-fill: #222222;
+
+    -fx-pref-height: 50px;
+}
+
+
+.officeCard {
+    -fx-background-color: white;
+
+    -fx-border-color: #ffd6d6;
+    -fx-border-width: 1.3;
+
+    -fx-background-radius: 18;
+    -fx-border-radius: 18;
+
+    -fx-padding: 15 16 15 16;
+
+    -fx-pref-height: 82px;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-cursor: hand;
+}
+
+
+.officeCard:hover {
+    -fx-background-color: #fff5f5;
+    -fx-border-color: #e8113f;
+}
+
+
+.officeCard .graphic {
+    -fx-pref-width: 350px;
+}
+
+
+.officeIcon {
+    -fx-font-size: 25px;
+    -fx-text-fill: #b00020;
+
+    -fx-min-width: 35px;
+    -fx-pref-width: 35px;
+}
+
+
+.officeName {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #161616;
+}
+
+
+.officeLocation {
+    -fx-font-size: 13px;
+    -fx-text-fill: #8d8585;
+}
+
+
+.officeArrow {
+    -fx-font-size: 25px;
+    -fx-text-fill: #e8113f;
+}
+
+.splashProgressNew {
+    -fx-accent: white;
+}
+
+.splashProgressNew > .track {
+    -fx-background-color: rgba(255,255,255,0.25);
+    -fx-background-radius: 10px;
+    -fx-pref-height: 8px;
+}
+
+.splashProgressNew > .bar {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-background-insets: 0;
+}
+
+/* =========================================================
+   FACILITIES PAGE
+   ========================================================= */
+
+.facilitiesRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.facilitiesHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.facilitiesBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.facilitiesBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.facilitiesPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* SEARCH */
+
+.facilitiesSearchContainer {
+    -fx-background-color: #FFF7F7;
+
+    -fx-background-radius: 20px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 20px;
+
+    -fx-padding: 3px 10px;
+}
+
+.facilitiesSearchIcon {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777777;
+}
+
+.facilitiesSearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+
+/* SCROLL */
+
+.facilitiesScroll {
+    -fx-background-color: #FFF9F9;
+    -fx-border-color: transparent;
+}
+
+.facilitiesScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* FACILITY CARD */
+
+.facilityCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 12px;
+
+    -fx-pref-height: 58px;
+
+    -fx-padding: 8px 11px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.facilityCard:hover {
+    -fx-background-color: #FFF0F0;
+    -fx-border-color: #F08080;
+}
+
+.facilityIcon {
+    -fx-font-size: 18px;
+
+    -fx-min-width: 30px;
+}
+
+.facilityName {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.facilitySubtitle {
+    -fx-font-size: 9px;
+    -fx-text-fill: #888888;
+}
+
+.facilityArrow {
+    -fx-font-size: 18px;
+    -fx-text-fill: #CD5C5C;
+}
+
+/* =========================================================
+   SERVICES PAGE
+   ========================================================= */
+
+.servicesRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.servicesHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.servicesBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.servicesBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.servicesPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* SEARCH */
+
+.servicesSearchContainer {
+    -fx-background-color: #FFF7F7;
+
+    -fx-background-radius: 20px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 20px;
+
+    -fx-padding: 3px 10px;
+}
+
+.servicesSearchIcon {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777777;
+}
+
+.servicesSearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+
+/* SCROLL */
+
+.servicesScroll {
+    -fx-background-color: #FFF9F9;
+    -fx-border-color: transparent;
+}
+
+.servicesScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* CARDS */
+
+.serviceCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 12px;
+
+    -fx-pref-height: 58px;
+
+    -fx-padding: 8px 11px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.serviceCard:hover {
+    -fx-background-color: #FFF0F0;
+    -fx-border-color: #F08080;
+}
+
+.serviceIcon {
+    -fx-font-size: 18px;
+    -fx-min-width: 30px;
+}
+
+.serviceName {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.serviceSubtitle {
+    -fx-font-size: 9px;
+    -fx-text-fill: #888888;
+}
+
+.serviceArrow {
+    -fx-font-size: 18px;
+    -fx-text-fill: #CD5C5C;
+}
+
+/* =========================================================
+   DIRECTORY PAGE
+   ========================================================= */
+
+.directoryRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.directoryHeader {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #FFE4E1 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.directoryBackButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.directoryBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.directoryPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* SEARCH */
+
+.directorySearchContainer {
+    -fx-background-color: #FFF7F7;
+    -fx-background-radius: 20px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 20px;
+
+    -fx-padding: 3px 10px;
+}
+
+.directorySearchIcon {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777777;
+}
+
+.directorySearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+
+/* CONTENT */
+
+.directoryContent {
+    -fx-background-color: #FFF9F9;
+}
+
+.directoryScroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.directoryScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* FILTER BUTTON */
+
+.directoryFilter {
+    -fx-background-color: white;
+
+    -fx-background-radius: 16px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 16px;
+
+    -fx-text-fill: #8B0000;
+
+    -fx-font-size: 9px;
+
+    -fx-padding: 6px 10px;
+
+    -fx-cursor: hand;
+}
+
+.directoryFilterActive {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 16px;
+
+    -fx-border-color: #DC143C;
+    -fx-border-radius: 16px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 6px 10px;
+
+    -fx-cursor: hand;
+}
+
+
+/* DIRECTORY CARD */
+
+.directoryCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 12px;
+
+    -fx-pref-height: 58px;
+
+    -fx-padding: 8px 11px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.directoryCard:hover {
+    -fx-background-color: #FFF0F0;
+    -fx-border-color: #F08080;
+}
+
+.directoryIcon {
+    -fx-font-size: 18px;
+    -fx-min-width: 30px;
+}
+
+.directoryName {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.directoryCategory {
+    -fx-font-size: 9px;
+    -fx-text-fill: #888888;
+}
+
+.directoryArrow {
+    -fx-font-size: 18px;
+    -fx-text-fill: #CD5C5C;
+}
+
+/* =========================================================
+   ANNOUNCEMENTS PAGE
+   ========================================================= */
+
+.announcementsRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.announcementsHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.announcementsBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.announcementsBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+
+    -fx-text-fill: #DC143C;
+}
+
+.announcementsPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #222222;
+}
+
+
+/* ================= CONTENT ================= */
+
+.announcementsContent {
+    -fx-background-color: #FFF9F9;
+}
+
+.announcementsScroll {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+}
+
+.announcementsScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= FILTERS ================= */
+
+.announcementFilter {
+    -fx-background-color: white;
+
+    -fx-background-radius: 16px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 16px;
+
+    -fx-text-fill: #8B0000;
+
+    -fx-font-size: 9px;
+
+    -fx-padding: 6px 11px;
+
+    -fx-cursor: hand;
+}
+
+.announcementFilterActive {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 16px;
+
+    -fx-border-color: #DC143C;
+    -fx-border-radius: 16px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 9px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 6px 11px;
+
+    -fx-cursor: hand;
+}
+
+
+/* ================= ANNOUNCEMENT CARD ================= */
+
+.announcementPageCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 13px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.04),
+            5,
+            0,
+            0,
+            1
+    );
+}
+
+.announcementPageIcon {
+    -fx-font-size: 20px;
+}
+
+.announcementPageTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #222222;
+}
+
+.announcementPageDescription {
+    -fx-font-size: 10px;
+
+    -fx-text-fill: #555555;
+
+    -fx-line-spacing: 2px;
+}
+
+.announcementPageDate {
+    -fx-font-size: 9px;
+
+    -fx-text-fill: #999999;
+}
+
+
+/* ================= BADGES ================= */
+
+.announcementNoticeBadge {
+    -fx-background-color: #FFE4E1;
+
+    -fx-background-radius: 10px;
+
+    -fx-padding: 2px 7px;
+
+    -fx-font-size: 8px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #8B0000;
+}
+
+.announcementUpdateBadge {
+    -fx-background-color: #FFF0F0;
+
+    -fx-background-radius: 10px;
+
+    -fx-padding: 2px 7px;
+
+    -fx-font-size: 8px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #CD5C5C;
+}
+
+.announcementEventBadge {
+    -fx-background-color: #DC143C;
+
+    -fx-background-radius: 10px;
+
+    -fx-padding: 2px 7px;
+
+    -fx-font-size: 8px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: white;
+}
+
+/* =========================================================
+   EVENTS PAGE
+   ========================================================= */
+
+.eventsRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.eventsHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.eventsBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.eventsBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.eventsPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* ================= SEARCH ================= */
+
+.eventsSearchContainer {
+    -fx-background-color: #FFF7F7;
+
+    -fx-background-radius: 20px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 20px;
+
+    -fx-padding: 3px 10px;
+}
+
+.eventsSearchIcon {
+    -fx-font-size: 14px;
+    -fx-text-fill: #777777;
+}
+
+.eventsSearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #999999;
+}
+
+
+/* ================= SCROLL ================= */
+
+.eventsScroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.eventsScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= EVENT CARD ================= */
+
+.eventCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 13px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.04),
+            5,
+            0,
+            0,
+            1
+    );
+}
+
+.eventCard:hover {
+    -fx-background-color: #FFF5F5;
+    -fx-border-color: #F08080;
+}
+
+.eventIcon {
+    -fx-font-size: 21px;
+}
+
+.eventTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #222222;
+}
+
+.eventType {
+    -fx-font-size: 9px;
+
+    -fx-text-fill: #CD5C5C;
+}
+
+.eventDescription {
+    -fx-font-size: 10px;
+
+    -fx-text-fill: #555555;
+
+    -fx-line-spacing: 2px;
+}
+
+.eventMeta {
+    -fx-font-size: 9px;
+
+    -fx-text-fill: #888888;
+}
+
+.eventArrow {
+    -fx-font-size: 18px;
+
+    -fx-text-fill: #DC143C;
+}
+
+/* =========================================================
+   EMERGENCY PAGE
+   ========================================================= */
+
+.emergencyRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.emergencyHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.emergencyBackButton {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.emergencyBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.emergencyPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* ================= SCROLL ================= */
+
+.emergencyScroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.emergencyScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= BANNER ================= */
+
+.emergencyBanner {
+    -fx-background-color: linear-gradient(
+            to right,
+            #8B0000,
+            #DC143C
+    );
+
+    -fx-background-radius: 14px;
+
+    -fx-padding: 16px;
+}
+
+.emergencyBannerTitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: white;
+}
+
+.emergencyBannerText {
+    -fx-font-size: 10px;
+
+    -fx-text-fill: #FFE4E1;
+
+    -fx-line-spacing: 2px;
+}
+
+
+/* ================= EMERGENCY CARD ================= */
+
+.emergencyCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 12px;
+
+    -fx-pref-height: 60px;
+
+    -fx-padding: 9px 11px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.emergencyCard:hover {
+    -fx-background-color: #FFF0F0;
+    -fx-border-color: #F08080;
+}
+
+.emergencyIcon {
+    -fx-font-size: 19px;
+
+    -fx-min-width: 30px;
+}
+
+.emergencyCardTitle {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #222222;
+}
+
+.emergencyCardSubtitle {
+    -fx-font-size: 9px;
+
+    -fx-text-fill: #888888;
+}
+
+.emergencyArrow {
+    -fx-font-size: 18px;
+
+    -fx-text-fill: #DC143C;
+}
+
+
+/* ================= INFORMATION CARD ================= */
+
+.emergencyInfoCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 14px;
+}
+
+.emergencySectionTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #222222;
+}
+
+.emergencyInfoText {
+    -fx-font-size: 10px;
+
+    -fx-text-fill: #555555;
+
+    -fx-line-spacing: 2px;
+}
+
+/* =========================================================
+   ABOUT RIZGO PAGE
+   ========================================================= */
+
+.aboutRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.aboutHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.aboutBackButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.aboutBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.aboutPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* ================= SCROLL ================= */
+
+.aboutScroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.aboutScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= HERO ================= */
+
+.aboutHeroCard {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #8B0000,
+            #DC143C
+    );
+
+    -fx-background-radius: 16px;
+
+    -fx-padding: 24px 18px;
+}
+
+.aboutLogo {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.aboutTagline {
+    -fx-font-size: 10px;
+    -fx-text-fill: #FFE4E1;
+}
+
+.aboutHeroDescription {
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+}
+
+
+/* ================= CARDS ================= */
+
+.aboutCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 14px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.04),
+            5,
+            0,
+            0,
+            1
+    );
+}
+
+.aboutSectionTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.aboutBodyText {
+    -fx-font-size: 10px;
+    -fx-text-fill: #555555;
+    -fx-line-spacing: 2px;
+}
+
+.aboutFeatureText {
+    -fx-font-size: 10px;
+    -fx-text-fill: #444444;
+}
+
+.aboutInfoTitle {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+
+/* ================= VERSION ================= */
+
+.aboutVersionCard {
+    -fx-background-color: #FFF0F0;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 14px;
+}
+
+.aboutVersionTitle {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.aboutVersionText {
+    -fx-font-size: 9px;
+    -fx-text-fill: #777777;
+}
+
+/* =========================================================
+   SETTINGS PAGE
+   ========================================================= */
+
+.settingsRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.settingsHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFE4E1
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.settingsBackButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+
+    -fx-pref-width: 36px;
+    -fx-pref-height: 36px;
+
+    -fx-padding: 0;
+
+    -fx-cursor: hand;
+}
+
+.settingsBackButton:hover {
+    -fx-background-color: #FFE4E1;
+    -fx-background-radius: 18px;
+    -fx-text-fill: #DC143C;
+}
+
+.settingsPageTitle {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* ================= SCROLL ================= */
+
+.settingsScroll {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.settingsScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= CARD ================= */
+
+.settingsCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 13px;
+}
+
+.settingsSectionTitle {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+
+/* ================= ROW ================= */
+
+.settingsRow {
+    -fx-padding: 10px 3px;
+}
+
+.settingsButtonRow {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-padding: 10px 3px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+}
+
+.settingsButtonRow:hover {
+    -fx-background-color: #FFF5F5;
+    -fx-background-radius: 8px;
+}
+
+.settingsIcon {
+    -fx-font-size: 17px;
+
+    -fx-min-width: 28px;
+}
+
+.settingsRowTitle {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.settingsRowSubtitle {
+    -fx-font-size: 8px;
+    -fx-text-fill: #888888;
+}
+
+.settingsArrow {
+    -fx-font-size: 18px;
+    -fx-text-fill: #CD5C5C;
+}
+
+
+/* ================= COMBO BOX ================= */
+
+.settingsComboBox {
+    -fx-background-color: #FFF5F5;
+
+    -fx-background-radius: 8px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 8px;
+
+    -fx-font-size: 9px;
+}
+
+
+/* ================= CHECKBOX ================= */
+
+.settingsCheckBox {
+    -fx-font-size: 10px;
+}
+
+
+/* ================= VERSION ================= */
+
+.settingsVersion {
+    -fx-padding: 10px;
+}
+
+.settingsVersionTitle {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8B0000;
+}
+
+.settingsVersionText {
+    -fx-font-size: 8px;
+    -fx-text-fill: #999999;
+}
+
+/* =========================================================
+   DASHBOARD QUICK ACCESS FIX
+   ========================================================= */
+
+.quickAccessButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-border-width: 1px;
+
+    -fx-pref-height: 92px;
+
+    -fx-padding: 12px;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.05),
+            6,
+            0,
+            0,
+            2
+    );
+}
+
+.quickAccessButton:hover {
+    -fx-background-color: #FFF5F5;
+    -fx-border-color: #F08080;
+}
+
+.quickAccessIcon {
+    -fx-font-size: 24px;
+    -fx-text-fill: #DC143C;
+}
+
+.quickAccessText {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* =========================================================
+   DASHBOARD SECTION TITLE
+   ========================================================= */
+
+.sectionTitle {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* =========================================================
+   EXPLORE CAMPUS
+   ========================================================= */
+
+.exploreCampusCard {
+    -fx-background-color: linear-gradient(
+            to bottom right,
+            #8B0000,
+            #DC143C
+    );
+
+    -fx-background-radius: 18px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.10),
+            10,
+            0,
+            0,
+            3
+    );
+}
+
+.exploreTitle {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.exploreSubtitle {
+    -fx-font-size: 10px;
+    -fx-text-fill: #FFE4E1;
+}
+
+.exploreIcon {
+    -fx-font-size: 26px;
+    -fx-text-fill: white;
+}
+
+.dashboardMapPreview {
+    -fx-background-color: rgba(255,255,255,0.13);
+
+    -fx-background-radius: 14px;
+
+    -fx-padding: 8px;
+}
+
+.exploreButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 20px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #8B0000;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 40px;
+
+    -fx-cursor: hand;
+}
+
+.exploreButton:hover {
+    -fx-background-color: #FFE4E1;
+}
+
+/* =========================================================
+   DASHBOARD ANNOUNCEMENT CARD - FIXED SIZE
+   ========================================================= */
+
+.announcementCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 12px 14px;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-cursor: hand;
+
+    -fx-pref-height: 95px;
+    -fx-min-height: 95px;
+    -fx-max-height: 95px;
+}
+
+.announcementCard:hover {
+    -fx-background-color: #FFF5F5;
+    -fx-border-color: #F08080;
+}
+
+.announcementCard > .graphic {
+    -fx-max-width: Infinity;
+}
+
+.announcementIcon {
+    -fx-font-size: 20px;
+    -fx-text-fill: #DC143C;
+
+    -fx-min-width: 32px;
+    -fx-pref-width: 32px;
+}
+
+.announcementTitle {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+.announcementDescription {
+    -fx-font-size: 9px;
+    -fx-text-fill: #777777;
+}
+
+.announcementDate {
+    -fx-font-size: 8px;
+    -fx-text-fill: #999999;
+}
+
+.announcementArrow {
+    -fx-font-size: 18px;
+    -fx-text-fill: #CD5C5C;
+}
+
+/* =========================================================
+   VIEW ALL
+   ========================================================= */
+
+.viewAllButton {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #DC143C;
+
+    -fx-font-size: 10px;
+
+    -fx-cursor: hand;
+}
+
+.viewAllButton:hover {
+    -fx-text-fill: #8B0000;
+}
+
+
+/* =========================================================
+   BOTTOM NAVIGATION FIX
+   ========================================================= */
+
+.bottomNavigation {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            #FFE4E1
+            transparent
+            transparent
+            transparent;
+
+    -fx-border-width: 1 0 0 0;
+
+    -fx-padding: 7px 10px;
+}
+
+.bottomNavButton {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #888888;
+
+    -fx-font-size: 10px;
+
+    -fx-padding: 4px 6px;
+
+    -fx-cursor: hand;
+}
+
+.bottomNavButton .label {
+    -fx-text-fill: #888888;
+}
+
+.bottomNavActive {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #DC143C;
+
+    -fx-font-size: 10px;
+
+    -fx-padding: 4px 6px;
+}
+
+.bottomNavActive .label {
+    -fx-text-fill: #DC143C;
+    -fx-font-weight: bold;
+}
+
+/* =========================================================
+   SIDE MENU - FORCE RED PANEL
+   ========================================================= */
+
+.sideMenu {
+    -fx-background-color: #B0000B;
+
+    -fx-border-color: #B0000B;
+    -fx-border-width: 0 1 0 0;
+
+    -fx-pref-width: 275px;
+    -fx-min-width: 275px;
+    -fx-max-width: 275px;
+
+    -fx-fill-width: true;
+}
+
+
+/* =========================================================
+   SIDE MENU HEADER
+   ========================================================= */
+
+.sideMenuHeader {
+    -fx-background-color: #B0000B;
+}
+
+.sideMenuTitle {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.sideMenuClose {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+
+    -fx-cursor: hand;
+}
+
+.sideMenuClose:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+
+/* =========================================================
+   NORMAL MENU ITEM
+   ========================================================= */
+
+.sideMenuItem {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-padding: 14px 20px;
+
+    -fx-background-radius: 10px;
+
+    -fx-cursor: hand;
+}
+
+
+/* Prevent JavaFX button text from becoming dark */
+
+.sideMenuItem .text {
+    -fx-fill: white;
+}
+
+
+/* HOVER */
+
+.sideMenuItem:hover {
+    -fx-background-color: rgba(255,255,255,0.12);
+}
+
+
+/* =========================================================
+   ACTIVE MENU ITEM
+   ========================================================= */
+
+.sideMenuItemActive {
+    -fx-background-color: rgba(255,255,255,0.18);
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER-LEFT;
+
+    -fx-padding: 14px 20px;
+
+    -fx-background-radius: 10px;
+
+    -fx-cursor: hand;
+}
+
+.sideMenuItemActive .text {
+    -fx-fill: white;
+}
+
+
+/* =========================================================
+   MENU FOOTER
+   ========================================================= */
+
+.sideMenuFooter {
+    -fx-background-color: #B0000B;
+
+    -fx-border-color: rgba(255,255,255,0.20)
+    transparent
+    transparent
+    transparent;
+
+    -fx-border-width: 1 0 0 0;
+}
+
+.sideMenuFooterLogo {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.sideMenuFooterText {
+    -fx-font-size: 10px;
+    -fx-text-fill: rgba(255,255,255,0.80);
+}
+
+
+/* =========================================================
+   DARK BACKGROUND OVERLAY
+   ========================================================= */
+
+.menuOverlay {
+    -fx-background-color: rgba(0,0,0,0.35);
+}
+
+/* =========================================================
+   CAMPUS MAP IMAGE
+   ========================================================= */
+
+.mapContainer {
+    -fx-background-color: white;
+
+    -fx-background-radius: 14px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 14px;
+
+    -fx-padding: 8px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            8,
+            0,
+            0,
+            2
+    );
+}
+
+
+.mapControlButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 50px;
+
+    -fx-border-color: #FFE4E1;
+    -fx-border-radius: 50px;
+
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #222222;
+
+    -fx-pref-width: 42px;
+    -fx-pref-height: 42px;
+
+    -fx-min-width: 42px;
+    -fx-min-height: 42px;
+
+    -fx-max-width: 42px;
+    -fx-max-height: 42px;
+
+    -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.10),
+            6,
+            0,
+            0,
+            2
+    );
+}
+
+
+.mapControlButton:hover {
+    -fx-background-color: #FFE4E1;
+
+    -fx-text-fill: #DC143C;
+}
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+.loginPageRoot {
+    -fx-background-color: #FFF8F8;
+}
+
+
+.loginCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFDADA;
+    -fx-border-radius: 22px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.08),
+            12,
+            0,
+            0,
+            4
+    );
+}
+
+
+/* LOGO */
+
+.loginLogo {
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B0000B;
+}
+
+
+.loginTagline {
+    -fx-font-size: 12px;
+    -fx-text-fill: #888888;
+}
+
+
+/* TITLE */
+
+.loginTitle {
+    -fx-font-size: 23px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #191919;
+}
+
+
+.loginSubtitle {
+    -fx-font-size: 11px;
+    -fx-text-fill: #888888;
+}
+
+
+/* FIELD LABEL */
+
+.loginFieldLabel {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+
+/* INPUT */
+
+.loginInput {
+    -fx-background-color: #FFF8F8;
+
+    -fx-background-radius: 12px;
+
+    -fx-border-color: #FFDADA;
+    -fx-border-radius: 12px;
+
+    -fx-border-width: 1px;
+
+    -fx-padding: 12px 14px;
+
+    -fx-pref-height: 47px;
+
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #AAAAAA;
+}
+
+
+.loginInput:focused {
+    -fx-border-color: #E8113F;
+    -fx-border-width: 1.5px;
+}
+
+
+/* CHECKBOX */
+
+.loginCheckBox {
+    -fx-font-size: 10px;
+    -fx-text-fill: #555555;
+}
+
+
+/* LINKS */
+
+.loginLink {
+    -fx-font-size: 10px;
+    -fx-text-fill: #B0000B;
+}
+
+
+.loginSignupLink {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E8113F;
+}
+
+
+.loginBottomText {
+    -fx-font-size: 10px;
+    -fx-text-fill: #777777;
+}
+
+
+/* LOGIN BUTTON */
+
+.loginPrimaryButton {
+    -fx-background-color: #E8113F;
+
+    -fx-background-radius: 14px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 48px;
+
+    -fx-cursor: hand;
+}
+
+
+.loginPrimaryButton:hover {
+    -fx-background-color: #C80D34;
+}
+
+
+/* OR */
+
+.loginOrText {
+    -fx-font-size: 9px;
+    -fx-text-fill: #999999;
+}
+
+/* =========================================================
+   SIGNUP
+   ========================================================= */
+
+.signupScroll {
+    -fx-background-color: #FFF8F8;
+    -fx-background: #FFF8F8;
+    -fx-border-color: transparent;
+}
+
+.signupScroll > .viewport {
+    -fx-background-color: #FFF8F8;
+}
+
+
+/* PASSWORD REQUIREMENTS */
+
+.passwordRequirements {
+    -fx-background-color: #FFF8F8;
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+}
+
+.passwordRequirementTitle {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.passwordRequirement {
+    -fx-font-size: 9px;
+    -fx-text-fill: #999999;
+}
+
+.passwordRequirementValid {
+    -fx-font-size: 9px;
+    -fx-text-fill: #159447;
+    -fx-font-weight: bold;
+}
+
+/* =========================================================
+   ROLE SELECTION PAGE
+   ========================================================= */
+
+.roleSelectionRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* ================= LOGO ================= */
+
+.roleLogo {
+    -fx-font-size: 52px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B4000B;
+}
+
+.roleTagline {
+    -fx-font-size: 17px;
+    -fx-text-fill: #888888;
+}
+
+
+/* ================= TITLE ================= */
+
+.roleTitle {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #151515;
+}
+
+.roleSubtitle {
+    -fx-font-size: 17px;
+    -fx-text-fill: #888888;
+}
+
+
+/* ================= ROLE CARDS ================= */
+
+.roleCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+
+    -fx-border-color: #FFD7D7;
+    -fx-border-width: 1.5;
+
+    -fx-padding: 15 25 15 25;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-cursor: hand;
+
+    -fx-effect:
+            dropshadow(
+                    gaussian,
+                    rgba(0,0,0,0.07),
+                    10,
+                    0,
+                    0,
+                    3
+            );
+}
+
+
+.roleCard:hover {
+    -fx-background-color: #FFF1F2;
+
+    -fx-border-color: #E6002D;
+
+    -fx-translate-y: -2;
+}
+
+
+.roleCard:pressed {
+    -fx-background-color: #FFE5E8;
+
+    -fx-translate-y: 0;
+}
+
+
+/* ================= ROLE CONTENT ================= */
+
+.roleIcon {
+    -fx-font-size: 30px;
+}
+
+.roleCardTitle {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.roleCardDescription {
+    -fx-font-size: 14px;
+    -fx-text-fill: #888888;
+}
+
+
+/* ================= FOOTER ================= */
+
+.roleFooter {
+    -fx-font-size: 13px;
+    -fx-text-fill: #AAAAAA;
+}
+
+.loginRoleLabel {
+    -fx-background-color: #FFF0F2;
+
+    -fx-background-radius: 20px;
+
+    -fx-border-color: #FFD5DA;
+    -fx-border-radius: 20px;
+
+    -fx-padding: 7px 14px;
+
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #B00020;
+}
+
+/* =========================================================
+   SIGNUP ROLE COMBOBOX
+   ========================================================= */
+
+.roleComboBox {
+    -fx-background-color: #FFF9F9;
+
+    -fx-border-color: #FFD4D8;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-background-radius: 22px;
+
+    -fx-padding: 0 12px;
+
+    -fx-font-size: 15px;
+}
+
+
+/* Text inside ComboBox */
+
+.roleComboBox .list-cell {
+    -fx-background-color: transparent;
+
+    -fx-text-fill: #333333;
+
+    -fx-font-size: 15px;
+
+    -fx-padding: 10px 15px;
+}
+
+
+/* Arrow area */
+
+.roleComboBox .arrow-button {
+    -fx-background-color: transparent;
+
+    -fx-padding: 0 15px 0 10px;
+}
+
+
+/* Arrow */
+
+.roleComboBox .arrow {
+    -fx-background-color: #E90D3D;
+}
+
+
+/* When focused */
+
+.roleComboBox:focused {
+    -fx-border-color: #E90D3D;
+    -fx-border-width: 2px;
+}
+
+
+/* =========================================================
+   DROPDOWN POPUP
+   ========================================================= */
+
+.roleComboBox .combo-box-popup .list-view {
+    -fx-background-color: white;
+
+    -fx-border-color: #FFD4D8;
+    -fx-border-width: 1px;
+
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+
+    -fx-padding: 5px;
+}
+
+
+/* Normal dropdown option */
+
+.roleComboBox .combo-box-popup .list-cell {
+    -fx-background-color: white;
+
+    -fx-text-fill: #333333;
+
+    -fx-padding: 10px 15px;
+
+    -fx-font-size: 14px;
+}
+
+
+/* Hover */
+
+.roleComboBox .combo-box-popup .list-cell:hover {
+    -fx-background-color: #FFF0F2;
+
+    -fx-text-fill: #E90D3D;
+}
+
+
+/* Selected option */
+
+.roleComboBox .combo-box-popup .list-cell:selected {
+    -fx-background-color: #E90D3D;
+
+    -fx-text-fill: white;
+}
+
+.guestButton {
+    -fx-background-color: transparent;
+
+    -fx-border-color: #E90D3D;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-background-radius: 22px;
+
+    -fx-text-fill: #E90D3D;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.guestButton:hover {
+    -fx-background-color: #FFF0F2;
+}
+
+/* =========================================================
+   ANIMATED RIZGO SPLASH
+   ========================================================= */
+
+.splashRoot {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #B0000B,
+            #E60033
+    );
+}
+
+
+/* =========================================================
+   RIZG TEXT
+   ========================================================= */
+
+.splashLogoText {
+    -fx-font-size: 58px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+/* =========================================================
+   LOCATION-PIN O
+   ========================================================= */
+
+.splashLocationPin {
+    -fx-background-color: white;
+
+    -fx-background-radius: 50% 50% 50% 0;
+
+    -fx-min-width: 43px;
+    -fx-pref-width: 43px;
+    -fx-max-width: 43px;
+
+    -fx-min-height: 43px;
+    -fx-pref-height: 43px;
+    -fx-max-height: 43px;
+
+    /*
+     * Rotate the rounded square so it resembles
+     * the familiar map-pin shape.
+     */
+
+    -fx-rotate: -45deg;
+
+    -fx-alignment: CENTER;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.15),
+            5,
+            0,
+            0,
+            2
+    );
+}
+
+
+/* HOLE INSIDE LOCATION PIN */
+
+.splashLocationDot {
+    -fx-text-fill: #C40020;
+
+    -fx-font-size: 13px;
+
+    /*
+     * Reverse the parent's rotation so
+     * the dot remains visually straight.
+     */
+
+    -fx-rotate: 45deg;
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.splashTagline {
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+
+/* =========================================================
+   LOADING BAR
+   ========================================================= */
+
+.splashProgress {
+    -fx-accent: white;
+}
+
+
+.splashProgress > .track {
+    -fx-background-color: rgba(255,255,255,0.28);
+
+    -fx-background-radius: 20px;
+
+    -fx-pref-height: 12px;
+}
+
+
+.splashProgress > .bar {
+    -fx-background-color: white;
+
+    -fx-background-radius: 20px;
+
+    -fx-background-insets: 0;
+}
+
+
+/* =========================================================
+   LOADING TEXT
+   ========================================================= */
+
+.splashLoadingText {
+    -fx-font-size: 15px;
+    -fx-text-fill: white;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.splashFooter {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   SPLASH ROOT
+   ========================================================= */
+
+.splashRoot {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #B0000B,
+            #E60033
+    );
+}
+
+
+/* =========================================================
+   RIZGO LOGO
+   ========================================================= */
+
+.splashLogoText {
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+/* LOCATION PIN THAT REPLACES O */
+
+.splashLocationPin {
+    -fx-background-color: white;
+
+    -fx-background-radius: 50% 50% 50% 0;
+
+    -fx-min-width: 54px;
+    -fx-pref-width: 54px;
+    -fx-max-width: 54px;
+
+    -fx-min-height: 54px;
+    -fx-pref-height: 54px;
+    -fx-max-height: 54px;
+
+    -fx-rotate: -45deg;
+
+    -fx-alignment: CENTER;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.15),
+            5,
+            0,
+            0,
+            2
+    );
+}
+
+/* =========================================================
+   SPLASH ROOT
+   ========================================================= */
+
+.splashRoot {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #B0000B,
+            #E60033
+    );
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.splashLogoText {
+    -fx-font-size: 72px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+/* LOCATION PIN "O" */
+
+.splashLocationPin {
+    -fx-background-color: white;
+
+    -fx-background-radius: 50% 50% 50% 0;
+
+    -fx-min-width: 54px;
+    -fx-pref-width: 54px;
+    -fx-max-width: 54px;
+
+    -fx-min-height: 54px;
+    -fx-pref-height: 54px;
+    -fx-max-height: 54px;
+
+    -fx-rotate: -45deg;
+
+    -fx-alignment: CENTER;
+}
+
+.splashLocationDot {
+    -fx-text-fill: #C40020;
+
+    -fx-font-size: 16px;
+
+    -fx-rotate: 45deg;
+}
+
+
+/* =========================================================
+   TAGLINE
+   ========================================================= */
+
+.splashTagline {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.splashProgress {
+    -fx-accent: white;
+}
+
+.splashProgress > .track {
+    -fx-background-color: rgba(255,255,255,0.28);
+
+    -fx-background-radius: 20px;
+
+    -fx-pref-height: 14px;
+}
+
+.splashProgress > .bar {
+    -fx-background-color: white;
+
+    -fx-background-radius: 20px;
+
+    -fx-background-insets: 0;
+}
+
+
+/* =========================================================
+   LOADING TEXT
+   ========================================================= */
+
+.splashLoadingText {
+    -fx-font-size: 17px;
+    -fx-text-fill: white;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.splashFooter {
+    -fx-font-size: 14px;
+    -fx-text-fill: rgba(255,255,255,0.80);
+}
+
+/* =========================================================
+   SPLASH - FINAL RED BACKGROUND
+   ========================================================= */
+
+.splashPageRoot {
+    -fx-background-color: #FFF8F8;
+}
+
+.splashCard {
+    -fx-background-color: #D60024;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #D60024;
+    -fx-border-width: 1px;
+    -fx-border-radius: 22px;
+}
+
+.officeBackButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #111111;
+
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+
+    -fx-padding: 0;
+
+    -fx-min-width: 50px;
+    -fx-pref-width: 50px;
+    -fx-max-width: 50px;
+
+    -fx-min-height: 50px;
+    -fx-pref-height: 50px;
+    -fx-max-height: 50px;
+
+    -fx-alignment: center;
+
+    -fx-cursor: hand;
+}
+
+.officeBackButton:hover {
+    -fx-background-color: #FFF0F2;
+    -fx-background-radius: 50;
+}
+
+.mapBackButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #111111;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-padding: 0;
+
+    -fx-min-width: 50px;
+    -fx-pref-width: 50px;
+    -fx-max-width: 50px;
+
+    -fx-min-height: 50px;
+    -fx-pref-height: 50px;
+    -fx-max-height: 50px;
+
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+/* =========================================================
+   OFFICES
+   ========================================================= */
+
+.officesRoot {
+    -fx-background-color: #FFF9F9;
+}
+
+.officesHeader {
+    -fx-background-color: white;
+
+    -fx-border-color:
+            transparent
+            transparent
+            #FFD4D4
+            transparent;
+
+    -fx-border-width: 0 0 1 0;
+}
+
+.officesPageTitle {
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+
+/* SEARCH */
+
+.officeSearchField {
+    -fx-background-color: #FFF9F9;
+
+    -fx-background-radius: 25px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 25px;
+
+    -fx-padding: 0 20px;
+
+    -fx-font-size: 16px;
+
+    -fx-prompt-text-fill: #AAAAAA;
+}
+
+.officeSearchField:focused {
+    -fx-border-color: #E60033;
+}
+
+
+/* SCROLL */
+
+.officeScroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+
+    -fx-border-color: transparent;
+}
+
+.officeScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+/* OFFICE CARD */
+
+.officeCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 15px 20px;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-cursor: hand;
+}
+
+.officeCard:hover {
+    -fx-background-color: #FFF1F2;
+
+    -fx-border-color: #E60033;
+}
+
+.officeIcon {
+    -fx-font-size: 22px;
+
+    -fx-text-fill: #E60033;
+
+    -fx-min-width: 35px;
+}
+
+.officeName {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #111111;
+}
+
+.officeFloor {
+    -fx-font-size: 14px;
+
+    -fx-text-fill: #888888;
+}
+
+.officeArrow {
+    -fx-font-size: 25px;
+
+    -fx-text-fill: #E60033;
+}
+
+
+/* =========================================================
+   CUSTOM OFFICE POPUP
+   ========================================================= */
+
+.officePopupOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.35);
+
+    -fx-padding: 35px;
+
+    -fx-alignment: CENTER;
+}
+
+
+.officePopupOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.30);
+    -fx-alignment: center;
+}
+
+.officePopupCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22;
+    -fx-border-radius: 22;
+
+    -fx-border-color: #ffcdd2;
+    -fx-border-width: 1.5;
+
+    -fx-padding: 24;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.12),
+            18,
+            0,
+            0,
+            5
+    );
+}
+
+.officePopupBrand {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c60018;
+}
+
+.officePopupClose {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 20px;
+    -fx-text-fill: #444444;
+    -fx-cursor: hand;
+    -fx-padding: 0;
+}
+
+.officePopupTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.officePopupMessage {
+    -fx-font-size: 15px;
+    -fx-text-fill: #444444;
+    -fx-wrap-text: true;
+}
+
+.officePopupDivider {
+    -fx-background-color: #ffcdd2;
+    -fx-pref-height: 1;
+}
+
+.officePopupButton {
+    -fx-background-color: #f0003c;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 20;
+    -fx-cursor: hand;
+
+    -fx-pref-height: 48;
+}
+
+.officePopupButton:hover {
+    -fx-background-color: #d90036;
+}
+
+
+/* RIZGO BRAND */
+
+.officePopupBrand {
+    -fx-font-size: 17px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #E60033;
+}
+
+
+/* CLOSE X */
+
+.officePopupClose {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-font-size: 25px;
+
+    -fx-text-fill: #555555;
+
+    -fx-cursor: hand;
+
+    -fx-min-width: 35px;
+    -fx-min-height: 35px;
+}
+
+.officePopupClose:hover {
+    -fx-background-color: #FFF0F2;
+
+    -fx-background-radius: 50;
+}
+
+
+/* TITLE */
+
+.officePopupTitle {
+    -fx-font-size: 22px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #111111;
+}
+
+
+/* SEPARATOR */
+
+.officePopupSeparator .line {
+    -fx-border-color: #FFD0D0;
+}
+
+
+/* MESSAGE */
+
+.officePopupMessage {
+    -fx-font-size: 15px;
+
+    -fx-text-fill: #555555;
+}
+
+
+/* OK BUTTON */
+
+.officePopupButton {
+    -fx-background-color: #E60033;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.officePopupButton:hover {
+    -fx-background-color: #C8002C;
+}
+
+.directoryPopupOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.30);
+    -fx-alignment: center;
+    -fx-padding: 30px;
+}
+
+.directoryPopupCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 22px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0,
+            0,
+            5
+    );
+}
+
+.directoryPopupBrand {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E60033;
+}
+
+.directoryPopupClose {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 24px;
+    -fx-text-fill: #444444;
+
+    -fx-cursor: hand;
+}
+
+.directoryPopupTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.directoryPopupCategory {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E60033;
+}
+
+.directoryPopupMessage {
+    -fx-font-size: 15px;
+    -fx-text-fill: #555555;
+}
+
+.directoryPopupButton {
+    -fx-background-color: #E60033;
+
+    -fx-background-radius: 18px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.directoryPopupButton:hover {
+    -fx-background-color: #C8002C;
+}
+
+/* =========================================================
+   FACILITY POPUP
+   ========================================================= */
+
+.facilityPopupOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.30);
+    -fx-alignment: center;
+    -fx-padding: 30px;
+}
+
+.facilityPopupCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 22px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0,
+            0,
+            5
+    );
+}
+
+.facilityPopupBrand {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E60033;
+}
+
+.facilityPopupClose {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 24px;
+    -fx-text-fill: #444444;
+
+    -fx-cursor: hand;
+}
+
+.facilityPopupTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.facilityPopupSeparator .line {
+    -fx-border-color: #FFD0D0;
+}
+
+.facilityPopupMessage {
+    -fx-font-size: 15px;
+    -fx-text-fill: #555555;
+}
+
+.facilityPopupButton {
+    -fx-background-color: #E60033;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.facilityPopupButton:hover {
+    -fx-background-color: #C8002C;
+}
+
+/* =========================================================
+   SERVICE POPUP
+   ========================================================= */
+
+.servicePopupOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.30);
+    -fx-alignment: center;
+    -fx-padding: 30px;
+}
+
+
+.servicePopupCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 22px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0,
+            0,
+            5
+    );
+}
+
+
+.servicePopupBrand {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E60033;
+}
+
+
+.servicePopupClose {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 24px;
+    -fx-text-fill: #444444;
+
+    -fx-cursor: hand;
+}
+
+
+.servicePopupTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+
+.servicePopupSeparator .line {
+    -fx-border-color: #FFD0D0;
+}
+
+
+.servicePopupMessage {
+    -fx-font-size: 15px;
+    -fx-text-fill: #555555;
+}
+
+
+.servicePopupButton {
+    -fx-background-color: #E60033;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+
+.servicePopupButton:hover {
+    -fx-background-color: #C8002C;
+}
+
+/* =========================================================
+   EMERGENCY POPUP
+   ========================================================= */
+
+.emergencyPopupOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.30);
+    -fx-alignment: center;
+    -fx-padding: 30px;
+}
+
+.emergencyPopupCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 22px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0,0,0,0.12),
+            18,
+            0,
+            0,
+            5
+    );
+}
+
+.emergencyPopupBrand {
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #E60033;
+}
+
+.emergencyPopupClose {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-font-size: 24px;
+    -fx-text-fill: #444444;
+
+    -fx-cursor: hand;
+}
+
+.emergencyPopupTitle {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.emergencyPopupSeparator .line {
+    -fx-border-color: #FFD0D0;
+}
+
+.emergencyPopupMessage {
+    -fx-font-size: 15px;
+    -fx-text-fill: #555555;
+}
+
+.emergencyPopupButton {
+    -fx-background-color: #E60033;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.emergencyPopupButton:hover {
+    -fx-background-color: #C8002C;
+}
+
+/* =========================================================
+   CHATBOT
+   ========================================================= */
+
+.chatRoot {
+    -fx-background-color: #fffafa;
+}
+
+.chatHeader {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #ffd3d3 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.chatPageTitle {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.chatBackButton,
+.chatResetButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 27px;
+    -fx-text-fill: #111111;
+    -fx-cursor: hand;
+}
+
+.chatContent {
+    -fx-background-color: #fffafa;
+}
+
+.chatScroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.chatScroll > .viewport {
+    -fx-background-color: #fffafa;
+}
+
+.chatUserBubble {
+    -fx-background-color: #eaf7f0;
+    -fx-background-radius: 22px;
+    -fx-padding: 12px 16px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #222222;
+}
+
+.chatBotBubble {
+    -fx-background-color: white;
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 22px;
+    -fx-border-width: 1px;
+    -fx-background-radius: 22px;
+    -fx-padding: 12px 16px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #222222;
+}
+
+.chatSuggestions {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-padding: 12px;
+}
+
+.chatSuggestionTitle {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #555555;
+}
+
+.chatSuggestionButton {
+    -fx-background-color: #fff8f8;
+    -fx-background-radius: 18px;
+    -fx-border-radius: 18px;
+    -fx-border-color: #ffd3d3;
+    -fx-text-fill: #b8001c;
+    -fx-font-size: 13px;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+
+.chatInputContainer {
+    -fx-background-color: white;
+    -fx-background-radius: 24px;
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 24px;
+    -fx-padding: 5px 7px 5px 14px;
+}
+
+.chatInput {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+.chatSendButton {
+    -fx-background-color: #e9003f;
+    -fx-background-radius: 50%;
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+
+    -fx-min-width: 46px;
+    -fx-pref-width: 46px;
+    -fx-max-width: 46px;
+
+    -fx-min-height: 46px;
+    -fx-pref-height: 46px;
+    -fx-max-height: 46px;
+
+    -fx-cursor: hand;
+}
+
+.chatDisclaimer {
+    -fx-font-size: 11px;
+    -fx-text-fill: #999999;
+}
+
+
+/* =========================================================
+   CAMPUS MAP
+   ========================================================= */
+
+.rizgoMapRoot {
+    -fx-background-color: #fffafa;
+}
+
+.rizgoMapHeader {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #ffd3d3 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.rizgoMapTitle {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.rizgoMapHeaderPin {
+    -fx-font-size: 23px;
+    -fx-text-fill: #e9003f;
+}
+
+.rizgoMapSearch {
+    -fx-background-color: #fff9f9;
+    -fx-background-radius: 25px;
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 25px;
+    -fx-border-width: 1.5px;
+    -fx-padding: 5px 15px;
+}
+
+.rizgoMapSearchIcon {
+    -fx-font-size: 21px;
+    -fx-text-fill: #777777;
+}
+
+.rizgoMapSearchField {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #aaaaaa;
+}
+
+.rizgoMapScroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.rizgoMapScroll > .viewport {
+    -fx-background-color: #fffafa;
+}
+
+.rizgoMapCard {
+    -fx-background-color: white;
+    -fx-background-radius: 20px;
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+}
+
+.rizgoMapArea {
+    -fx-background-color: #fffafa;
+    -fx-background-radius: 16px;
+    -fx-border-radius: 16px;
+}
+
+
+/* =========================================================
+   SMART PINPOINT PIN
+   ========================================================= */
+
+.smartMapPin {
+    -fx-background-color: #e9003f;
+
+    -fx-background-radius: 50% 50% 50% 0;
+
+    -fx-rotate: -45deg;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 10px;
+
+    -fx-alignment: center;
+
+    -fx-min-width: 28px;
+    -fx-pref-width: 28px;
+    -fx-max-width: 28px;
+
+    -fx-min-height: 28px;
+    -fx-pref-height: 28px;
+    -fx-max-height: 28px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(233,0,63,0.45),
+            14,
+            0.4,
+            0,
+            2
+    );
+}
+
+.pinpointMessage {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e9003f;
+    -fx-alignment: center;
+}
+
+
+/* =========================================================
+   SELECTED LOCATION
+   ========================================================= */
+
+.selectedLocationCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 20px;
+
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+
+    -fx-padding: 16px;
+}
+
+.selectedLocationHeading {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.selectedLocationName {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #111111;
+}
+
+.selectedInfoLabel {
+    -fx-font-size: 13px;
+    -fx-text-fill: #999999;
+}
+
+.selectedInfoValue {
+    -fx-font-size: 13px;
+    -fx-text-fill: #444444;
+}
+
+.mapSectionTitle {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #222222;
+}
+
+
+/* =========================================================
+   LOCATION BUTTONS
+   ========================================================= */
+
+.mapLocationButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: #ffd3d3;
+    -fx-border-radius: 18px;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #222222;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-padding: 14px 18px;
+
+    -fx-cursor: hand;
+}
+
+.mapLocationButton:hover {
+    -fx-background-color: #fff0f2;
+    -fx-border-color: #e9003f;
+}
+
+
+/* =========================================================
+   COMMON ACTIVE BOTTOM NAV
+   ========================================================= */
+
+.bottomNavButtonActive {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #e9003f;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* =========================================================
+   MAP PREVIEW
+   ========================================================= */
+
+.mapPreviewMainCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 12px;
+}
+
+
+.mapPreviewImageHolder {
+    -fx-background-color: #FFF9F9;
+    -fx-background-radius: 18px;
+
+    -fx-padding: 8px;
+}
+
+
+.mapZoomButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: #E9003F;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 18px;
+
+    -fx-text-fill: #E9003F;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 46px;
+
+    -fx-cursor: hand;
+}
+
+
+.mapZoomButton:hover {
+    -fx-background-color: #FFF0F3;
+}
+
+
+/* =========================================================
+   PINPOINT BUTTON
+   ========================================================= */
+
+.mapPinpointButton {
+    -fx-background-color: #FFF1F3;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: #FFB7C3;
+    -fx-border-width: 1px;
+    -fx-border-radius: 18px;
+
+    -fx-text-fill: #E9003F;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 46px;
+
+    -fx-cursor: hand;
+}
+
+
+.mapPinpointButton:hover {
+    -fx-background-color: #FFE4E9;
+}
+
+
+/* =========================================================
+   VIEW BUILDING DETAILS
+   ========================================================= */
+
+.buildingDetailsButton {
+    -fx-background-color: #E9003F;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 48px;
+
+    -fx-cursor: hand;
+}
+
+
+.buildingDetailsButton:hover {
+    -fx-background-color: #CF0038;
+}
+
+
+/* =========================================================
+   ENLARGED MAP
+   ========================================================= */
+
+.zoomMapOverlay {
+    -fx-background-color: rgba(0, 0, 0, 0.42);
+
+    -fx-alignment: CENTER;
+
+    -fx-padding: 10px;
+}
+
+
+.zoomMapCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 24px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 24px;
+
+    -fx-padding: 16px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(0, 0, 0, 0.18),
+            22,
+            0,
+            0,
+            6
+    );
+}
+
+
+.zoomMapTitle {
+    -fx-font-size: 21px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #111111;
+}
+
+
+.zoomMapSubtitle {
+    -fx-font-size: 13px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #E9003F;
+}
+
+
+.zoomMapCloseButton {
+    -fx-background-color: transparent;
+
+    -fx-border-color: transparent;
+
+    -fx-text-fill: #333333;
+
+    -fx-font-size: 27px;
+
+    -fx-min-width: 42px;
+    -fx-pref-width: 42px;
+
+    -fx-min-height: 42px;
+    -fx-pref-height: 42px;
+
+    -fx-cursor: hand;
+}
+
+
+.zoomMapCloseButton:hover {
+    -fx-background-color: #FFF1F3;
+
+    -fx-background-radius: 50%;
+}
+
+
+.zoomMapScroll {
+    -fx-background-color: transparent;
+
+    -fx-background: transparent;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-radius: 16px;
+
+    -fx-padding: 1px;
+}
+
+
+.zoomMapScroll > .viewport {
+    -fx-background-color: #FFF9F9;
+}
+
+
+.zoomMapCanvas {
+    -fx-background-color: white;
+}
+
+
+/* =========================================================
+   ZOOM LOCATION PIN
+   ========================================================= */
+
+.zoomLocationPin {
+    -fx-background-color: #E9003F;
+
+    -fx-background-radius: 50% 50% 50% 0;
+
+    -fx-rotate: -45deg;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 10px;
+
+    -fx-alignment: CENTER;
+
+    -fx-min-width: 32px;
+    -fx-pref-width: 32px;
+    -fx-max-width: 32px;
+
+    -fx-min-height: 32px;
+    -fx-pref-height: 32px;
+    -fx-max-height: 32px;
+
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(233, 0, 63, 0.60),
+            18,
+            0.5,
+            0,
+            3
+    );
+}
+
+
+.zoomMapHint {
+    -fx-font-size: 11px;
+
+    -fx-text-fill: #999999;
+}
+
+
+.zoomMapDoneButton {
+    -fx-background-color: #E9003F;
+
+    -fx-background-radius: 18px;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-pref-height: 46px;
+
+    -fx-cursor: hand;
+}
+
+
+/* =========================================================
+   BUILDING IMAGE / MAP PREVIEW
+   ========================================================= */
+
+.buildingImageCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 15px;
+}
+
+
+.buildingImageHolder {
+    -fx-background-color: #FFF9F9;
+
+    -fx-background-radius: 16px;
+
+    -fx-padding: 8px;
+}
+
+
+.buildingImageHint {
+    -fx-font-size: 12px;
+
+    -fx-text-fill: #888888;
+}
+
+
+/* =========================================================
+   SELECTED LOCATION
+   ========================================================= */
+
+.selectedLocationCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #FFD0D0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 17px;
+}
+
+
+.selectedLocationHeading {
+    -fx-font-size: 15px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #333333;
+}
+
+
+.selectedLocationName {
+    -fx-font-size: 21px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #111111;
+}
+
+
+.selectedInfoLabel {
+    -fx-font-size: 13px;
+
+    -fx-text-fill: #999999;
+}
+
+
+.selectedInfoValue {
+    -fx-font-size: 13px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #444444;
+}
+
+
+.pinpointMessage {
+    -fx-font-size: 13px;
+
+    -fx-font-weight: bold;
+
+    -fx-text-fill: #E9003F;
+}
+
+/* =========================================================
+   MAP PHONE WIDTH FIX
+   ========================================================= */
+
+.rizgoMapRoot {
+    -fx-background-color: #fffafa;
+}
+
+.rizgoMapScroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.rizgoMapScroll > .viewport {
+    -fx-background-color: #fffafa;
+}
+
+.mapPreviewMainCard,
+.selectedLocationCard {
+    -fx-max-width: Infinity;
+}
+
+.mapPreviewImageHolder {
+    -fx-alignment: center;
+}
+
+.mapLocationButton {
+    -fx-max-width: Infinity;
+}
+
+.zoomMapCard {
+    -fx-pref-width: 400px;
+    -fx-max-width: 400px;
+}
+
+/* =========================================================
+   FINAL MAP FIT FIX
+   ========================================================= */
+
+/* MAIN PAGE */
+
+.rizgoMapRoot {
+    -fx-background-color: #fffafa;
+}
+
+
+/* MAIN SCROLLPANE */
+
+.rizgoMapScroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+
+    -fx-padding: 0;
+}
+
+
+.rizgoMapScroll > .viewport {
+    -fx-background-color: #fffafa;
+}
+
+
+/* PREVENT CONTENT FROM FORCING THE PAGE WIDER */
+
+.mapPreviewMainCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #ffd0d0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 12px;
+
+    -fx-max-width: Infinity;
+}
+
+
+.mapPreviewImageHolder {
+    -fx-background-color: #fff9f9;
+
+    -fx-background-radius: 18px;
+
+    -fx-padding: 6px;
+
+    -fx-alignment: center;
+
+    -fx-max-width: Infinity;
+}
+
+
+/* SELECTED CARD */
+
+.selectedLocationCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #ffd0d0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 16px;
+
+    -fx-max-width: Infinity;
+}
+
+
+/* LOCATION BUTTONS */
+
+.mapLocationButton {
+    -fx-background-color: white;
+
+    -fx-background-radius: 18px;
+
+    -fx-border-color: #ffd0d0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 18px;
+
+    -fx-padding: 14px 16px;
+
+    -fx-alignment: CENTER_LEFT;
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+    -fx-max-width: Infinity;
+
+    -fx-cursor: hand;
+}
+
+
+/* ENLARGED MAP CARD */
+
+.zoomMapCard {
+    -fx-background-color: white;
+
+    -fx-background-radius: 22px;
+
+    -fx-border-color: #ffd0d0;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+
+    -fx-padding: 14px;
+
+    -fx-pref-width: 360px;
+    -fx-max-width: 360px;
+}
+
+.chatBackButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: #111111;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+
+    -fx-min-width: 55px;
+    -fx-pref-width: 55px;
+    -fx-max-width: 55px;
+
+    -fx-min-height: 55px;
+    -fx-pref-height: 55px;
+    -fx-max-height: 55px;
+
+    -fx-padding: 0;
+    -fx-cursor: hand;
+}
+
+.chatBackButton:hover {
+    -fx-text-fill: #F00046;
+}

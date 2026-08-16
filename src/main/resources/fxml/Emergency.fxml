@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.EmergencyController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <!-- ===================================================== -->
+    <!-- MAIN EMERGENCY PAGE                                   -->
+    <!-- ===================================================== -->
+
+    <BorderPane maxWidth="430"
+                styleClass="emergencyRoot">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER                                            -->
+        <!-- ================================================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  styleClass="emergencyHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+                </padding>
+
+
+                <GridPane>
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+
+                    <!-- BACK -->
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="emergencyBackButton"/>
+
+
+                    <!-- TITLE -->
+
+                    <Label text="Emergency"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="emergencyPageTitle"/>
+
+
+                    <Region GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================================================= -->
+        <!-- CENTER                                            -->
+        <!-- ================================================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="emergencyScroll">
+
+                <content>
+
+                    <VBox spacing="14"
+                          fillWidth="true">
+
+                        <padding>
+                            <Insets top="14"
+                                    right="14"
+                                    bottom="20"
+                                    left="14"/>
+                        </padding>
+
+
+                        <!-- ================================================= -->
+                        <!-- EMERGENCY BANNER                                  -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="7"
+                              styleClass="emergencyBanner">
+
+                            <Label text="Emergency Assistance"
+                                   styleClass="emergencyBannerTitle"/>
+
+                            <Label text="Use this page to quickly find school emergency information and important campus support."
+                                   wrapText="true"
+                                   styleClass="emergencyBannerText"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- SCHOOL CLINIC                                     -->
+                        <!-- ================================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openClinic"
+                                styleClass="emergencyCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="✚"
+                                           styleClass="emergencyIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="School Clinic"
+                                               styleClass="emergencyCardTitle"/>
+
+                                        <Label text="For basic health and medical assistance"
+                                               styleClass="emergencyCardSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="emergencyArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================================= -->
+                        <!-- GUIDANCE                                          -->
+                        <!-- ================================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openGuidance"
+                                styleClass="emergencyCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="💬"
+                                           styleClass="emergencyIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Guidance Office"
+                                               styleClass="emergencyCardTitle"/>
+
+                                        <Label text="For student support and urgent concerns"
+                                               styleClass="emergencyCardSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="emergencyArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================================= -->
+                        <!-- ADMIN OFFICE                                      -->
+                        <!-- ================================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openAdmin"
+                                styleClass="emergencyCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="🏢"
+                                           styleClass="emergencyIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Admin Office"
+                                               styleClass="emergencyCardTitle"/>
+
+                                        <Label text="For administrative or campus-related emergencies"
+                                               styleClass="emergencyCardSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="emergencyArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================================= -->
+                        <!-- CAMPUS MAP                                        -->
+                        <!-- ================================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openMap"
+                                styleClass="emergencyCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="⌖"
+                                           styleClass="emergencyIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Campus Map"
+                                               styleClass="emergencyCardTitle"/>
+
+                                        <Label text="Locate buildings and facilities quickly"
+                                               styleClass="emergencyCardSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="emergencyArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================================= -->
+                        <!-- IMPORTANT REMINDERS                               -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="9"
+                              styleClass="emergencyInfoCard">
+
+                            <Label text="Important Reminders"
+                                   styleClass="emergencySectionTitle"/>
+
+                            <Separator/>
+
+                            <Label text="• Stay calm and follow school personnel instructions."
+                                   wrapText="true"
+                                   styleClass="emergencyInfoText"/>
+
+                            <Label text="• Move to designated safe areas when instructed."
+                                   wrapText="true"
+                                   styleClass="emergencyInfoText"/>
+
+                            <Label text="• Report urgent concerns to school personnel immediately."
+                                   wrapText="true"
+                                   styleClass="emergencyInfoText"/>
+
+                            <Label text="• Use the Campus Map if you need help locating an office or facility."
+                                   wrapText="true"
+                                   styleClass="emergencyInfoText"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- EMERGENCY CONTACTS                                -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="9"
+                              styleClass="emergencyInfoCard">
+
+                            <Label text="Emergency Contacts"
+                                   styleClass="emergencySectionTitle"/>
+
+                            <Separator/>
+
+                            <Label text="School emergency contact information can be added here once the official details are available."
+                                   wrapText="true"
+                                   styleClass="emergencyInfoText"/>
+
+                        </VBox>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM NAV                                        -->
+        <!-- ================================================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER"
+                              spacing="3">
+                            <Label text="⌂"/>
+                            <Label text="Home"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER"
+                              spacing="3">
+                            <Label text="⌖"/>
+                            <Label text="Map"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER"
+                              spacing="3">
+                            <Label text="◉"/>
+                            <Label text="Chat"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER"
+                              spacing="3">
+                            <Label text="♙"/>
+                            <Label text="Profile"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- CUSTOM EMERGENCY POPUP                                -->
+    <!-- ===================================================== -->
+
+    <StackPane fx:id="emergencyPopupOverlay"
+               visible="false"
+               managed="false"
+               maxWidth="430"
+               maxHeight="Infinity"
+               styleClass="emergencyPopupOverlay">
+
+
+        <VBox fx:id="emergencyPopupCard"
+              alignment="CENTER_LEFT"
+              spacing="14"
+              prefWidth="330"
+              maxWidth="330"
+              minHeight="-Infinity"
+              prefHeight="-1"
+              maxHeight="-Infinity"
+              styleClass="emergencyPopupCard">
+
+
+            <HBox alignment="CENTER_LEFT">
+
+                <Label text="RizGo"
+                       styleClass="emergencyPopupBrand"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <Button text="×"
+                        onAction="#closeEmergencyPopup"
+                        styleClass="emergencyPopupClose"/>
+
+            </HBox>
+
+
+            <Label fx:id="emergencyPopupTitle"
+                   text="Emergency"
+                   wrapText="true"
+                   styleClass="emergencyPopupTitle"/>
+
+
+            <Separator styleClass="emergencyPopupSeparator"/>
+
+
+            <Label fx:id="emergencyPopupMessage"
+                   text="Emergency information."
+                   wrapText="true"
+                   maxWidth="Infinity"
+                   styleClass="emergencyPopupMessage"/>
+
+
+            <Button text="OK"
+                    onAction="#closeEmergencyPopup"
+                    maxWidth="Infinity"
+                    prefHeight="48"
+                    styleClass="emergencyPopupButton"/>
+
+        </VBox>
+
+    </StackPane>
+
+</StackPane>

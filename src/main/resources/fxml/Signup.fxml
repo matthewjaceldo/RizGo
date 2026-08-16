@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<ScrollPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.rizgo.controllers.SignupController"
+            stylesheets="@../css/rizgo.css"
+            fitToWidth="true"
+            hbarPolicy="NEVER"
+            vbarPolicy="AS_NEEDED"
+            styleClass="signupScroll">
+
+    <content>
+
+        <StackPane styleClass="loginPageRoot">
+
+            <padding>
+                <Insets top="35"
+                        right="25"
+                        bottom="35"
+                        left="25"/>
+            </padding>
+
+            <VBox alignment="CENTER"
+                  spacing="15"
+                  maxWidth="390"
+                  styleClass="loginCard">
+
+                <padding>
+                    <Insets top="30"
+                            right="30"
+                            bottom="30"
+                            left="30"/>
+                </padding>
+
+
+                <!-- LOGO -->
+
+                <Label text="RizGo"
+                       styleClass="loginLogo"/>
+
+                <Label text="Rizalians. Navigate. Discover."
+                       styleClass="loginTagline"/>
+
+                <Region prefHeight="5"/>
+
+
+                <!-- TITLE -->
+
+                <Label text="Create Account"
+                       styleClass="loginTitle"/>
+
+                <Label text="Create your RizGo account to get started."
+                       styleClass="loginSubtitle"/>
+
+
+                <!-- FULL NAME -->
+
+                <VBox spacing="5"
+                      maxWidth="Infinity">
+
+                    <Label text="Full Name"
+                           styleClass="loginFieldLabel"/>
+
+                    <TextField fx:id="fullNameField"
+                               promptText="Enter your full name"
+                               styleClass="loginInput"/>
+
+                </VBox>
+
+
+                <!-- USERNAME -->
+
+                <VBox spacing="5"
+                      maxWidth="Infinity">
+
+                    <Label text="Username"
+                           styleClass="loginFieldLabel"/>
+
+                    <TextField fx:id="usernameField"
+                               promptText="Enter your username"
+                               styleClass="loginInput"/>
+
+                </VBox>
+
+
+                <!-- EMAIL -->
+
+                <VBox spacing="5"
+                      maxWidth="Infinity">
+
+                    <Label text="Email"
+                           styleClass="loginFieldLabel"/>
+
+                    <TextField fx:id="emailField"
+                               promptText="Enter your email"
+                               styleClass="loginInput"/>
+
+                </VBox>
+
+                <!-- ROLE -->
+
+                <Label text="Role"
+                       styleClass="fieldLabel"/>
+
+                <ComboBox fx:id="roleComboBox"
+                          promptText="Select your role"
+                          prefHeight="55"
+                          maxWidth="Infinity"
+                          styleClass="roleComboBox"/>
+
+
+                <!-- PASSWORD -->
+
+                <VBox spacing="5"
+                      maxWidth="Infinity">
+
+                    <Label text="Password"
+                           styleClass="loginFieldLabel"/>
+
+                    <StackPane>
+
+                        <PasswordField fx:id="passwordField"
+                                       promptText="Create a password"
+                                       maxWidth="Infinity"
+                                       styleClass="loginInput"/>
+
+                        <TextField fx:id="visiblePasswordField"
+                                   promptText="Create a password"
+                                   maxWidth="Infinity"
+                                   visible="false"
+                                   managed="false"
+                                   styleClass="loginInput"/>
+
+                    </StackPane>
+
+                </VBox>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <VBox spacing="5"
+                      maxWidth="Infinity">
+
+                    <Label text="Confirm Password"
+                           styleClass="loginFieldLabel"/>
+
+                    <StackPane>
+
+                        <PasswordField fx:id="confirmPasswordField"
+                                       promptText="Confirm your password"
+                                       maxWidth="Infinity"
+                                       styleClass="loginInput"/>
+
+                        <TextField fx:id="visibleConfirmPasswordField"
+                                   promptText="Confirm your password"
+                                   maxWidth="Infinity"
+                                   visible="false"
+                                   managed="false"
+                                   styleClass="loginInput"/>
+
+                    </StackPane>
+
+                </VBox>
+
+
+                <!-- SHOW PASSWORD -->
+
+                <HBox alignment="CENTER_LEFT"
+                      maxWidth="Infinity">
+
+                    <CheckBox fx:id="showPasswordCheckBox"
+                              text="Show Password"
+                              onAction="#togglePassword"
+                              styleClass="loginCheckBox"/>
+
+                </HBox>
+
+
+                <!-- PASSWORD REQUIREMENTS -->
+
+                <VBox spacing="4"
+                      maxWidth="Infinity"
+                      styleClass="passwordRequirements">
+
+                    <Label text="Password must contain:"
+                           styleClass="passwordRequirementTitle"/>
+
+                    <FlowPane hgap="12"
+                              vgap="5">
+
+                        <Label fx:id="lengthRequirement"
+                               text="○ 8-20 characters"
+                               styleClass="passwordRequirement"/>
+
+                        <Label fx:id="upperRequirement"
+                               text="○ Uppercase"
+                               styleClass="passwordRequirement"/>
+
+                        <Label fx:id="lowerRequirement"
+                               text="○ Lowercase"
+                               styleClass="passwordRequirement"/>
+
+                        <Label fx:id="specialRequirement"
+                               text="○ Special character"
+                               styleClass="passwordRequirement"/>
+
+                    </FlowPane>
+
+                </VBox>
+
+
+                <!-- CREATE ACCOUNT -->
+
+                <Button text="CREATE ACCOUNT"
+                        onAction="#handleSignup"
+                        maxWidth="Infinity"
+                        styleClass="loginPrimaryButton"/>
+
+
+                <!-- LOGIN -->
+
+                <HBox alignment="CENTER"
+                      spacing="5">
+
+                    <Label text="Already have an account?"
+                           styleClass="loginBottomText"/>
+
+                    <Hyperlink text="Login"
+                               onAction="#backToLogin"
+                               styleClass="loginSignupLink"/>
+
+                </HBox>
+
+            </VBox>
+
+        </StackPane>
+
+    </content>
+
+</ScrollPane>

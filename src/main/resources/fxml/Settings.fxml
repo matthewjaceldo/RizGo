@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="com.rizgo.controllers.SettingsController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <BorderPane maxWidth="430"
+                styleClass="settingsRoot">
+
+        <!-- ================= HEADER ================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  styleClass="settingsHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+                </padding>
+
+                <GridPane>
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="settingsBackButton"/>
+
+                    <Label text="Settings"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="settingsPageTitle"/>
+
+                    <Region GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================= CENTER ================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="settingsScroll">
+
+                <content>
+
+                    <VBox spacing="14"
+                          fillWidth="true">
+
+                        <padding>
+                            <Insets top="14"
+                                    right="14"
+                                    bottom="20"
+                                    left="14"/>
+                        </padding>
+
+
+                        <!-- ================= PREFERENCES ================= -->
+
+                        <VBox spacing="0"
+                              styleClass="settingsCard">
+
+                            <Label text="Preferences"
+                                   styleClass="settingsSectionTitle">
+
+                                <VBox.margin>
+                                    <Insets bottom="8"/>
+                                </VBox.margin>
+
+                            </Label>
+
+
+                            <!-- NOTIFICATIONS -->
+
+                            <HBox alignment="CENTER_LEFT"
+                                  spacing="12"
+                                  styleClass="settingsRow">
+
+                                <Label text="🔔"
+                                       styleClass="settingsIcon"/>
+
+                                <VBox spacing="2"
+                                      HBox.hgrow="ALWAYS">
+
+                                    <Label text="Notifications"
+                                           styleClass="settingsRowTitle"/>
+
+                                    <Label text="Receive school updates and announcements"
+                                           wrapText="true"
+                                           styleClass="settingsRowSubtitle"/>
+
+                                </VBox>
+
+                                <CheckBox fx:id="notificationsCheckBox"
+                                          selected="true"
+                                          styleClass="settingsCheckBox"/>
+
+                            </HBox>
+
+                            <Separator/>
+
+
+                            <!-- LANGUAGE -->
+
+                            <HBox alignment="CENTER_LEFT"
+                                  spacing="12"
+                                  styleClass="settingsRow">
+
+                                <Label text="🌐"
+                                       styleClass="settingsIcon"/>
+
+                                <VBox spacing="2"
+                                      HBox.hgrow="ALWAYS">
+
+                                    <Label text="Language"
+                                           styleClass="settingsRowTitle"/>
+
+                                    <Label text="Select the display language"
+                                           styleClass="settingsRowSubtitle"/>
+
+                                </VBox>
+
+                                <ComboBox fx:id="languageComboBox"
+                                          prefWidth="110"
+                                          styleClass="settingsComboBox"/>
+
+                            </HBox>
+
+                        </VBox>
+
+
+                        <!-- ================= APP SETTINGS ================= -->
+
+                        <VBox spacing="0"
+                              styleClass="settingsCard">
+
+                            <Label text="Application"
+                                   styleClass="settingsSectionTitle">
+
+                                <VBox.margin>
+                                    <Insets bottom="8"/>
+                                </VBox.margin>
+
+                            </Label>
+
+
+                            <!-- PERMISSIONS -->
+
+                            <Button maxWidth="Infinity"
+                                    onAction="#openPermissions"
+                                    styleClass="settingsButtonRow">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="12">
+
+                                        <Label text="🔐"
+                                               styleClass="settingsIcon"/>
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="App Permissions"
+                                                   styleClass="settingsRowTitle"/>
+
+                                            <Label text="View application permissions"
+                                                   styleClass="settingsRowSubtitle"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="settingsArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                            <Separator/>
+
+
+                            <!-- FEEDBACK -->
+
+                            <Button maxWidth="Infinity"
+                                    onAction="#openFeedback"
+                                    styleClass="settingsButtonRow">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="12">
+
+                                        <Label text="💬"
+                                               styleClass="settingsIcon"/>
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Send Feedback"
+                                                   styleClass="settingsRowTitle"/>
+
+                                            <Label text="Share comments about RizGo"
+                                                   styleClass="settingsRowSubtitle"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="settingsArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </VBox>
+
+
+                        <!-- ================= HELP ================= -->
+
+                        <VBox spacing="0"
+                              styleClass="settingsCard">
+
+                            <Label text="Help &amp; Information"
+                                   styleClass="settingsSectionTitle">
+
+                                <VBox.margin>
+                                    <Insets bottom="8"/>
+                                </VBox.margin>
+
+                            </Label>
+
+
+                            <!-- USER GUIDE -->
+
+                            <Button maxWidth="Infinity"
+                                    onAction="#openUserGuide"
+                                    styleClass="settingsButtonRow">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="12">
+
+                                        <Label text="📖"
+                                               styleClass="settingsIcon"/>
+
+                                        <Label text="User Guide"
+                                               HBox.hgrow="ALWAYS"
+                                               styleClass="settingsRowTitle"/>
+
+                                        <Label text="›"
+                                               styleClass="settingsArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                            <Separator/>
+
+
+                            <!-- ABOUT -->
+
+                            <Button maxWidth="Infinity"
+                                    onAction="#openAbout"
+                                    styleClass="settingsButtonRow">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="12">
+
+                                        <Label text="ⓘ"
+                                               styleClass="settingsIcon"/>
+
+                                        <Label text="About RizGo"
+                                               HBox.hgrow="ALWAYS"
+                                               styleClass="settingsRowTitle"/>
+
+                                        <Label text="›"
+                                               styleClass="settingsArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                            <Separator/>
+
+
+                            <!-- PRIVACY -->
+
+                            <Button maxWidth="Infinity"
+                                    onAction="#openPrivacy"
+                                    styleClass="settingsButtonRow">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="12">
+
+                                        <Label text="🛡"
+                                               styleClass="settingsIcon"/>
+
+                                        <Label text="Privacy Policy"
+                                               HBox.hgrow="ALWAYS"
+                                               styleClass="settingsRowTitle"/>
+
+                                        <Label text="›"
+                                               styleClass="settingsArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                            <Separator/>
+
+
+                            <!-- TERMS -->
+
+                            <Button maxWidth="Infinity"
+                                    onAction="#openTerms"
+                                    styleClass="settingsButtonRow">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="12">
+
+                                        <Label text="📄"
+                                               styleClass="settingsIcon"/>
+
+                                        <Label text="Terms of Use"
+                                               HBox.hgrow="ALWAYS"
+                                               styleClass="settingsRowTitle"/>
+
+                                        <Label text="›"
+                                               styleClass="settingsArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </VBox>
+
+
+                        <!-- ================= VERSION ================= -->
+
+                        <VBox alignment="CENTER"
+                              spacing="3"
+                              styleClass="settingsVersion">
+
+                            <Label text="RizGo"
+                                   styleClass="settingsVersionTitle"/>
+
+                            <Label text="Version 1.0"
+                                   styleClass="settingsVersionText"/>
+
+                        </VBox>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================= BOTTOM NAV ================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="6"
+                  styleClass="newBottomBar">
+
+                <Button text="⌂&#10;Home"
+                        onAction="#goHome"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="⌖&#10;Map"
+                        onAction="#openMap"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="◉&#10;Chat"
+                        onAction="#openChat"
+                        styleClass="bottomNavButton"/>
+
+                <Button text="♙&#10;Profile"
+                        onAction="#openProfile"
+                        styleClass="bottomNavButton"/>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+</StackPane>

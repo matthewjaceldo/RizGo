@@ -1,0 +1,623 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.DirectoryController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <!-- ===================================================== -->
+    <!-- MAIN DIRECTORY PAGE                                   -->
+    <!-- ===================================================== -->
+
+    <BorderPane maxWidth="430"
+                styleClass="directoryRoot">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER                                            -->
+        <!-- ================================================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  styleClass="directoryHeader">
+
+                <padding>
+
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+
+                </padding>
+
+
+                <!-- HEADER BAR -->
+
+                <GridPane>
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+
+                    <!-- BACK BUTTON -->
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="directoryBackButton"/>
+
+
+                    <!-- TITLE -->
+
+                    <Label text="Directory"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="directoryPageTitle"/>
+
+
+                    <!-- EMPTY RIGHT SIDE -->
+
+                    <Region GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+
+                <!-- ================================================= -->
+                <!-- SEARCH                                            -->
+                <!-- ================================================= -->
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="8"
+                      styleClass="directorySearchContainer">
+
+                    <Label text="⌕"
+                           styleClass="directorySearchIcon"/>
+
+                    <TextField fx:id="searchField"
+                               promptText="Search directory..."
+                               onKeyReleased="#searchDirectory"
+                               HBox.hgrow="ALWAYS"
+                               styleClass="directorySearchField"/>
+
+                </HBox>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================================================= -->
+        <!-- CENTER                                            -->
+        <!-- ================================================= -->
+
+        <center>
+
+            <VBox spacing="10"
+                  styleClass="directoryContent">
+
+                <padding>
+
+                    <Insets top="12"
+                            right="14"
+                            bottom="14"
+                            left="14"/>
+
+                </padding>
+
+
+                <!-- ================================================= -->
+                <!-- FILTER BUTTONS                                    -->
+                <!-- ================================================= -->
+
+                <HBox spacing="7"
+                      alignment="CENTER_LEFT">
+
+
+                    <ToggleButton fx:id="allFilter"
+                                  text="All"
+                                  selected="true"
+                                  onAction="#filterAll"
+                                  styleClass="directoryFilterActive"/>
+
+
+                    <ToggleButton fx:id="officeFilter"
+                                  text="Offices"
+                                  onAction="#filterOffices"
+                                  styleClass="directoryFilter"/>
+
+
+                    <ToggleButton fx:id="facilityFilter"
+                                  text="Facilities"
+                                  onAction="#filterFacilities"
+                                  styleClass="directoryFilter"/>
+
+
+                    <ToggleButton fx:id="serviceFilter"
+                                  text="Services"
+                                  onAction="#filterServices"
+                                  styleClass="directoryFilter"/>
+
+                </HBox>
+
+
+                <!-- ================================================= -->
+                <!-- DIRECTORY LIST                                    -->
+                <!-- ================================================= -->
+
+                <ScrollPane fitToWidth="true"
+                            hbarPolicy="NEVER"
+                            vbarPolicy="AS_NEEDED"
+                            VBox.vgrow="ALWAYS"
+                            styleClass="directoryScroll">
+
+                    <content>
+
+                        <VBox fx:id="directoryList"
+                              spacing="9"
+                              fillWidth="true">
+
+
+                            <!-- ===================================== -->
+                            <!-- REGISTRAR                             -->
+                            <!-- ===================================== -->
+
+                            <Button maxWidth="Infinity"
+                                    userData="office"
+                                    onAction="#openRegistrar"
+                                    styleClass="directoryCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="11">
+
+                                        <Label text="🏢"
+                                               styleClass="directoryIcon"/>
+
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Registrar's Office"
+                                                   styleClass="directoryName"/>
+
+                                            <Label text="Office"
+                                                   styleClass="directoryCategory"/>
+
+                                        </VBox>
+
+
+                                        <Label text="›"
+                                               styleClass="directoryArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+
+                            <!-- ===================================== -->
+                            <!-- GUIDANCE                              -->
+                            <!-- ===================================== -->
+
+                            <Button maxWidth="Infinity"
+                                    userData="office"
+                                    onAction="#openGuidance"
+                                    styleClass="directoryCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="11">
+
+                                        <Label text="💬"
+                                               styleClass="directoryIcon"/>
+
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Guidance Office"
+                                                   styleClass="directoryName"/>
+
+                                            <Label text="Office"
+                                                   styleClass="directoryCategory"/>
+
+                                        </VBox>
+
+
+                                        <Label text="›"
+                                               styleClass="directoryArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+
+                            <!-- ===================================== -->
+                            <!-- LIBRARY                               -->
+                            <!-- ===================================== -->
+
+                            <Button maxWidth="Infinity"
+                                    userData="facility"
+                                    onAction="#openLibrary"
+                                    styleClass="directoryCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="11">
+
+                                        <Label text="📚"
+                                               styleClass="directoryIcon"/>
+
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Library"
+                                                   styleClass="directoryName"/>
+
+                                            <Label text="Facility"
+                                                   styleClass="directoryCategory"/>
+
+                                        </VBox>
+
+
+                                        <Label text="›"
+                                               styleClass="directoryArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+
+                            <!-- ===================================== -->
+                            <!-- GYMNASIUM                             -->
+                            <!-- ===================================== -->
+
+                            <Button maxWidth="Infinity"
+                                    userData="facility"
+                                    onAction="#openGym"
+                                    styleClass="directoryCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="11">
+
+                                        <Label text="🏀"
+                                               styleClass="directoryIcon"/>
+
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Gymnasium"
+                                                   styleClass="directoryName"/>
+
+                                            <Label text="Facility"
+                                                   styleClass="directoryCategory"/>
+
+                                        </VBox>
+
+
+                                        <Label text="›"
+                                               styleClass="directoryArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+
+                            <!-- ===================================== -->
+                            <!-- ENROLLMENT                            -->
+                            <!-- ===================================== -->
+
+                            <Button maxWidth="Infinity"
+                                    userData="service"
+                                    onAction="#openEnrollment"
+                                    styleClass="directoryCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="11">
+
+                                        <Label text="📝"
+                                               styleClass="directoryIcon"/>
+
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Enrollment"
+                                                   styleClass="directoryName"/>
+
+                                            <Label text="Service"
+                                                   styleClass="directoryCategory"/>
+
+                                        </VBox>
+
+
+                                        <Label text="›"
+                                               styleClass="directoryArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+
+                            <!-- ===================================== -->
+                            <!-- STUDENT RECORDS                       -->
+                            <!-- ===================================== -->
+
+                            <Button maxWidth="Infinity"
+                                    userData="service"
+                                    onAction="#openStudentRecords"
+                                    styleClass="directoryCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="11">
+
+                                        <Label text="📄"
+                                               styleClass="directoryIcon"/>
+
+
+                                        <VBox spacing="2"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Student Records"
+                                                   styleClass="directoryName"/>
+
+                                            <Label text="Service"
+                                                   styleClass="directoryCategory"/>
+
+                                        </VBox>
+
+
+                                        <Label text="›"
+                                               styleClass="directoryArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </VBox>
+
+                    </content>
+
+                </ScrollPane>
+
+            </VBox>
+
+        </center>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM NAVIGATION                                 -->
+        <!-- ================================================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+
+                <!-- HOME -->
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌂"/>
+
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- MAP -->
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌖"/>
+
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- CHAT -->
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="◉"/>
+
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- PROFILE -->
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="♙"/>
+
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- CUSTOM RIZGO DIRECTORY POPUP                          -->
+    <!-- ===================================================== -->
+
+    <StackPane fx:id="directoryPopupOverlay"
+               visible="false"
+               managed="false"
+               maxWidth="430"
+               maxHeight="Infinity"
+               styleClass="directoryPopupOverlay">
+
+
+        <!-- ================================================= -->
+        <!-- POPUP CARD                                        -->
+        <!-- ================================================= -->
+
+        <VBox fx:id="directoryPopupCard"
+              alignment="CENTER_LEFT"
+              spacing="14"
+              prefWidth="330"
+              maxWidth="330"
+              minHeight="-Infinity"
+              prefHeight="-1"
+              maxHeight="-Infinity"
+              styleClass="directoryPopupCard">
+
+
+            <!-- TOP -->
+
+            <HBox alignment="CENTER_LEFT">
+
+                <Label text="RizGo"
+                       styleClass="directoryPopupBrand"/>
+
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+
+                <Button text="×"
+                        onAction="#closeDirectoryPopup"
+                        styleClass="directoryPopupClose"/>
+
+            </HBox>
+
+
+            <!-- TITLE -->
+
+            <Label fx:id="directoryPopupTitle"
+                   text="Directory"
+                   wrapText="true"
+                   styleClass="directoryPopupTitle"/>
+
+
+            <!-- DIVIDER -->
+
+            <Separator styleClass="directoryPopupSeparator"/>
+
+
+            <!-- CATEGORY -->
+
+            <Label fx:id="directoryPopupCategory"
+                   text="Category:"
+                   styleClass="directoryPopupCategory"/>
+
+
+            <!-- DESCRIPTION -->
+
+            <Label fx:id="directoryPopupMessage"
+                   text="Directory information."
+                   wrapText="true"
+                   maxWidth="Infinity"
+                   styleClass="directoryPopupMessage"/>
+
+
+            <!-- OK BUTTON -->
+
+            <Button text="OK"
+                    onAction="#closeDirectoryPopup"
+                    maxWidth="Infinity"
+                    prefHeight="48"
+                    styleClass="directoryPopupButton"/>
+
+        </VBox>
+
+    </StackPane>
+
+</StackPane>

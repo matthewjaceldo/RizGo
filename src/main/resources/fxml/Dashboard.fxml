@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.DashboardController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appRoot">
+
+    <!-- ===================================================== -->
+    <!-- MAIN DASHBOARD                                        -->
+    <!-- ===================================================== -->
+
+    <BorderPane>
+
+        <!-- ================================================= -->
+        <!-- HEADER                                            -->
+        <!-- ================================================= -->
+
+        <top>
+
+            <VBox spacing="16"
+                  styleClass="dashboardHeader">
+
+                <padding>
+                    <Insets top="20"
+                            right="20"
+                            bottom="18"
+                            left="20"/>
+                </padding>
+
+
+                <!-- ================= TOP ROW ================= -->
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="15">
+
+                    <Button text="☰"
+                            onAction="#openMenu"
+                            styleClass="menuButton"/>
+
+                    <Label text="RizGo"
+                           styleClass="dashboardLogo"/>
+
+                    <Pane HBox.hgrow="ALWAYS"/>
+
+                    <Button text="♙"
+                            onAction="#openProfile"
+                            styleClass="profileCircleButton"/>
+
+                </HBox>
+
+
+                <!-- ================= GREETING ================= -->
+
+                <VBox spacing="2">
+
+                    <Label text="Hello, Rizalian! 👋"
+                           styleClass="dashboardGreeting"/>
+
+                    <Label text="How can we help you today?"
+                           styleClass="dashboardSubtitle"/>
+
+                </VBox>
+
+
+                <!-- ================================================= -->
+                <!-- WORKING HOME SEARCH BAR                            -->
+                <!-- ================================================= -->
+
+                <HBox alignment="CENTER"
+                      spacing="8"
+                      styleClass="dashboardSearchContainer">
+
+                    <Label text="⌕"
+                           styleClass="searchIcon"/>
+
+                    <TextField fx:id="homeSearchField"
+                               promptText="Search for places, offices, services..."
+                               onAction="#searchHome"
+                               HBox.hgrow="ALWAYS"
+                               styleClass="dashboardSearchField"/>
+
+                    <Button text="⌕"
+                            onAction="#searchHome"
+                            styleClass="searchCircleButton"/>
+
+                </HBox>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================================================= -->
+        <!-- CENTER                                            -->
+        <!-- ================================================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="dashboardScroll">
+
+                <content>
+
+                    <VBox spacing="22"
+                          fillWidth="true">
+
+                        <padding>
+                            <Insets top="20"
+                                    right="20"
+                                    bottom="35"
+                                    left="20"/>
+                        </padding>
+
+
+                        <!-- ================================================= -->
+                        <!-- QUICK ACCESS                                      -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="15"
+                              maxWidth="Infinity">
+
+                            <Label text="QUICK ACCESS"
+                                   styleClass="sectionTitle"/>
+
+
+                            <GridPane hgap="12"
+                                      vgap="12"
+                                      maxWidth="Infinity">
+
+                                <columnConstraints>
+
+                                    <ColumnConstraints percentWidth="33.33"
+                                                       halignment="CENTER"
+                                                       hgrow="ALWAYS"/>
+
+                                    <ColumnConstraints percentWidth="33.33"
+                                                       halignment="CENTER"
+                                                       hgrow="ALWAYS"/>
+
+                                    <ColumnConstraints percentWidth="33.33"
+                                                       halignment="CENTER"
+                                                       hgrow="ALWAYS"/>
+
+                                </columnConstraints>
+
+
+                                <!-- ================= ROW 1 ================= -->
+
+
+                                <!-- CAMPUS MAP -->
+
+                                <Button onAction="#openMap"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="0"
+                                        GridPane.rowIndex="0"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="⌖"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Campus Map"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- CHATBOT -->
+
+                                <Button onAction="#openChat"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="1"
+                                        GridPane.rowIndex="0"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="🤖"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Chatbot"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- OFFICES -->
+
+                                <Button onAction="#openOffices"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="2"
+                                        GridPane.rowIndex="0"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="▦"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Offices"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- ================= ROW 2 ================= -->
+
+
+                                <!-- FACILITIES -->
+
+                                <Button onAction="#openFacilities"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="0"
+                                        GridPane.rowIndex="1"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="♨"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Facilities"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- SERVICES -->
+
+                                <Button onAction="#openServices"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="1"
+                                        GridPane.rowIndex="1"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="▣"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Services"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- DIRECTORY -->
+
+                                <Button onAction="#openDirectory"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="2"
+                                        GridPane.rowIndex="1"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="▤"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Directory"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- ================= ROW 3 ================= -->
+
+
+                                <!-- ANNOUNCEMENTS -->
+
+                                <Button onAction="#openAnnouncements"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="0"
+                                        GridPane.rowIndex="2"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="◖))"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Announcements"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- EVENTS -->
+
+                                <Button onAction="#openEvents"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="1"
+                                        GridPane.rowIndex="2"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="▦"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Events"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+
+                                <!-- EMERGENCY -->
+
+                                <Button onAction="#openEmergency"
+                                        maxWidth="Infinity"
+                                        prefHeight="120"
+                                        GridPane.columnIndex="2"
+                                        GridPane.rowIndex="2"
+                                        styleClass="quickAccessButton">
+
+                                    <graphic>
+
+                                        <VBox alignment="CENTER"
+                                              spacing="12">
+
+                                            <Label text="☎"
+                                                   styleClass="quickAccessIcon"/>
+
+                                            <Label text="Emergency"
+                                                   styleClass="quickAccessText"/>
+
+                                        </VBox>
+
+                                    </graphic>
+
+                                </Button>
+
+                            </GridPane>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- EXPLORE CAMPUS                                     -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="12"
+                              styleClass="exploreCampusCard">
+
+                            <padding>
+                                <Insets top="20"
+                                        right="20"
+                                        bottom="20"
+                                        left="20"/>
+                            </padding>
+
+
+                            <HBox alignment="CENTER_LEFT">
+
+                                <VBox spacing="5"
+                                      HBox.hgrow="ALWAYS">
+
+                                    <Label text="EXPLORE THE CAMPUS"
+                                           styleClass="exploreTitle"/>
+
+                                    <Label text="Find locations and navigate easily around RHS."
+                                           wrapText="true"
+                                           styleClass="exploreSubtitle"/>
+
+                                </VBox>
+
+
+                                <Label text="⌕"
+                                       styleClass="exploreIcon"/>
+
+                            </HBox>
+
+
+                            <!-- MAP IMAGE -->
+
+                            <StackPane prefHeight="220"
+                                       styleClass="dashboardMapPreview">
+
+                                <ImageView fitHeight="210"
+                                           preserveRatio="true"
+                                           smooth="true">
+
+                                    <image>
+                                        <Image url="@../images/campus_map.png.png"/>
+                                    </image>
+
+                                </ImageView>
+
+                            </StackPane>
+
+
+                            <Button text="Open Map  ›"
+                                    onAction="#openMap"
+                                    maxWidth="Infinity"
+                                    styleClass="exploreButton"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- ANNOUNCEMENTS                                      -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="12">
+
+                            <HBox alignment="CENTER_LEFT">
+
+                                <Label text="ANNOUNCEMENTS"
+                                       styleClass="sectionTitle"/>
+
+                                <Pane HBox.hgrow="ALWAYS"/>
+
+                                <Button text="View all"
+                                        onAction="#openAnnouncements"
+                                        styleClass="viewAllButton"/>
+
+                            </HBox>
+
+
+                            <!-- ANNOUNCEMENT 1 -->
+
+                            <Button onAction="#openAnnouncements"
+                                    maxWidth="Infinity"
+                                    prefHeight="95"
+                                    minHeight="95"
+                                    maxHeight="95"
+                                    styleClass="announcementCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="15">
+
+                                        <Label text="◖))"
+                                               styleClass="announcementIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Enrollment for SY 2025-2026"
+                                                   styleClass="announcementTitle"/>
+
+                                            <Label text="Enrollment for new and returning students."
+                                                   wrapText="true"
+                                                   styleClass="announcementDescription"/>
+
+                                            <Label text="May 15, 2025"
+                                                   styleClass="announcementDate"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="announcementArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+
+                            <!-- ANNOUNCEMENT 2 -->
+
+                            <Button onAction="#openAnnouncements"
+                                    maxWidth="Infinity"
+                                    prefHeight="95"
+                                    minHeight="95"
+                                    maxHeight="95"
+                                    styleClass="announcementCard">
+
+                                <graphic>
+
+                                    <HBox alignment="CENTER_LEFT"
+                                          spacing="15">
+
+                                        <Label text="▦"
+                                               styleClass="announcementIcon"/>
+
+                                        <VBox spacing="3"
+                                              HBox.hgrow="ALWAYS">
+
+                                            <Label text="Intramurals 2025"
+                                                   styleClass="announcementTitle"/>
+
+                                            <Label text="Check the latest campus event information."
+                                                   wrapText="true"
+                                                   styleClass="announcementDescription"/>
+
+                                        </VBox>
+
+                                        <Label text="›"
+                                               styleClass="announcementArrow"/>
+
+                                    </HBox>
+
+                                </graphic>
+
+                            </Button>
+
+                        </VBox>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM NAVIGATION                                 -->
+        <!-- ================================================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="10"
+                  styleClass="bottomNavigation">
+
+                <!-- HOME -->
+
+                <Button onAction="#openHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavActive">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌂"/>
+
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- MAP -->
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌖"/>
+
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- CHAT -->
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="◉"/>
+
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- PROFILE -->
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="♙"/>
+
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- DARK OVERLAY                                          -->
+    <!-- ===================================================== -->
+
+    <Pane fx:id="menuOverlay"
+          visible="false"
+          managed="false"
+          onMouseClicked="#closeMenu"
+          styleClass="menuOverlay"/>
+
+
+    <!-- ===================================================== -->
+    <!-- SIDE MENU                                             -->
+    <!-- ===================================================== -->
+
+    <VBox fx:id="sideMenu"
+          visible="false"
+          managed="false"
+          prefWidth="275"
+          minWidth="275"
+          maxWidth="275"
+          maxHeight="Infinity"
+          StackPane.alignment="CENTER_LEFT"
+          style="-fx-background-color: #B0000B;"
+          styleClass="sideMenu">
+
+
+        <!-- MENU HEADER -->
+
+        <HBox alignment="CENTER_LEFT"
+              spacing="10"
+              styleClass="sideMenuHeader">
+
+            <padding>
+                <Insets top="22"
+                        right="15"
+                        bottom="20"
+                        left="20"/>
+            </padding>
+
+            <Label text="Menu"
+                   styleClass="sideMenuTitle"/>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button text="×"
+                    onAction="#closeMenu"
+                    styleClass="sideMenuClose"/>
+
+        </HBox>
+
+
+        <!-- MENU ITEMS -->
+
+        <VBox spacing="3"
+              VBox.vgrow="ALWAYS">
+
+            <Button text="⌂     Home"
+                    onAction="#openHome"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItemActive"/>
+
+            <Button text="⌖     Campus Map"
+                    onAction="#openMap"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="🤖     Chatbot"
+                    onAction="#openChat"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="▦     Offices"
+                    onAction="#openOffices"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="♨     Facilities"
+                    onAction="#openFacilities"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="▣     Services"
+                    onAction="#openServices"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="▤     Directory"
+                    onAction="#openDirectory"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="◖))   Announcements"
+                    onAction="#openAnnouncements"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="▦     Events"
+                    onAction="#openEvents"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="☎     Emergency"
+                    onAction="#openEmergency"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="ⓘ     About RizGo"
+                    onAction="#openAbout"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+            <Button text="⚙     Settings"
+                    onAction="#openSettings"
+                    maxWidth="Infinity"
+                    styleClass="sideMenuItem"/>
+
+        </VBox>
+
+
+        <!-- MENU FOOTER -->
+
+        <VBox spacing="4"
+              styleClass="sideMenuFooter">
+
+            <padding>
+                <Insets top="15"
+                        right="20"
+                        bottom="18"
+                        left="20"/>
+            </padding>
+
+            <Label text="RizGo"
+                   styleClass="sideMenuFooterLogo"/>
+
+            <Label text="Rizalians. Navigate. Discover."
+                   styleClass="sideMenuFooterText"/>
+
+        </VBox>
+
+    </VBox>
+
+</StackPane>

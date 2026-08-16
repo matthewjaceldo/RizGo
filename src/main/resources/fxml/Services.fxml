@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.ServicesController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <!-- ===================================================== -->
+    <!-- MAIN SERVICES PAGE                                    -->
+    <!-- ===================================================== -->
+
+    <BorderPane maxWidth="430"
+                styleClass="servicesRoot">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER                                            -->
+        <!-- ================================================= -->
+
+        <top>
+
+            <VBox spacing="10"
+                  styleClass="servicesHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="12"
+                            left="16"/>
+                </padding>
+
+
+                <GridPane>
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+
+                    <!-- BACK -->
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            GridPane.columnIndex="0"
+                            styleClass="servicesBackButton"/>
+
+
+                    <!-- TITLE -->
+
+                    <Label text="Services"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="servicesPageTitle"/>
+
+
+                    <!-- RIGHT PLACEHOLDER -->
+
+                    <Region GridPane.columnIndex="2"/>
+
+                </GridPane>
+
+
+                <!-- ================================================= -->
+                <!-- SEARCH                                            -->
+                <!-- ================================================= -->
+
+                <HBox alignment="CENTER_LEFT"
+                      spacing="8"
+                      styleClass="servicesSearchContainer">
+
+                    <Label text="⌕"
+                           styleClass="servicesSearchIcon"/>
+
+                    <TextField fx:id="searchField"
+                               promptText="Search service..."
+                               onKeyReleased="#searchServices"
+                               HBox.hgrow="ALWAYS"
+                               styleClass="servicesSearchField"/>
+
+                </HBox>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================================================= -->
+        <!-- CENTER                                            -->
+        <!-- ================================================= -->
+
+        <center>
+
+            <ScrollPane fitToWidth="true"
+                        hbarPolicy="NEVER"
+                        vbarPolicy="AS_NEEDED"
+                        styleClass="servicesScroll">
+
+                <content>
+
+                    <VBox fx:id="serviceList"
+                          spacing="10"
+                          fillWidth="true">
+
+                        <padding>
+                            <Insets top="14"
+                                    right="14"
+                                    bottom="20"
+                                    left="14"/>
+                        </padding>
+
+
+                        <!-- ================================= -->
+                        <!-- ENROLLMENT                        -->
+                        <!-- ================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openEnrollment"
+                                styleClass="serviceCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="📝"
+                                           styleClass="serviceIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Enrollment"
+                                               styleClass="serviceName"/>
+
+                                        <Label text="Student Registration Service"
+                                               styleClass="serviceSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="serviceArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================= -->
+                        <!-- STUDENT RECORDS                   -->
+                        <!-- ================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openStudentRecords"
+                                styleClass="serviceCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="📄"
+                                           styleClass="serviceIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Student Records"
+                                               styleClass="serviceName"/>
+
+                                        <Label text="Academic Records Service"
+                                               styleClass="serviceSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="serviceArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================= -->
+                        <!-- GUIDANCE SERVICES                 -->
+                        <!-- ================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openGuidanceServices"
+                                styleClass="serviceCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="💬"
+                                           styleClass="serviceIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Guidance Services"
+                                               styleClass="serviceName"/>
+
+                                        <Label text="Student Support Service"
+                                               styleClass="serviceSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="serviceArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================= -->
+                        <!-- MEDICAL SERVICES                  -->
+                        <!-- ================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openMedicalServices"
+                                styleClass="serviceCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="✚"
+                                           styleClass="serviceIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Medical Services"
+                                               styleClass="serviceName"/>
+
+                                        <Label text="School Health Service"
+                                               styleClass="serviceSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="serviceArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================= -->
+                        <!-- LIBRARY SERVICES                  -->
+                        <!-- ================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openLibraryServices"
+                                styleClass="serviceCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="📚"
+                                           styleClass="serviceIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="Library Services"
+                                               styleClass="serviceName"/>
+
+                                        <Label text="Learning Resource Service"
+                                               styleClass="serviceSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="serviceArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+
+                        <!-- ================================= -->
+                        <!-- IT SERVICES                       -->
+                        <!-- ================================= -->
+
+                        <Button maxWidth="Infinity"
+                                onAction="#openITServices"
+                                styleClass="serviceCard">
+
+                            <graphic>
+
+                                <HBox alignment="CENTER_LEFT"
+                                      spacing="12">
+
+                                    <Label text="💻"
+                                           styleClass="serviceIcon"/>
+
+                                    <VBox spacing="2"
+                                          HBox.hgrow="ALWAYS">
+
+                                        <Label text="IT Services"
+                                               styleClass="serviceName"/>
+
+                                        <Label text="Technology Support Service"
+                                               styleClass="serviceSubtitle"/>
+
+                                    </VBox>
+
+                                    <Label text="›"
+                                           styleClass="serviceArrow"/>
+
+                                </HBox>
+
+                            </graphic>
+
+                        </Button>
+
+                    </VBox>
+
+                </content>
+
+            </ScrollPane>
+
+        </center>
+
+
+        <!-- ================================================= -->
+        <!-- BOTTOM NAVIGATION                                 -->
+        <!-- ================================================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+
+                <!-- HOME -->
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌂"/>
+                            <Label text="Home"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- MAP -->
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="⌖"/>
+                            <Label text="Map"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- CHAT -->
+
+                <Button onAction="#openChat"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="◉"/>
+                            <Label text="Chat"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+
+                <!-- PROFILE -->
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+
+                        <VBox alignment="CENTER"
+                              spacing="3">
+
+                            <Label text="♙"/>
+                            <Label text="Profile"/>
+
+                        </VBox>
+
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+
+    <!-- ===================================================== -->
+    <!-- CUSTOM SERVICE POPUP                                  -->
+    <!-- ===================================================== -->
+
+    <StackPane fx:id="servicePopupOverlay"
+               visible="false"
+               managed="false"
+               maxWidth="430"
+               maxHeight="Infinity"
+               styleClass="servicePopupOverlay">
+
+
+        <VBox fx:id="servicePopupCard"
+              alignment="CENTER_LEFT"
+              spacing="14"
+              prefWidth="330"
+              maxWidth="330"
+              minHeight="-Infinity"
+              prefHeight="-1"
+              maxHeight="-Infinity"
+              styleClass="servicePopupCard">
+
+
+            <!-- TOP -->
+
+            <HBox alignment="CENTER_LEFT">
+
+                <Label text="RizGo"
+                       styleClass="servicePopupBrand"/>
+
+                <Pane HBox.hgrow="ALWAYS"/>
+
+                <Button text="×"
+                        onAction="#closeServicePopup"
+                        styleClass="servicePopupClose"/>
+
+            </HBox>
+
+
+            <!-- TITLE -->
+
+            <Label fx:id="servicePopupTitle"
+                   text="Service"
+                   wrapText="true"
+                   styleClass="servicePopupTitle"/>
+
+
+            <!-- DIVIDER -->
+
+            <Separator styleClass="servicePopupSeparator"/>
+
+
+            <!-- DESCRIPTION -->
+
+            <Label fx:id="servicePopupMessage"
+                   text="Service information."
+                   wrapText="true"
+                   maxWidth="Infinity"
+                   styleClass="servicePopupMessage"/>
+
+
+            <!-- OK -->
+
+            <Button text="OK"
+                    onAction="#closeServicePopup"
+                    maxWidth="Infinity"
+                    prefHeight="48"
+                    styleClass="servicePopupButton"/>
+
+        </VBox>
+
+    </StackPane>
+
+</StackPane>

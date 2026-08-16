@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/21"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.rizgo.controllers.ChatbotController"
+           stylesheets="@../css/rizgo.css"
+           styleClass="appBackground">
+
+    <BorderPane maxWidth="430"
+                styleClass="chatRoot">
+
+
+        <!-- ================= HEADER ================= -->
+
+        <top>
+
+            <VBox styleClass="chatHeader">
+
+                <padding>
+                    <Insets top="14"
+                            right="16"
+                            bottom="14"
+                            left="16"/>
+                </padding>
+
+
+                <GridPane>
+
+                    <columnConstraints>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                        <ColumnConstraints hgrow="ALWAYS"/>
+
+                        <ColumnConstraints minWidth="45"
+                                           prefWidth="45"
+                                           maxWidth="45"/>
+
+                    </columnConstraints>
+
+
+                    <Button text="←"
+                            onAction="#goBack"
+                            prefWidth="55"
+                            minWidth="55"
+                            maxWidth="55"
+                            prefHeight="55"
+                            styleClass="chatBackButton"/>
+
+
+                    <Label text="Chatbot"
+                           GridPane.columnIndex="1"
+                           GridPane.halignment="CENTER"
+                           styleClass="chatPageTitle"/>
+
+
+                    <Button text="↻"
+                            onAction="#resetChat"
+                            GridPane.columnIndex="2"
+                            styleClass="chatResetButton"/>
+
+                </GridPane>
+
+            </VBox>
+
+        </top>
+
+
+        <!-- ================= CENTER ================= -->
+
+        <center>
+
+            <VBox spacing="12"
+                  styleClass="chatContent">
+
+                <padding>
+                    <Insets top="14"
+                            right="14"
+                            bottom="14"
+                            left="14"/>
+                </padding>
+
+
+                <!-- CHAT HISTORY -->
+
+                <ScrollPane fitToWidth="true"
+                            hbarPolicy="NEVER"
+                            vbarPolicy="AS_NEEDED"
+                            VBox.vgrow="ALWAYS"
+                            styleClass="chatScroll">
+
+                    <content>
+
+                        <VBox fx:id="chatMessages"
+                              spacing="10"
+                              fillWidth="true">
+
+                            <padding>
+                                <Insets top="8"
+                                        right="5"
+                                        bottom="8"
+                                        left="5"/>
+                            </padding>
+
+                        </VBox>
+
+                    </content>
+
+                </ScrollPane>
+
+
+                <!-- SUGGESTIONS -->
+
+                <VBox spacing="8"
+                      styleClass="chatSuggestions">
+
+                    <Label text="You may also ask:"
+                           styleClass="chatSuggestionTitle"/>
+
+
+                    <Button text="Where is the Science Building?"
+                            onAction="#askScience"
+                            maxWidth="Infinity"
+                            styleClass="chatSuggestionButton"/>
+
+
+                    <Button text="Where is the Gymnasium?"
+                            onAction="#askGym"
+                            maxWidth="Infinity"
+                            styleClass="chatSuggestionButton"/>
+
+
+                    <Button text="Where is the Admin Office?"
+                            onAction="#askAdmin"
+                            maxWidth="Infinity"
+                            styleClass="chatSuggestionButton"/>
+
+                </VBox>
+
+
+                <!-- INPUT -->
+
+                <HBox spacing="8"
+                      alignment="CENTER"
+                      styleClass="chatInputContainer">
+
+                    <TextField fx:id="messageField"
+                               promptText="Type your message..."
+                               onAction="#sendMessage"
+                               HBox.hgrow="ALWAYS"
+                               styleClass="chatInput"/>
+
+
+                    <Button text="➤"
+                            onAction="#sendMessage"
+                            styleClass="chatSendButton"/>
+
+                </HBox>
+
+
+                <Label text="RizGo Chatbot can help locate campus buildings."
+                       wrapText="true"
+                       styleClass="chatDisclaimer"/>
+
+            </VBox>
+
+        </center>
+
+
+        <!-- ================= BOTTOM ================= -->
+
+        <bottom>
+
+            <HBox alignment="CENTER"
+                  spacing="5"
+                  maxWidth="Infinity"
+                  styleClass="bottomNavigation">
+
+
+                <Button onAction="#goHome"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="3">
+                            <Label text="⌂"/>
+                            <Label text="Home"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openMap"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="3">
+                            <Label text="⌖"/>
+                            <Label text="Map"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+
+                <Button maxWidth="Infinity"
+                        HBox.hgrow="ALWAYS"
+                        styleClass="bottomNavButtonActive">
+
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="3">
+                            <Label text="◉"/>
+                            <Label text="Chat"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+
+                <Button onAction="#openProfile"
+                        HBox.hgrow="ALWAYS"
+                        maxWidth="Infinity"
+                        styleClass="bottomNavButton">
+
+                    <graphic>
+                        <VBox alignment="CENTER" spacing="3">
+                            <Label text="♙"/>
+                            <Label text="Profile"/>
+                        </VBox>
+                    </graphic>
+
+                </Button>
+
+            </HBox>
+
+        </bottom>
+
+    </BorderPane>
+
+</StackPane>
