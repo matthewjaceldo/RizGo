@@ -27,8 +27,6 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-          # Cache maven is built-in to setup-java, simplifying things.
-          # (Ensure this block is indented exactly like the other blocks)
           cache: maven
 
       - name: Setup Android NDK
@@ -53,15 +51,13 @@ jobs:
             zlib1g-dev
 
       - name: Check environment and set permissions
-        # Make the wrapper executable right before we check,
-        # ensuring the context is correct.
         run: |
           chmod +x mvnw
           echo "JAVA_HOME=$JAVA_HOME"
           echo "GRAALVM_HOME=$GRAALVM_HOME"
           java -version
-          # Using $(...) ensures we run the command properly.
-          $($GRAALVM_HOME/bin/native-image --version)
+          # Use standard path referencing provided by GraalVM action
+          native-image --version
           ./mvnw -version
 
       - name: Compile RizGo
@@ -70,9 +66,6 @@ jobs:
       - name: Build Android APK
         run: |
           export ANDROID_SDK=$ANDROID_HOME
-          # Added clean to ensure a completely fresh build
-          # -Pandroid should be fine, but sometimes -Dclient.target=android is safer.
-          # I'll stick with what you have as it should work if configured.
           ./mvnw -Pandroid clean gluonfx:build gluonfx:package
         env:
           ANDROID_NDK: ${{ steps.setup-ndk.outputs.ndk-path }}
@@ -80,7 +73,6 @@ jobs:
       - name: Find generated APK
         run: |
           echo "Generated Android files:"
-          # Just printing is good for logging, the next step does the work.
           find target/gluonfx/aarch64-android/gvm \
             -type f \( -name "*.apk" -o -name "*.aab" \) -print || echo "No APK/AAB found."
 
@@ -88,7 +80,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RizGo-Android
-          # Using wildcards (/*.apk) is best to ensure we catch whatever is built.
           path: |
             target/gluonfx/aarch64-android/gvm/*.apk
             target/gluonfx/aarch64-android/gvm/*.aab
