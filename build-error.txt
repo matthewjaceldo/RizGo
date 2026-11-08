@@ -1,0 +1,136 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.rizgo:RizGo >---------------------------
+[INFO] Building RizGo 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- gluonfx-maven-plugin:1.0.29:build (default-cli) @ RizGo ---
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.rizgo:RizGo >---------------------------
+[INFO] Building RizGo 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> gluonfx-maven-plugin:1.0.29:compile (default-cli) > process-classes @ RizGo >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ RizGo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 33 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ RizGo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug release 17 module-path] to target/classes
+[INFO] 
+[INFO] <<< gluonfx-maven-plugin:1.0.29:compile (default-cli) < process-classes @ RizGo <<<
+[INFO] 
+[INFO] 
+[INFO] --- gluonfx-maven-plugin:1.0.29:compile (default-cli) @ RizGo ---
+Nov 06, 2026 8:40:50 PM com.gluonhq.substrate.util.Logger logInfo
+INFO: Substrate is tested with the Gluon's GraalVM build which you can find at https://github.com/gluonhq/graal/releases.
+While you can still use other GraalVM builds, there is no guarantee that these will work properly with Substrate
+[Fri Nov 06 20:40:50 PST 2026][INFO] ==================== COMPILE TASK ====================
+             _______  ___      __   __  _______  __    _
+            |       ||   |    |  | |  ||       ||  |  | |
+            |    ___||   |    |  | |  ||   _   ||   |_| |
+            |   | __ |   |    |  |_|  ||  | |  ||       |
+            |   ||  ||   |___ |       ||  |_|  ||  _    |
+            |   |_| ||       ||       ||       || | |   |
+            |_______||_______||_______||_______||_|  |__|
+
+    Access to the latest docs, tips and tricks and more info on
+    how to get support? Register your usage of Gluon Substrate now at
+
+    https://gluonhq.com/activate
+
+
+
+[Fri Nov 06 20:40:51 PST 2026][INFO] We will now compile your code for aarch64-linux-android. This may take some time.
+[Fri Nov 06 20:40:57 PST 2026][INFO] [SUB] Warning: Ignoring server-mode native-image argument --no-server.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:+ForceNoROSectionRelocations' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:+UseCAPCache' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:-DeadlockWatchdogExitOnTimeout' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:ReflectionConfigurationFiles=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/reflectionconfig-aarch64-android.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:CAPCacheDir=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/capcache' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:ResourceConfigurationFiles=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/resourceconfig-aarch64-android.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:DeadlockWatchdogInterval=0' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:+RemoveSaturatedTypeFlows' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:JNIConfigurationFiles=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/jniconfig-aarch64-android.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:-SpawnIsolates' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:ResourceConfigurationResources=META-INF/native-image/org.xerial/sqlite-jdbc/resource-config.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:+ExitAfterRelocatableImageWrite' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:EnableURLProtocols=http,https' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:+SharedLibrary' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:CompilerBackend=lir' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle,com.sun.media.jfxmedia.MediaErrors,com.sun.webkit.graphics.Images,com.sun.webkit.LocalizedStrings,javafx.scene.web.HTMLEditorSkin,com.sun.org.apache.xerces.internal.impl.msg.XMLMessages' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: The option '-H:TempDirectory=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/tmp' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:40:58 PST 2026][INFO] [SUB] Warning: Please re-evaluate whether any experimental option is required, and either remove or unlock it. The build output lists all active experimental options, including where they come from and possible alternatives. If you think an experimental option should be considered as stable, please file an issue.
+[Fri Nov 06 20:41:06 PST 2026][INFO] [SUB] ========================================================================================================================
+[Fri Nov 06 20:41:06 PST 2026][INFO] [SUB] GraalVM Native Image: Generating 'com.rizgo.main' (shared library)...
+[Fri Nov 06 20:41:06 PST 2026][INFO] [SUB] ========================================================================================================================
+[Fri Nov 06 20:41:06 PST 2026][INFO] [SUB] For detailed information and explanations on the build output, visit:
+[Fri Nov 06 20:41:06 PST 2026][INFO] [SUB] https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+[Fri Nov 06 20:41:06 PST 2026][INFO] [SUB] ------------------------------------------------------------------------------------------------------------------------
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] [1/8] Initializing...                                                                                    (0.0s @ 0.09GB)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] Error: Missing CAP cache value for: NativeCodeInfo:BuiltinDirectives:StructInfo:graal_create_isolate_params_t:StructFieldInfo:_reserved_5
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] Internal exception: com.oracle.svm.core.util.UserError$UserException: Missing CAP cache value for: NativeCodeInfo:BuiltinDirectives:StructInfo:graal_create_isolate_params_t:StructFieldInfo:_reserved_5
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.util.UserError.abort(UserError.java:75)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.InfoTreeVisitor.processChildren(InfoTreeVisitor.java:78)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.query.QueryResultParser.visitStructInfo(QueryResultParser.java:138)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.StructInfo.accept(StructInfo.java:62)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.InfoTreeVisitor.processChildren(InfoTreeVisitor.java:76)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.InfoTreeVisitor.visitNativeCodeInfo(InfoTreeVisitor.java:84)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.NativeCodeInfo.accept(NativeCodeInfo.java:57)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.query.QueryResultParser.parse(QueryResultParser.java:82)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.CAnnotationProcessorCache.get(CAnnotationProcessorCache.java:169)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.CAnnotationProcessor.process(CAnnotationProcessor.java:94)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.NativeLibraries.finish(NativeLibraries.java:559)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.processNativeLibraryImports(NativeImageGenerator.java:1754)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.setupNativeLibraries(NativeImageGenerator.java:1202)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.setupNativeImage(NativeImageGenerator.java:962)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.doRun(NativeImageGenerator.java:591)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.run(NativeImageGenerator.java:551)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.buildImage(NativeImageGeneratorRunner.java:538)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.build(NativeImageGeneratorRunner.java:727)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.start(NativeImageGeneratorRunner.java:142)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.main(NativeImageGeneratorRunner.java:97)
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] ------------------------------------------------------------------------------------------------------------------------
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB]                         0.4s (4.1% of total time) in 24 GCs | Peak RSS: 0.48GB | CPU load: 2.66
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] ========================================================================================================================
+[Fri Nov 06 20:41:08 PST 2026][INFO] [SUB] Finished generating 'com.rizgo.main' in 8.3s.
+[Fri Nov 06 20:41:09 PST 2026][SEVERE] Process compile failed with result: 1
+Check the log files under /mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/log
+And please check https://docs.gluonhq.com/ for more information.
+[Fri Nov 06 20:41:09 PST 2026][INFO] Logging process [compile] to file: /mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/log/process-compile-1793968869310.log
+[Fri Nov 06 20:41:09 PST 2026][SEVERE] Compiling failed.
+Check the log files under /mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/log
+And please check https://docs.gluonhq.com/ for more information.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  31.806 s
+[INFO] Finished at: 2026-11-06T20:41:09+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.gluonhq:gluonfx-maven-plugin:1.0.29:compile (default-cli) on project RizGo: Compiling failed -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  34.103 s
+[INFO] Finished at: 2026-11-06T20:41:09+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.gluonhq:gluonfx-maven-plugin:1.0.29:build (default-cli) on project RizGo: Error, gluonfx:build failed -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

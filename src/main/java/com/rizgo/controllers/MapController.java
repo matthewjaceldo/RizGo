@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 import javafx.scene.layout.VBox;
@@ -40,6 +41,9 @@ public class MapController {
     @FXML
     private Label pinpointMessage;
 
+    @FXML
+    private ImageView campusMapImageView;
+
 
     // =========================================================
     // ZOOM MAP
@@ -62,7 +66,7 @@ public class MapController {
 
 
     // =========================================================
-    // SELECTED LOCATION
+    // SELECTED LOCATION & RATIOS
     // =========================================================
 
     private String selectedBuilding = "";
@@ -70,15 +74,8 @@ public class MapController {
     private String selectedFloor = "";
     private String selectedStatus = "";
 
-    /*
-     * The zoom map canvas is:
-     *
-     * WIDTH  = 760
-     * HEIGHT = 652
-     *
-     * Coordinates below are based on your campus_map.png.png.
-     */
-
+    private double targetRatioX = -1;
+    private double targetRatioY = -1;
     private double selectedPinX = -1;
     private double selectedPinY = -1;
 
@@ -149,7 +146,7 @@ public class MapController {
 
 
     // =========================================================
-    // LOCATE BUILDING
+    // LOCATE BUILDING (Using precise percentage ratios 0.0 to 1.0)
     // =========================================================
 
     private void locateBuilding(
@@ -174,8 +171,8 @@ public class MapController {
                     "6 Floor",
                     "Open",
 
-                    0.516,
-                    0.723,
+                    0.505,
+                    0.655,
 
                     openZoom
             );
@@ -196,8 +193,8 @@ public class MapController {
                     "3 Floors",
                     "Open",
 
-                    0.617,
-                    0.435,
+                    0.531,
+                    0.389,
 
                     openZoom
             );
@@ -219,8 +216,8 @@ public class MapController {
                     "3 Floors",
                     "Open",
 
-                    0.815,
-                    0.682,
+                    0.802,
+                    0.664,
 
                     openZoom
             );
@@ -244,8 +241,8 @@ public class MapController {
                     "1 Floor",
                     "Closed",
 
-                    0.786,
-                    0.422,
+                    0.776,
+                    0.434,
 
                     openZoom
             );
@@ -267,8 +264,8 @@ public class MapController {
                     "4 Floors",
                     "Open",
 
-                    0.393,
-                    0.743,
+                    0.391,
+                    0.655,
 
                     openZoom
             );
@@ -291,8 +288,8 @@ public class MapController {
                     "3 Floors",
                     "Open",
 
-                    0.375,
-                    0.131,
+                    0.479,
+                    0.150,
 
                     openZoom
             );
@@ -314,8 +311,8 @@ public class MapController {
                     "4 Floors",
                     "Open",
 
-                    0.876,
-                    0.756,
+                    0.802,
+                    0.752,
 
                     openZoom
             );
@@ -338,8 +335,8 @@ public class MapController {
                     "6 Floors",
                     "Open",
 
-                    0.378,
-                    0.206,
+                    0.406,
+                    0.221,
 
                     openZoom
             );
@@ -360,8 +357,8 @@ public class MapController {
                     "4 Floors",
                     "Open",
 
-                    0.125,
-                    0.649,
+                    0.167,
+                    0.628,
 
                     openZoom
             );
@@ -384,7 +381,7 @@ public class MapController {
                     "Open",
 
                     0.286,
-                    0.649,
+                    0.628,
 
                     openZoom
             );
@@ -406,8 +403,8 @@ public class MapController {
                     "6 Floors",
                     "Open",
 
-                    0.264,
-                    0.834,
+                    0.292,
+                    0.823,
 
                     openZoom
             );
@@ -428,8 +425,8 @@ public class MapController {
                     "2 Floor",
                     "Open",
 
-                    0.067,
-                    0.149,
+                    0.156,
+                    0.168,
 
                     openZoom
             );
@@ -451,7 +448,7 @@ public class MapController {
                     "Open",
 
                     0.307,
-                    0.441,
+                    0.434,
 
                     openZoom
             );
@@ -462,19 +459,21 @@ public class MapController {
 
         // =====================================================
         // R.H.
-        //
-        // Exact position is not clearly labelled in the
-        // current campus map image.
         // =====================================================
 
         if (search.contains("r.h")
                 || search.matches(".*\\brh\\b.*")) {
 
-            selectBuildingWithoutPin(
+            selectBuilding(
                     "R.H. Building",
                     "Academic Building",
                     "3 Floors",
-                    "Open"
+                    "Open",
+
+                    0.906,
+                    0.434,
+
+                    openZoom
             );
 
             return;
@@ -482,16 +481,21 @@ public class MapController {
 
 
         // =====================================================
-        // ROMULO
+        // ROMULO / NEW BUILDING
         // =====================================================
 
-        if (search.contains("romulo")) {
+        if (search.contains("romulo") || search.contains("new building")) {
 
-            selectBuildingWithoutPin(
+            selectBuilding(
                     "Romulo Building",
                     "Academic Building",
                     "4 Floors",
-                    "Open"
+                    "Open",
+
+                    0.750,
+                    0.080,
+
+                    openZoom
             );
 
             return;
@@ -504,11 +508,16 @@ public class MapController {
 
         if (search.contains("chapel")) {
 
-            selectBuildingWithoutPin(
+            selectBuilding(
                     "RHS Chapel",
                     "Religious Facility",
                     "1 Floor",
-                    "Open"
+                    "Open",
+
+                    0.604,
+                    0.212,
+
+                    openZoom
             );
 
             return;
@@ -536,7 +545,7 @@ public class MapController {
 
 
     // =========================================================
-    // SELECT BUILDING WITH PIN
+    // SELECT BUILDING WITH RATIOS
     // =========================================================
 
     private void selectBuilding(
@@ -544,8 +553,8 @@ public class MapController {
             String category,
             String floor,
             String status,
-            double normalizedX,
-            double normalizedY,
+            double ratioX,
+            double ratioY,
             boolean openZoom) {
 
         selectedBuilding = name;
@@ -553,29 +562,17 @@ public class MapController {
         selectedFloor = floor;
         selectedStatus = status;
 
-
         nameLabel.setText(name);
         categoryLabel.setText(category);
         floorLabel.setText(floor);
         statusLabel.setText(status);
 
-
-        /*
-         * Convert normalized campus-map position
-         * to our 760 x 652 zoom-map canvas.
-         */
-
-        selectedPinX =
-                normalizedX * 760;
-
-        selectedPinY =
-                normalizedY * 652;
-
+        targetRatioX = ratioX;
+        targetRatioY = ratioY;
 
         pinpointMessage.setText(
                 "Location ready: " + name
         );
-
 
         if (openZoom) {
 
@@ -599,15 +596,15 @@ public class MapController {
         selectedFloor = floor;
         selectedStatus = status;
 
+        targetRatioX = -1;
+        targetRatioY = -1;
         selectedPinX = -1;
         selectedPinY = -1;
-
 
         nameLabel.setText(name);
         categoryLabel.setText(category);
         floorLabel.setText(floor);
         statusLabel.setText(status);
-
 
         pinpointMessage.setText(
                 "Building selected. Exact map position is not configured yet."
@@ -633,8 +630,8 @@ public class MapController {
         }
 
 
-        if (selectedPinX < 0
-                || selectedPinY < 0) {
+        if (targetRatioX < 0
+                || targetRatioY < 0) {
 
             pinpointMessage.setText(
                     "Exact map position is not configured for this building yet."
@@ -649,7 +646,7 @@ public class MapController {
 
 
     // =========================================================
-    // OPEN ZOOMED MAP
+    // OPEN ZOOMED MAP (Dynamic Layout Bounds Mapping)
     // =========================================================
 
     @FXML
@@ -676,8 +673,16 @@ public class MapController {
         );
 
 
-        if (selectedPinX >= 0
-                && selectedPinY >= 0) {
+        if (targetRatioX >= 0
+                && targetRatioY >= 0
+                && campusMapImageView != null) {
+
+            // Dynamically evaluate actual rendered bounds on screen
+            double currentImgWidth = campusMapImageView.getBoundsInLocal().getWidth();
+            double currentImgHeight = campusMapImageView.getBoundsInLocal().getHeight();
+
+            selectedPinX = targetRatioX * currentImgWidth;
+            selectedPinY = targetRatioY * currentImgHeight;
 
             zoomPin.setLayoutX(
                     selectedPinX - 15
@@ -716,22 +721,18 @@ public class MapController {
 
 
             /*
-             * Move the scroll viewport roughly toward
+             * Move the scroll viewport toward
              * the selected location.
              */
 
             Platform.runLater(() -> {
 
                 zoomMapScroll.setHvalue(
-                        clamp(
-                                selectedPinX / 760.0
-                        )
+                        clamp(targetRatioX)
                 );
 
                 zoomMapScroll.setVvalue(
-                        clamp(
-                                selectedPinY / 652.0
-                        )
+                        clamp(targetRatioY)
                 );
             });
 

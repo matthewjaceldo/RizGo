@@ -455,7 +455,7 @@
                                            smooth="true">
 
                                     <image>
-                                        <Image url="@../images/campus_map.png.png"/>
+                                        <Image url="@../images/campus_map.png"/>
                                     </image>
 
                                 </ImageView>

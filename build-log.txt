@@ -1,0 +1,443 @@
+Apache Maven 3.8.8 (4c87b05d9aedce574290d1acc98575ed5eb6cd39)
+Maven home: /opt/maven
+Java version: 21.0.12, vendor: Oracle Corporation, runtime: /home/rizgo/graalvm/graalvm-jdk-21.0.12+7.1
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "6.18.33.2-microsoft-standard-wsl2", arch: "amd64", family: "unix"
+[DEBUG] Created new class realm maven.api
+[DEBUG] Importing foreign packages into class realm maven.api
+[DEBUG]   Imported: javax.annotation.* < plexus.core
+[DEBUG]   Imported: javax.annotation.security.* < plexus.core
+[DEBUG]   Imported: javax.inject.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.artifact < plexus.core
+[DEBUG]   Imported: org.apache.maven.classrealm < plexus.core
+[DEBUG]   Imported: org.apache.maven.cli < plexus.core
+[DEBUG]   Imported: org.apache.maven.configuration < plexus.core
+[DEBUG]   Imported: org.apache.maven.exception < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution < plexus.core
+[DEBUG]   Imported: org.apache.maven.execution.scope < plexus.core
+[DEBUG]   Imported: org.apache.maven.graph < plexus.core
+[DEBUG]   Imported: org.apache.maven.lifecycle < plexus.core
+[DEBUG]   Imported: org.apache.maven.model < plexus.core
+[DEBUG]   Imported: org.apache.maven.monitor < plexus.core
+[DEBUG]   Imported: org.apache.maven.plugin < plexus.core
+[DEBUG]   Imported: org.apache.maven.profiles < plexus.core
+[DEBUG]   Imported: org.apache.maven.project < plexus.core
+[DEBUG]   Imported: org.apache.maven.reporting < plexus.core
+[DEBUG]   Imported: org.apache.maven.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.rtinfo < plexus.core
+[DEBUG]   Imported: org.apache.maven.settings < plexus.core
+[DEBUG]   Imported: org.apache.maven.toolchain < plexus.core
+[DEBUG]   Imported: org.apache.maven.usability < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.* < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authentication < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.authorization < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.events < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.observers < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.proxy < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.repository < plexus.core
+[DEBUG]   Imported: org.apache.maven.wagon.resource < plexus.core
+[DEBUG]   Imported: org.codehaus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.* < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.classworlds < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.component < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.configuration < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.container < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.context < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.lifecycle < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.logging < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.personality < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.Xpp3Dom < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParser < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlPullParserException < plexus.core
+[DEBUG]   Imported: org.codehaus.plexus.util.xml.pull.XmlSerializer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.* < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.artifact < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.collection < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.deployment < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.graph < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.installation < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.internal.impl < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.metadata < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.repository < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.resolution < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.spi < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.transfer < plexus.core
+[DEBUG]   Imported: org.eclipse.aether.version < plexus.core
+[DEBUG]   Imported: org.fusesource.jansi.* < plexus.core
+[DEBUG]   Imported: org.slf4j.* < plexus.core
+[DEBUG]   Imported: org.slf4j.event.* < plexus.core
+[DEBUG]   Imported: org.slf4j.helpers.* < plexus.core
+[DEBUG]   Imported: org.slf4j.spi.* < plexus.core
+[DEBUG] Populating class realm maven.api
+[INFO] Error stacktraces are turned on.
+[DEBUG] Message scheme: color
+[DEBUG] Message styles: debug info warning error success failure strong mojo project
+[DEBUG] Reading global settings from /opt/maven/conf/settings.xml
+[DEBUG] Reading user settings from /home/rizgo/.m2/settings.xml
+[DEBUG] Reading global toolchains from /opt/maven/conf/toolchains.xml
+[DEBUG] Reading user toolchains from /home/rizgo/.m2/toolchains.xml
+[DEBUG] Using local repository at /home/rizgo/.m2/repository
+[DEBUG] Using manager EnhancedLocalRepositoryManager with priority 10.0 for /home/rizgo/.m2/repository
+[INFO] Scanning for projects...
+[DEBUG] Extension realms for project com.rizgo:RizGo:jar:1.0-SNAPSHOT: (none)
+[DEBUG] Looking up lifecycle mappings for packaging jar from ClassRealm[plexus.core, parent: null]
+[DEBUG] Resolving plugin prefix gluonfx from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix gluonfx to com.gluonhq:gluonfx-maven-plugin from POM com.rizgo:RizGo:jar:1.0-SNAPSHOT
+[DEBUG] === REACTOR BUILD PLAN ================================================
+[DEBUG] Project: com.rizgo:RizGo:jar:1.0-SNAPSHOT
+[DEBUG] Tasks:   [gluonfx:build]
+[DEBUG] Style:   Aggregating
+[DEBUG] =======================================================================
+[INFO] 
+[INFO] --------------------------< com.rizgo:RizGo >---------------------------
+[INFO] Building RizGo 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[DEBUG] Resolving plugin prefix gluonfx from [org.apache.maven.plugins, org.codehaus.mojo]
+[DEBUG] Resolved plugin prefix gluonfx to com.gluonhq:gluonfx-maven-plugin from POM com.rizgo:RizGo:jar:1.0-SNAPSHOT
+[DEBUG] Lifecycle default -> [validate, initialize, generate-sources, process-sources, generate-resources, process-resources, compile, process-classes, generate-test-sources, process-test-sources, generate-test-resources, process-test-resources, test-compile, process-test-classes, test, prepare-package, package, pre-integration-test, integration-test, post-integration-test, verify, install, deploy]
+[DEBUG] Lifecycle clean -> [pre-clean, clean, post-clean]
+[DEBUG] Lifecycle site -> [pre-site, site, post-site, site-deploy]
+[DEBUG] === PROJECT BUILD PLAN ================================================
+[DEBUG] Project:       com.rizgo:RizGo:1.0-SNAPSHOT
+[DEBUG] Dependencies (collect): []
+[DEBUG] Dependencies (resolve): [compile]
+[DEBUG] Repositories (dependencies): [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] Repositories (plugins)     : [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG] -----------------------------------------------------------------------
+[DEBUG] Goal:          com.gluonhq:gluonfx-maven-plugin:1.0.29:build (default-cli)
+[DEBUG] Style:         Aggregating
+[DEBUG] Configuration: <?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appIdentifier>${gluonfx.appIdentifier}</appIdentifier>
+  <attachList>${gluonfx.attachList}</attachList>
+  <basedir default-value="${basedir}"/>
+  <bundlesList>${gluonfx.bundlesList}</bundlesList>
+  <enableSWRendering default-value="false">${gluonfx.enableSWRendering}</enableSWRendering>
+  <executable default-value="java">${gluonfx.executable}</executable>
+  <graalvmHome>${gluonfx.graalvmHome}</graalvmHome>
+  <javaStaticSdkVersion>${gluonfx.javaStaticSdkVersion}</javaStaticSdkVersion>
+  <javafxStaticSdkVersion>${gluonfx.javafxStaticSdkVersion}</javafxStaticSdkVersion>
+  <jniList>${gluonfx.jniList}</jniList>
+  <linkerArgs>${gluonfx.linkerArgs}</linkerArgs>
+  <mainClass>com.rizgo/com.rizgo.Main</mainClass>
+  <nativeImageArgs>${gluonfx.nativeImageArgs}</nativeImageArgs>
+  <pom default-value="${basedir}/pom.xml"/>
+  <project default-value="${project}"/>
+  <reflectionList>
+    <list>com.rizgo.controllers.AboutController</list>
+    <list>com.rizgo.controllers.AnnouncementsController</list>
+    <list>com.rizgo.controllers.BuildingController</list>
+    <list>com.rizgo.controllers.ChatbotController</list>
+    <list>com.rizgo.controllers.DashboardController</list>
+    <list>com.rizgo.controllers.DirectoryController</list>
+    <list>com.rizgo.controllers.EmergencyController</list>
+    <list>com.rizgo.controllers.EventsController</list>
+    <list>com.rizgo.controllers.FacilitiesController</list>
+    <list>com.rizgo.controllers.LoginController</list>
+    <list>com.rizgo.controllers.MapController</list>
+    <list>com.rizgo.controllers.OfficesController</list>
+    <list>com.rizgo.controllers.ProfileController</list>
+    <list>com.rizgo.controllers.RoleSelectionController</list>
+    <list>com.rizgo.controllers.SearchController</list>
+    <list>com.rizgo.controllers.ServicesController</list>
+    <list>com.rizgo.controllers.SettingsController</list>
+    <list>com.rizgo.controllers.SignupController</list>
+    <list>com.rizgo.controllers.SplashController</list>${gluonfx.reflectionList}</reflectionList>
+  <releaseConfiguration>
+    <appLabel>RizGo</appLabel>
+    <versionCode>1</versionCode>
+    <versionName>1.0</versionName>${gluonfx.releaseConfiguration}</releaseConfiguration>
+  <remoteDir>${gluonfx.remoteDir}</remoteDir>
+  <remoteHostName>${gluonfx.remoteHostName}</remoteHostName>
+  <remoteRepos default-value="${project.remoteProjectRepositories}"/>
+  <repoSession default-value="${repositorySystemSession}"/>
+  <resourcesList>
+    <list>fxml/.*</list>
+    <list>css/.*</list>
+    <list>images/.*</list>${gluonfx.resourcesList}</resourcesList>
+  <runtimeArgs>${gluonfx.runtimeArgs}</runtimeArgs>
+  <session default-value="${session}"/>
+  <target default-value="host">android</target>
+  <verbose default-value="false">${gluonfx.verbose}</verbose>
+</configuration>
+[DEBUG] =======================================================================
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=734995, ConflictMarker.markTime=688844, ConflictMarker.nodeCount=32, ConflictIdSorter.graphTime=514661, ConflictIdSorter.topsortTime=470586, ConflictIdSorter.conflictIdCount=15, ConflictIdSorter.conflictIdCycleCount=6, ConflictResolver.totalTime=2786542, ConflictResolver.conflictItemCount=22, DefaultDependencyCollector.collectTime=73533899, DefaultDependencyCollector.transformTime=7969793}
+[DEBUG] com.rizgo:RizGo:jar:1.0-SNAPSHOT
+[DEBUG]    org.openjfx:javafx-controls:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-controls:jar:linux:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-graphics:jar:21.0.2:compile
+[DEBUG]          org.openjfx:javafx-graphics:jar:linux:21.0.2:compile
+[DEBUG]          org.openjfx:javafx-base:jar:21.0.2:compile
+[DEBUG]             org.openjfx:javafx-base:jar:linux:21.0.2:compile
+[DEBUG]    org.openjfx:javafx-fxml:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-fxml:jar:linux:21.0.2:compile
+[DEBUG]    org.openjfx:javafx-web:jar:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-web:jar:linux:21.0.2:compile
+[DEBUG]       org.openjfx:javafx-media:jar:21.0.2:compile
+[DEBUG]          org.openjfx:javafx-media:jar:linux:21.0.2:compile
+[DEBUG]    org.xerial:sqlite-jdbc:jar:3.39.4.1:compile
+[DEBUG]    org.slf4j:slf4j-api:jar:2.0.17:compile
+[DEBUG]    org.slf4j:slf4j-simple:jar:2.0.17:compile
+[INFO] 
+[INFO] --- gluonfx-maven-plugin:1.0.29:build (default-cli) @ RizGo ---
+[DEBUG] Using mirror maven-default-http-blocker (http://0.0.0.0/) for ow2-snapshot (http://repository.ow2.org/nexus/content/repositories/snapshots).
+[DEBUG] Dependency collection stats {ConflictMarker.analyzeTime=365237, ConflictMarker.markTime=76635, ConflictMarker.nodeCount=31, ConflictIdSorter.graphTime=33775, ConflictIdSorter.topsortTime=25300, ConflictIdSorter.conflictIdCount=27, ConflictIdSorter.conflictIdCycleCount=0, ConflictResolver.totalTime=4307142, ConflictResolver.conflictItemCount=31, DefaultDependencyCollector.collectTime=153522834, DefaultDependencyCollector.transformTime=4931383}
+[DEBUG] com.gluonhq:gluonfx-maven-plugin:jar:1.0.29
+[DEBUG]    com.gluonhq:substrate:jar:0.0.69:compile
+[DEBUG]       com.googlecode.plist:dd-plist:jar:1.23:runtime
+[DEBUG]       org.bouncycastle:bcpkix-jdk15on:jar:1.49:runtime
+[DEBUG]          org.bouncycastle:bcprov-jdk15on:jar:1.49:runtime
+[DEBUG]       org.graalvm.nativeimage:svm:jar:21.1.0:runtime
+[DEBUG]          org.graalvm.nativeimage:svm-hosted-native-linux-amd64:tar.gz:21.1.0:runtime
+[DEBUG]          org.graalvm.nativeimage:svm-hosted-native-darwin-amd64:tar.gz:21.1.0:runtime
+[DEBUG]          org.graalvm.nativeimage:svm-hosted-native-windows-amd64:tar.gz:21.1.0:runtime
+[DEBUG]          org.graalvm.sdk:graal-sdk:jar:21.1.0:runtime
+[DEBUG]          org.graalvm.nativeimage:objectfile:jar:21.1.0:runtime
+[DEBUG]          org.graalvm.nativeimage:pointsto:jar:21.1.0:runtime
+[DEBUG]          org.graalvm.compiler:compiler:jar:21.1.0:runtime
+[DEBUG]             org.graalvm.truffle:truffle-api:jar:21.1.0:runtime
+[DEBUG]       org.apidesign.bck2brwsr:aot:jar:0.53:runtime
+[DEBUG]          org.apidesign.bck2brwsr:vm4brwsr:jar:0.53:runtime
+[DEBUG]             org.apidesign.bck2brwsr:core:jar:0.53:runtime
+[DEBUG]             com.google.javascript:closure-compiler:jar:v20210601:runtime
+[DEBUG]          org.ow2.asm:asm:jar:9.2:runtime
+[DEBUG]    org.apache.maven.resolver:maven-resolver-util:jar:2.0.1:compile
+[DEBUG]       org.apache.maven.resolver:maven-resolver-api:jar:2.0.1:compile
+[DEBUG]    org.apache.maven.shared:maven-invoker:jar:3.3.0:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+[DEBUG]          org.slf4j:slf4j-api:jar:1.7.36:compile
+[DEBUG]          commons-io:commons-io:jar:2.11.0:compile
+[DEBUG]       javax.inject:javax.inject:jar:1:compile
+[DEBUG]    org.apache.commons:commons-exec:jar:1.4.0:compile
+[DEBUG]    org.codehaus.plexus:plexus-utils:jar:1.1:runtime
+[DEBUG] Created new class realm plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29
+[DEBUG] Importing foreign packages into class realm plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29
+[DEBUG]   Imported:  < maven.api
+[DEBUG] Populating class realm plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29
+[DEBUG]   Included: com.gluonhq:gluonfx-maven-plugin:jar:1.0.29
+[DEBUG]   Included: com.gluonhq:substrate:jar:0.0.69
+[DEBUG]   Included: com.googlecode.plist:dd-plist:jar:1.23
+[DEBUG]   Included: org.bouncycastle:bcpkix-jdk15on:jar:1.49
+[DEBUG]   Included: org.bouncycastle:bcprov-jdk15on:jar:1.49
+[DEBUG]   Included: org.graalvm.nativeimage:svm:jar:21.1.0
+[DEBUG]   Included: org.graalvm.nativeimage:svm-hosted-native-linux-amd64:tar.gz:21.1.0
+[DEBUG]   Included: org.graalvm.nativeimage:svm-hosted-native-darwin-amd64:tar.gz:21.1.0
+[DEBUG]   Included: org.graalvm.nativeimage:svm-hosted-native-windows-amd64:tar.gz:21.1.0
+[DEBUG]   Included: org.graalvm.sdk:graal-sdk:jar:21.1.0
+[DEBUG]   Included: org.graalvm.nativeimage:objectfile:jar:21.1.0
+[DEBUG]   Included: org.graalvm.nativeimage:pointsto:jar:21.1.0
+[DEBUG]   Included: org.graalvm.compiler:compiler:jar:21.1.0
+[DEBUG]   Included: org.graalvm.truffle:truffle-api:jar:21.1.0
+[DEBUG]   Included: org.apidesign.bck2brwsr:aot:jar:0.53
+[DEBUG]   Included: org.apidesign.bck2brwsr:vm4brwsr:jar:0.53
+[DEBUG]   Included: org.apidesign.bck2brwsr:core:jar:0.53
+[DEBUG]   Included: com.google.javascript:closure-compiler:jar:v20210601
+[DEBUG]   Included: org.ow2.asm:asm:jar:9.2
+[DEBUG]   Included: org.apache.maven.resolver:maven-resolver-util:jar:2.0.1
+[DEBUG]   Included: org.apache.maven.shared:maven-invoker:jar:3.3.0
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.4.2
+[DEBUG]   Included: commons-io:commons-io:jar:2.11.0
+[DEBUG]   Included: org.apache.commons:commons-exec:jar:1.4.0
+[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG] Loading mojo com.gluonhq:gluonfx-maven-plugin:1.0.29:build from plugin realm ClassRealm[plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
+[DEBUG] Configuring mojo execution 'com.gluonhq:gluonfx-maven-plugin:1.0.29:build:default-cli' with basic configurator -->
+[DEBUG]   (f) attachList = []
+[DEBUG]   (f) basedir = /mnt/c/Users/Acer/Downloads/RizG
+[DEBUG]   (f) bundlesList = []
+[DEBUG]   (f) enableSWRendering = false
+[DEBUG]   (f) executable = java
+[DEBUG]   (f) jniList = []
+[DEBUG]   (f) linkerArgs = []
+[DEBUG]   (f) mainClass = com.rizgo/com.rizgo.Main
+[DEBUG]   (f) nativeImageArgs = []
+[DEBUG]   (f) pom = /mnt/c/Users/Acer/Downloads/RizG/pom.xml
+[DEBUG]   (f) project = MavenProject: com.rizgo:RizGo:1.0-SNAPSHOT @ /mnt/c/Users/Acer/Downloads/RizG/pom.xml
+[DEBUG]   (f) reflectionList = [com.rizgo.controllers.AboutController, com.rizgo.controllers.AnnouncementsController, com.rizgo.controllers.BuildingController, com.rizgo.controllers.ChatbotController, com.rizgo.controllers.DashboardController, com.rizgo.controllers.DirectoryController, com.rizgo.controllers.EmergencyController, com.rizgo.controllers.EventsController, com.rizgo.controllers.FacilitiesController, com.rizgo.controllers.LoginController, com.rizgo.controllers.MapController, com.rizgo.controllers.OfficesController, com.rizgo.controllers.ProfileController, com.rizgo.controllers.RoleSelectionController, com.rizgo.controllers.SearchController, com.rizgo.controllers.ServicesController, com.rizgo.controllers.SettingsController, com.rizgo.controllers.SignupController, com.rizgo.controllers.SplashController]
+[DEBUG]   (s) appLabel = RizGo
+[DEBUG]   (s) versionCode = 1
+[DEBUG]   (s) versionName = 1.0
+[DEBUG]   (f) releaseConfiguration = ReleaseConfiguration{packageType=null, description='null', vendor='null', version='null', macAppStore=false, macSigningUserName=null, macAppCategory=null, bundleName='null', bundleVersion='null', bundleShortVersion='null', providedSigningIdentity='null', providedProvisioningProfile='null', skipSigning=false, simulatorDevice='null', appLabel='RizGo', versionCode='1', versionName='1.0', providedKeyStorePath='null', providedKeyStorePassword='null', providedKeyAlias='null', providedKeyAliasPassword='null'}
+[DEBUG]   (f) remoteRepos = [central (https://repo.maven.apache.org/maven2, default, releases)]
+[DEBUG]   (f) repoSession = org.eclipse.aether.DefaultRepositorySystemSession@34dc85a
+[DEBUG]   (f) resourcesList = [fxml/.*, css/.*, images/.*]
+[DEBUG]   (f) runtimeArgs = []
+[DEBUG]   (f) session = org.apache.maven.execution.MavenSession@67403656
+[DEBUG]   (f) target = android
+[DEBUG]   (f) verbose = false
+[DEBUG] -- end configuration --
+[DEBUG] Start building
+[WARN] Maven will be executed in interactive mode, but no input stream has been configured for this MavenInvoker instance.
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.rizgo:RizGo >---------------------------
+[INFO] Building RizGo 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> gluonfx-maven-plugin:1.0.29:compile (default-cli) > process-classes @ RizGo >>>
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ RizGo ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 33 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.13.0:compile (default-compile) @ RizGo ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 28 source files with javac [debug release 17 module-path] to target/classes
+[INFO] 
+[INFO] <<< gluonfx-maven-plugin:1.0.29:compile (default-cli) < process-classes @ RizGo <<<
+[INFO] 
+[INFO] 
+[INFO] --- gluonfx-maven-plugin:1.0.29:compile (default-cli) @ RizGo ---
+Nov 06, 2026 8:32:29 PM com.gluonhq.substrate.util.Logger logInfo
+INFO: Substrate is tested with the Gluon's GraalVM build which you can find at https://github.com/gluonhq/graal/releases.
+While you can still use other GraalVM builds, there is no guarantee that these will work properly with Substrate
+[Fri Nov 06 20:32:29 PST 2026][INFO] ==================== COMPILE TASK ====================
+             _______  ___      __   __  _______  __    _
+            |       ||   |    |  | |  ||       ||  |  | |
+            |    ___||   |    |  | |  ||   _   ||   |_| |
+[Fri Nov 06 20:32:30 PST 2026][INFO] We will now compile your code for aarch64-linux-android. This may take some time.
+            |   | __ |   |    |  |_|  ||  | |  ||       |
+            |   ||  ||   |___ |       ||  |_|  ||  _    |
+            |   |_| ||       ||       ||       || | |   |
+            |_______||_______||_______||_______||_|  |__|
+
+    Access to the latest docs, tips and tricks and more info on
+    how to get support? Register your usage of Gluon Substrate now at
+
+    https://gluonhq.com/activate
+
+
+
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: Ignoring server-mode native-image argument --no-server.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:+ForceNoROSectionRelocations' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:+UseCAPCache' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:-DeadlockWatchdogExitOnTimeout' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:ReflectionConfigurationFiles=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/reflectionconfig-aarch64-android.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:CAPCacheDir=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/capcache' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:ResourceConfigurationFiles=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/resourceconfig-aarch64-android.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:DeadlockWatchdogInterval=0' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:+RemoveSaturatedTypeFlows' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:JNIConfigurationFiles=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/jniconfig-aarch64-android.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:-SpawnIsolates' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:ResourceConfigurationResources=META-INF/native-image/org.xerial/sqlite-jdbc/resource-config.json' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:+ExitAfterRelocatableImageWrite' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:EnableURLProtocols=http,https' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:+SharedLibrary' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:CompilerBackend=lir' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:IncludeResourceBundles=com/sun/javafx/scene/control/skin/resources/controls,com/sun/javafx/scene/control/skin/resources/controls-nt,com.sun.javafx.tk.quantum.QuantumMessagesBundle,com.sun.media.jfxmedia.MediaErrors,com.sun.webkit.graphics.Images,com.sun.webkit.LocalizedStrings,javafx.scene.web.HTMLEditorSkin,com.sun.org.apache.xerces.internal.impl.msg.XMLMessages' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: The option '-H:TempDirectory=/mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/tmp' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+[Fri Nov 06 20:32:37 PST 2026][INFO] [SUB] Warning: Please re-evaluate whether any experimental option is required, and either remove or unlock it. The build output lists all active experimental options, including where they come from and possible alternatives. If you think an experimental option should be considered as stable, please file an issue.
+[Fri Nov 06 20:32:46 PST 2026][INFO] [SUB] ========================================================================================================================
+[Fri Nov 06 20:32:46 PST 2026][INFO] [SUB] GraalVM Native Image: Generating 'com.rizgo.main' (shared library)...
+[Fri Nov 06 20:32:46 PST 2026][INFO] [SUB] ========================================================================================================================
+[Fri Nov 06 20:32:46 PST 2026][INFO] [SUB] For detailed information and explanations on the build output, visit:
+[Fri Nov 06 20:32:46 PST 2026][INFO] [SUB] https://github.com/oracle/graal/blob/master/docs/reference-manual/native-image/BuildOutput.md
+[Fri Nov 06 20:32:46 PST 2026][INFO] [SUB] ------------------------------------------------------------------------------------------------------------------------
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] [1/8] Initializing...                                                                                    (0.0s @ 0.09GB)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] Error: Missing CAP cache value for: NativeCodeInfo:BuiltinDirectives:StructInfo:graal_create_isolate_params_t:StructFieldInfo:_reserved_5
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] Internal exception: com.oracle.svm.core.util.UserError$UserException: Missing CAP cache value for: NativeCodeInfo:BuiltinDirectives:StructInfo:graal_create_isolate_params_t:StructFieldInfo:_reserved_5
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.core.util.UserError.abort(UserError.java:75)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.InfoTreeVisitor.processChildren(InfoTreeVisitor.java:78)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.query.QueryResultParser.visitStructInfo(QueryResultParser.java:138)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.StructInfo.accept(StructInfo.java:62)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.InfoTreeVisitor.processChildren(InfoTreeVisitor.java:76)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.InfoTreeVisitor.visitNativeCodeInfo(InfoTreeVisitor.java:84)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.info.NativeCodeInfo.accept(NativeCodeInfo.java:57)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.query.QueryResultParser.parse(QueryResultParser.java:82)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.CAnnotationProcessorCache.get(CAnnotationProcessorCache.java:169)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.CAnnotationProcessor.process(CAnnotationProcessor.java:94)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.c.NativeLibraries.finish(NativeLibraries.java:559)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.processNativeLibraryImports(NativeImageGenerator.java:1754)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.setupNativeLibraries(NativeImageGenerator.java:1202)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.setupNativeImage(NativeImageGenerator.java:962)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.doRun(NativeImageGenerator.java:591)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGenerator.run(NativeImageGenerator.java:551)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.buildImage(NativeImageGeneratorRunner.java:538)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.build(NativeImageGeneratorRunner.java:727)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.start(NativeImageGeneratorRunner.java:142)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] 	at org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner.main(NativeImageGeneratorRunner.java:97)
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] ------------------------------------------------------------------------------------------------------------------------
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB]                         0.5s (5.0% of total time) in 23 GCs | Peak RSS: 0.52GB | CPU load: 2.52
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] ========================================================================================================================
+[Fri Nov 06 20:32:48 PST 2026][INFO] [SUB] Finished generating 'com.rizgo.main' in 9.0s.
+[Fri Nov 06 20:32:48 PST 2026][SEVERE] Process compile failed with result: 1
+Check the log files under /mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/log
+And please check https://docs.gluonhq.com/ for more information.
+[Fri Nov 06 20:32:48 PST 2026][INFO] Logging process [compile] to file: /mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/log/process-compile-1793968368827.log
+[Fri Nov 06 20:32:48 PST 2026][SEVERE] Compiling failed.
+Check the log files under /mnt/c/Users/Acer/Downloads/RizG/target/gluonfx/aarch64-android/gvm/log
+And please check https://docs.gluonhq.com/ for more information.
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  34.547 s
+[INFO] Finished at: 2026-11-06T20:32:48+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.gluonhq:gluonfx-maven-plugin:1.0.29:compile (default-cli) on project RizGo: Compiling failed -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  37.243 s
+[INFO] Finished at: 2026-11-06T20:32:48+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal com.gluonhq:gluonfx-maven-plugin:1.0.29:build (default-cli) on project RizGo: Error, gluonfx:build failed -> [Help 1]
+org.apache.maven.lifecycle.LifecycleExecutionException: Failed to execute goal com.gluonhq:gluonfx-maven-plugin:1.0.29:build (default-cli) on project RizGo: Error, gluonfx:build failed
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:375)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+Caused by: org.apache.maven.plugin.MojoExecutionException: Error, gluonfx:build failed
+    at com.gluonhq.NativeBuildMojo.execute (NativeBuildMojo.java:82)
+    at org.apache.maven.plugin.DefaultBuildPluginManager.executeMojo (DefaultBuildPluginManager.java:137)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute2 (MojoExecutor.java:370)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.doExecute (MojoExecutor.java:351)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:215)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:171)
+    at org.apache.maven.lifecycle.internal.MojoExecutor.execute (MojoExecutor.java:163)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:117)
+    at org.apache.maven.lifecycle.internal.LifecycleModuleBuilder.buildProject (LifecycleModuleBuilder.java:81)
+    at org.apache.maven.lifecycle.internal.builder.singlethreaded.SingleThreadedBuilder.build (SingleThreadedBuilder.java:56)
+    at org.apache.maven.lifecycle.internal.LifecycleStarter.execute (LifecycleStarter.java:128)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:299)
+    at org.apache.maven.DefaultMaven.doExecute (DefaultMaven.java:193)
+    at org.apache.maven.DefaultMaven.execute (DefaultMaven.java:106)
+    at org.apache.maven.cli.MavenCli.execute (MavenCli.java:963)
+    at org.apache.maven.cli.MavenCli.doMain (MavenCli.java:296)
+    at org.apache.maven.cli.MavenCli.main (MavenCli.java:199)
+    at jdk.internal.reflect.DirectMethodHandleAccessor.invoke (DirectMethodHandleAccessor.java:103)
+    at java.lang.reflect.Method.invoke (Method.java:580)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launchEnhanced (Launcher.java:282)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.launch (Launcher.java:225)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.mainWithExitCode (Launcher.java:406)
+    at org.codehaus.plexus.classworlds.launcher.Launcher.main (Launcher.java:347)
+[ERROR] 
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

@@ -12,8 +12,6 @@
            stylesheets="@../css/rizgo.css"
            styleClass="appBackground">
 
-    <!-- WINDOW WIDTH IS STILL 430 -->
-
     <BorderPane maxWidth="430"
                 styleClass="buildingRoot">
 
@@ -27,12 +25,10 @@
                   styleClass="header">
 
                 <padding>
-
                     <Insets top="18"
                             right="24"
                             bottom="18"
                             left="24"/>
-
                 </padding>
 
 
@@ -95,12 +91,10 @@
                           styleClass="buildingContent">
 
                         <padding>
-
                             <Insets top="16"
                                     right="16"
                                     bottom="24"
                                     left="16"/>
-
                         </padding>
 
 
@@ -117,7 +111,6 @@
                                    maxWidth="Infinity"
                                    styleClass="buildingNameLargeNew"/>
 
-
                             <Label fx:id="descriptionLabel"
                                    text="Building information."
                                    wrapText="true"
@@ -128,7 +121,7 @@
 
 
                         <!-- ================================================= -->
-                        <!-- IMAGE / MAP REFERENCE                             -->
+                        <!-- CAMPUS MAP                                        -->
                         <!-- ================================================= -->
 
                         <VBox spacing="10"
@@ -137,7 +130,6 @@
                             <Label text="Campus Location Preview"
                                    styleClass="buildingSectionTitle"/>
 
-
                             <StackPane styleClass="buildingImageHolder">
 
                                 <ImageView fitWidth="360"
@@ -145,17 +137,41 @@
                                            smooth="true">
 
                                     <image>
-
-                                        <Image url="@../images/campus_map.png.png"/>
-
+                                        <Image url="@../images/campus_map.png"/>
                                     </image>
 
                                 </ImageView>
 
                             </StackPane>
 
-
                             <Label text="This campus map shows the location of buildings and facilities around Rizal High School."
+                                   wrapText="true"
+                                   styleClass="buildingImageHint"/>
+
+                        </VBox>
+
+
+                        <!-- ================================================= -->
+                        <!-- BUILDING PHOTO                                    -->
+                        <!-- ================================================= -->
+
+                        <VBox spacing="10"
+                              styleClass="buildingImageCard">
+
+                            <Label text="Building Photo"
+                                   styleClass="buildingSectionTitle"/>
+
+                            <StackPane styleClass="buildingImageHolder">
+
+                                <ImageView fx:id="buildingImageView"
+                                           fitWidth="360"
+                                           fitHeight="210"
+                                           preserveRatio="true"
+                                           smooth="true"/>
+
+                            </StackPane>
+
+                            <Label text="A photo of the selected building within Rizal High School."
                                    wrapText="true"
                                    styleClass="buildingImageHint"/>
 
@@ -249,7 +265,6 @@
 
                             <Separator/>
 
-
                             <Label fx:id="additionalInfoLabel"
                                    text="No additional information available."
                                    wrapText="true"
@@ -266,7 +281,6 @@
                         <VBox spacing="10"
                               styleClass="buildingMapCard">
 
-
                             <HBox spacing="8"
                                   alignment="CENTER_LEFT">
 
@@ -278,11 +292,9 @@
 
                             </HBox>
 
-
                             <Label text="Open the Campus Map to see this building pinpointed on the enlarged map."
                                    wrapText="true"
                                    styleClass="buildingAdditionalText"/>
-
 
                             <Button text="Get Directions  ›"
                                     onAction="#openMap"
