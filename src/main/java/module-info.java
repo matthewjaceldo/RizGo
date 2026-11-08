@@ -11,4 +11,6 @@ module com.rizgo {
 
     exports com.rizgo;
     exports com.rizgo.controllers;
+    exports com.rizgo.utils;
+    opens com.rizgo.utils to javafx.fxml;
 }
