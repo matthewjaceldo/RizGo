@@ -9,21 +9,22 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        var fxmlUrl = getClass().getResource("/fxml/Splash.fxml");
+        if (fxmlUrl == null) {
+            throw new RuntimeException("Cannot find /fxml/Splash.fxml resource!");
+        }
 
-        FXMLLoader loader = new FXMLLoader(
-                getClass().getResource("/fxml/Splash.fxml"));
-
+        FXMLLoader loader = new FXMLLoader(fxmlUrl);
         Scene scene = new Scene(loader.load());
 
-        scene.getStylesheets().add(
-                getClass().getResource("/css/rizgo.css").toExternalForm());
+        var cssUrl = getClass().getResource("/css/rizgo.css");
+        if (cssUrl != null) {
+            scene.getStylesheets().add(cssUrl.toExternalForm());
+        }
 
         stage.setTitle("RizGo");
-
         stage.setResizable(false);
-
         stage.setScene(scene);
-
         stage.show();
     }
 
