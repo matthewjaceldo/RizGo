@@ -1,7 +1,7 @@
 package com.rizgo.controllers;
 
 import com.rizgo.utils.PageTransition;
-import utils.MapRequest;
+import com.rizgo.utils.MapRequest;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

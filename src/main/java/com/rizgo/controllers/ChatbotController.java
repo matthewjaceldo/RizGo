@@ -1,6 +1,6 @@
 package com.rizgo.controllers;
 
-import utils.MapRequest;
+import com.rizgo.utils.MapRequest;
 import com.rizgo.utils.PageTransition;
 
 import javafx.animation.PauseTransition;

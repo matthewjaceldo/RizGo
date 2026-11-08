@@ -207,12 +207,12 @@ OS name: "linux", version: "6.18.33.2-microsoft-standard-wsl2", arch: "amd64", f
 [DEBUG]    org.apache.maven.resolver:maven-resolver-util:jar:2.0.1:compile
 [DEBUG]       org.apache.maven.resolver:maven-resolver-api:jar:2.0.1:compile
 [DEBUG]    org.apache.maven.shared:maven-invoker:jar:3.3.0:compile
-[DEBUG]       org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+[DEBUG]       org.apache.maven.shared:maven-shared-com.rizgo.utils:jar:3.4.2:compile
 [DEBUG]          org.slf4j:slf4j-api:jar:1.7.36:compile
 [DEBUG]          commons-io:commons-io:jar:2.11.0:compile
 [DEBUG]       javax.inject:javax.inject:jar:1:compile
 [DEBUG]    org.apache.commons:commons-exec:jar:1.4.0:compile
-[DEBUG]    org.codehaus.plexus:plexus-utils:jar:1.1:runtime
+[DEBUG]    org.codehaus.plexus:plexus-com.rizgo.utils:jar:1.1:runtime
 [DEBUG] Created new class realm plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29
 [DEBUG] Importing foreign packages into class realm plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29
 [DEBUG]   Imported:  < maven.api
@@ -238,10 +238,10 @@ OS name: "linux", version: "6.18.33.2-microsoft-standard-wsl2", arch: "amd64", f
 [DEBUG]   Included: org.ow2.asm:asm:jar:9.2
 [DEBUG]   Included: org.apache.maven.resolver:maven-resolver-util:jar:2.0.1
 [DEBUG]   Included: org.apache.maven.shared:maven-invoker:jar:3.3.0
-[DEBUG]   Included: org.apache.maven.shared:maven-shared-utils:jar:3.4.2
+[DEBUG]   Included: org.apache.maven.shared:maven-shared-com.rizgo.utils:jar:3.4.2
 [DEBUG]   Included: commons-io:commons-io:jar:2.11.0
 [DEBUG]   Included: org.apache.commons:commons-exec:jar:1.4.0
-[DEBUG]   Included: org.codehaus.plexus:plexus-utils:jar:1.1
+[DEBUG]   Included: org.codehaus.plexus:plexus-com.rizgo.utils:jar:1.1
 [DEBUG] Loading mojo com.gluonhq:gluonfx-maven-plugin:1.0.29:build from plugin realm ClassRealm[plugin>com.gluonhq:gluonfx-maven-plugin:1.0.29, parent: jdk.internal.loader.ClassLoaders$AppClassLoader@2626b418]
 [DEBUG] Configuring mojo execution 'com.gluonhq:gluonfx-maven-plugin:1.0.29:build:default-cli' with basic configurator -->
 [DEBUG]   (f) attachList = []
