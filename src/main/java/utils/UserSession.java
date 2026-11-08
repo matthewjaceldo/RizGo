@@ -1,4 +1,4 @@
-package com.rizgo.utils;
+package utils;
 
 public class UserSession {
 

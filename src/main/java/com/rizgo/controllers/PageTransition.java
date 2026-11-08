@@ -1,4 +1,4 @@
-package com.rizgo.utils;
+package com.rizgo.controllers;
 
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXMLLoader;
